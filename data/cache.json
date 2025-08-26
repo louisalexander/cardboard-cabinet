@@ -1,0 +1,3753 @@
+[
+  {
+    "id": 17329,
+    "name": "Animal Upon Animal",
+    "year": 2005,
+    "image": "https://cf.geekdo-images.com/3We9ciQcC6g4StwcFbzIqw__original/img/uHKkjsq-42iOVJTzsnsTQQtBYe8=/0x0/filters:format(jpeg)/pic8899094.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/3We9ciQcC6g4StwcFbzIqw__thumb/img/H-kuHfDkslX7j1XwV_MVz0FUcWU=/fit-in/200x150/filters:strip_icc()/pic8899094.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 15,
+    "weight": 1.0389,
+    "avg_rating": 6.77053,
+    "bayes_rating": 6.49411,
+    "my_rating": null,
+    "mechanics": [
+      "Dice Rolling",
+      "Stacking and Balancing",
+      "Take That"
+    ],
+    "categories": [
+      "Action / Dexterity",
+      "Animals",
+      "Children's Game"
+    ],
+    "designers": [
+      "Klaus Miltenberger"
+    ],
+    "artists": [
+      "Michael Bayer",
+      "Daniel D\u00f6bner",
+      "Klaus Miltenberger"
+    ],
+    "publishers": [
+      "HABA",
+      "Conclave Editora",
+      "Hobby World",
+      "Swan Panasia Co., Ltd."
+    ]
+  },
+  {
+    "id": 230802,
+    "name": "Azul",
+    "year": 2017,
+    "image": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__original/img/AkbtYVc6xXJF3c9EUrakklcclKw=/0x0/filters:format(png)/pic6973671.png",
+    "thumbnail": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__thumb/img/ccsXKrdGJw-YSClWwzVUwk5Nh9Y=/fit-in/200x150/filters:strip_icc()/pic6973671.png",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 45,
+    "weight": 1.773,
+    "avg_rating": 7.72616,
+    "bayes_rating": 7.61675,
+    "my_rating": 6.0,
+    "mechanics": [
+      "End Game Bonuses",
+      "Grid Coverage",
+      "Open Drafting",
+      "Pattern Building",
+      "Set Collection",
+      "Square Grid",
+      "Tile Placement",
+      "Turn Order: Claim Action"
+    ],
+    "categories": [
+      "Abstract Strategy",
+      "Renaissance"
+    ],
+    "designers": [
+      "Michael Kiesling"
+    ],
+    "artists": [
+      "Philippe Gu\u00e9rin",
+      "Chris Quilliams"
+    ],
+    "publishers": [
+      "Next Move Games",
+      "Plan B Games",
+      "asmodee",
+      "Belleville (\u0411\u0435\u043b\u044c\u0432\u0456\u043b\u044c)",
+      "Broadway Toys LTD",
+      "Divercentro",
+      "Gal\u00e1pagos Jogos",
+      "G\u00e9m Klub Kft.",
+      "Ghenos Games",
+      "Green Elephant Games",
+      "Hobby Japan",
+      "KADABRA",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "Lacerta",
+      "MINDOK",
+      "MIPL",
+      "Orangutan Games",
+      "Pegasus Spiele",
+      "Rebel Sp. z o.o.",
+      "SuperHeated Neurons",
+      "Tower Tactic Games",
+      "TWOPLUS Games",
+      "Zvezda"
+    ]
+  },
+  {
+    "id": 256226,
+    "name": "Azul: Stained Glass of Sintra",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/RrYR1xB8H7D1B5GwNV8jgQ__original/img/unI8OEWp9Fdv3D_dLahPPdLG1qc=/0x0/filters:format(jpeg)/pic4212417.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/RrYR1xB8H7D1B5GwNV8jgQ__thumb/img/vUGmS3mniayuyVOG-1ulrVGnjSg=/fit-in/200x150/filters:strip_icc()/pic4212417.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 45,
+    "weight": 2.0101,
+    "avg_rating": 7.29072,
+    "bayes_rating": 7.00142,
+    "my_rating": 8.0,
+    "mechanics": [
+      "End Game Bonuses",
+      "Modular Board",
+      "Open Drafting",
+      "Pattern Building",
+      "Set Collection",
+      "Tile Placement",
+      "Turn Order: Claim Action"
+    ],
+    "categories": [
+      "Abstract Strategy",
+      "Puzzle",
+      "Renaissance"
+    ],
+    "designers": [
+      "Michael Kiesling"
+    ],
+    "artists": [
+      "Chris Quilliams"
+    ],
+    "publishers": [
+      "Next Move Games",
+      "asmodee",
+      "Belleville (\u0411\u0435\u043b\u044c\u0432\u0456\u043b\u044c)",
+      "Broadway Toys LTD",
+      "Gal\u00e1pagos Jogos",
+      "G\u00e9m Klub Kft.",
+      "Ghenos Games",
+      "Hobby Japan",
+      "Korea Boardgames",
+      "Lacerta",
+      "MINDOK",
+      "Plan B Games",
+      "Rebel Sp. z o.o.",
+      "Zvezda"
+    ]
+  },
+  {
+    "id": 165283,
+    "name": "Battleship",
+    "year": 2014,
+    "image": "https://cf.geekdo-images.com/tuYBIwOlDCNMojpAeGhGFw__original/img/vHDgImnTDJLB8f290bmIuTpCwXI=/0x0/filters:format(jpeg)/pic2180912.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/tuYBIwOlDCNMojpAeGhGFw__thumb/img/MlnavCuzTVctSgAbGNlMqAAYyCE=/fit-in/200x150/filters:strip_icc()/pic2180912.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 15,
+    "weight": 1.0,
+    "avg_rating": 5.32072,
+    "bayes_rating": 5.46764,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management"
+    ],
+    "categories": [
+      "Card Game",
+      "Children's Game"
+    ],
+    "designers": [
+      "(Uncredited)"
+    ],
+    "artists": [],
+    "publishers": [
+      "ASS Altenburger Spielkarten",
+      "Cartamundi",
+      "Hasbro",
+      "Shuffle"
+    ]
+  },
+  {
+    "id": 2453,
+    "name": "Blokus",
+    "year": 2000,
+    "image": "https://cf.geekdo-images.com/96YA5wUJDxtPkmPxemr5Qg__original/img/sdX6o0TZpXjsDMw071k2P80wpYw=/0x0/filters:format(jpeg)/pic2197702.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/96YA5wUJDxtPkmPxemr5Qg__thumb/img/EBt2y7Awj5djyo185R7g6FV3P9g=/fit-in/200x150/filters:strip_icc()/pic2197702.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 20,
+    "weight": 1.7351,
+    "avg_rating": 6.86229,
+    "bayes_rating": 6.71155,
+    "my_rating": 5.0,
+    "mechanics": [
+      "Chaining",
+      "Enclosure",
+      "Grid Coverage",
+      "Hand Management",
+      "Player Elimination",
+      "Square Grid",
+      "Tile Placement"
+    ],
+    "categories": [
+      "Abstract Strategy",
+      "Territory Building"
+    ],
+    "designers": [
+      "Bernard Tavitian"
+    ],
+    "artists": [
+      "Alan D. Hoch"
+    ],
+    "publishers": [
+      "Educational Insights",
+      "Mattel, Inc.",
+      "(Unknown)",
+      "Alary Games",
+      "Beverly Enterprises, Inc.",
+      "danspil",
+      "Divisible By Zero (DBZ) Aust Pty Ltd",
+      "Educa Korea",
+      "Euro World",
+      "FoxMind Israel",
+      "Granna",
+      "Green Board Game Co.",
+      "Heidelberger Spieleverlag",
+      "Hodin",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "Piatnik",
+      "QfreeGames",
+      "Ravensburger",
+      "Sekkoia",
+      "Super Impulse",
+      "Winning Moves France",
+      "Winning Moves Germany"
+    ]
+  },
+  {
+    "id": 224517,
+    "name": "Brass: Birmingham",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__thumb/img/o18rjEemoWaVru9Y2TyPwuIaRfE=/fit-in/200x150/filters:strip_icc()/pic3490053.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 120,
+    "weight": 3.8691,
+    "avg_rating": 8.57492,
+    "bayes_rating": 8.40074,
+    "my_rating": null,
+    "mechanics": [
+      "Chaining",
+      "End Game Bonuses",
+      "Hand Management",
+      "Income",
+      "Loans",
+      "Market",
+      "Multi-Use Cards",
+      "Network and Route Building",
+      "Ownership",
+      "Tags",
+      "Tech Trees / Tech Tracks",
+      "Tile Placement",
+      "Turn Order: Stat-Based",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Age of Reason",
+      "Economic",
+      "Industry / Manufacturing",
+      "Post-Napoleonic",
+      "Trains",
+      "Transportation"
+    ],
+    "designers": [
+      "Gavan Brown",
+      "Matt Tolman",
+      "Martin Wallace"
+    ],
+    "artists": [
+      "Gavan Brown",
+      "Lina Cossette",
+      "David Forest",
+      "Gui Landgraf",
+      "Damien Mammoliti",
+      "Matt Tolman"
+    ],
+    "publishers": [
+      "Roxley",
+      "Arclight Games",
+      "Board Game Rookie",
+      "BoardM Factory",
+      "CMON Global Limited",
+      "Conclave Editora",
+      "CoolPlay",
+      "CrowD Games",
+      "Dexker Games",
+      "Funforge",
+      "G\u00e9m Klub Kft.",
+      "Ghenos Games",
+      "Giant Roc",
+      "Lanlalen",
+      "Lord of Boards",
+      "Maldito Games",
+      "PHALANX",
+      "Rebel Sp. z o.o.",
+      "TLAMA games",
+      "White Goblin Games",
+      "\u76d2\u62cd\u5de5\u4f5c\u5ba4 Hepa Studio"
+    ]
+  },
+  {
+    "id": 172081,
+    "name": "Burgle Bros.",
+    "year": 2015,
+    "image": "https://cf.geekdo-images.com/cPZZhbehOr-cXE1HRa6T3w__original/img/GAmiCfqQ1UdkVxYw4LAkryGW4dY=/0x0/filters:format(png)/pic2439102.png",
+    "thumbnail": "https://cf.geekdo-images.com/cPZZhbehOr-cXE1HRa6T3w__thumb/img/snQ34rjbfQk96R_-pljlOetsYC4=/fit-in/200x150/filters:strip_icc()/pic2439102.png",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 90,
+    "weight": 2.3138,
+    "avg_rating": 7.41691,
+    "bayes_rating": 7.08794,
+    "my_rating": null,
+    "mechanics": [
+      "Action Points",
+      "Cooperative Game",
+      "Dice Rolling",
+      "Grid Movement",
+      "Map Addition",
+      "Modular Board",
+      "Multiple Maps",
+      "Solo / Solitaire Game",
+      "Square Grid",
+      "Three Dimensional Movement",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Exploration",
+      "Maze",
+      "Print & Play",
+      "Spies / Secret Agents"
+    ],
+    "designers": [
+      "Tim Fowers"
+    ],
+    "artists": [
+      "Virginia Critchfield",
+      "Ryan Goldsberry",
+      "Heiko G\u00fcnther"
+    ],
+    "publishers": [
+      "Fowers Games",
+      "(Self-Published)",
+      "(Web published)",
+      "2Tomatoes Games",
+      "Choo Choo Games",
+      "Niza Gams",
+      "Reflexshop"
+    ]
+  },
+  {
+    "id": 50381,
+    "name": "Cards Against Humanity",
+    "year": 2009,
+    "image": "https://cf.geekdo-images.com/nYLrPiI9gnvlrwOrKQ4_CA__original/img/EgMpdhoG38LUTApk0kyFFsmoQPk=/0x0/filters:format(jpeg)/pic2909692.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/nYLrPiI9gnvlrwOrKQ4_CA__thumb/img/fIhQLjWueNPYZhCZ_LzjAIhPm5U=/fit-in/200x150/filters:strip_icc()/pic2909692.jpg",
+    "min_players": 4,
+    "max_players": 30,
+    "playing_time": 30,
+    "weight": 1.1744,
+    "avg_rating": 5.72626,
+    "bayes_rating": 5.55601,
+    "my_rating": 5.0,
+    "mechanics": [
+      "Hand Management",
+      "Player Judge",
+      "Simultaneous Action Selection"
+    ],
+    "categories": [
+      "Card Game",
+      "Humor",
+      "Mature / Adult",
+      "Party Game",
+      "Print & Play"
+    ],
+    "designers": [
+      "Josh Dillon",
+      "Daniel Dranove",
+      "Eli Halpern",
+      "Ben Hantoot",
+      "David Munk",
+      "David Pinsof",
+      "Max Temkin",
+      "Eliot Weinstein"
+    ],
+    "artists": [],
+    "publishers": [
+      "(Self-Published)",
+      "(Web published)",
+      "Cards Against Humanity  LLC",
+      "Estrela"
+    ]
+  },
+  {
+    "id": 317367,
+    "name": "Cards Against Humanity: Family Edition",
+    "year": 2020,
+    "image": "https://cf.geekdo-images.com/9Guy_98QfBoECEZQU6pLVw__original/img/B6pDCny0oBbPSj7c_LpmUGfh05E=/0x0/filters:format(jpeg)/pic5880120.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/9Guy_98QfBoECEZQU6pLVw__thumb/img/686DpP7fpbCh8-blF3K4RxQIZTg=/fit-in/200x150/filters:strip_icc()/pic5880120.jpg",
+    "min_players": 4,
+    "max_players": 30,
+    "playing_time": 30,
+    "weight": 1.0,
+    "avg_rating": 6.12122,
+    "bayes_rating": 5.56589,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Player Judge",
+      "Simultaneous Action Selection"
+    ],
+    "categories": [
+      "Card Game",
+      "Humor",
+      "Party Game"
+    ],
+    "designers": [
+      "Max Temkin"
+    ],
+    "artists": [],
+    "publishers": [
+      "Cards Against Humanity  LLC"
+    ]
+  },
+  {
+    "id": 43443,
+    "name": "Castle Panic",
+    "year": 2009,
+    "image": "https://cf.geekdo-images.com/ryPiCH15spkrdtvUI-utuA__original/img/RYiSrrenTejCl149T6tc2d9CuwA=/0x0/filters:format(jpeg)/pic6966125.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/ryPiCH15spkrdtvUI-utuA__thumb/img/2MMQHuG-dSRngk0E2EKeqyE8e9o=/fit-in/200x150/filters:strip_icc()/pic6966125.jpg",
+    "min_players": 1,
+    "max_players": 6,
+    "playing_time": 60,
+    "weight": 1.6564,
+    "avg_rating": 6.65586,
+    "bayes_rating": 6.46625,
+    "my_rating": null,
+    "mechanics": [
+      "Campaign / Battle Card Driven",
+      "Cooperative Game",
+      "Dice Rolling",
+      "Hand Management",
+      "Semi-Cooperative Game",
+      "Solo / Solitaire Game",
+      "Trading"
+    ],
+    "categories": [
+      "Fantasy",
+      "Fighting",
+      "Medieval"
+    ],
+    "designers": [
+      "Justin De Witt"
+    ],
+    "artists": [
+      "Justin De Witt",
+      "Chad Hoverter",
+      "Tad Lambert"
+    ],
+    "publishers": [
+      "Fireside Games",
+      "Hobby World",
+      "Pegasus Spiele"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "CATAN",
+    "year": 1995,
+    "image": "https://cf.geekdo-images.com/PyUol9QxBnZQCJqZI6bmSA__original/img/g11AF48C6pLizxWPAq9dUEeKltQ=/0x0/filters:format(png)/pic8632666.png",
+    "thumbnail": "https://cf.geekdo-images.com/PyUol9QxBnZQCJqZI6bmSA__thumb/img/virV2Bm82Dql7gh-LZScBwqByik=/fit-in/200x150/filters:strip_icc()/pic8632666.png",
+    "min_players": 3,
+    "max_players": 4,
+    "playing_time": 120,
+    "weight": 2.2863,
+    "avg_rating": 7.09134,
+    "bayes_rating": 6.90856,
+    "my_rating": null,
+    "mechanics": [
+      "Chaining",
+      "Dice Rolling",
+      "Hand Management",
+      "Hexagon Grid",
+      "Hidden Victory Points",
+      "Income",
+      "Market",
+      "Modular Board",
+      "Network and Route Building",
+      "Race",
+      "Random Production",
+      "Take That",
+      "Trading",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Economic",
+      "Negotiation"
+    ],
+    "designers": [
+      "Klaus Teuber"
+    ],
+    "artists": [
+      "Volkan Baga",
+      "Tanja Donner",
+      "Pete Fenlon",
+      "Jason Hawkins",
+      "Eric Hibbeler",
+      "Michaela Kienle",
+      "Andreas Klober",
+      "Harald Lieske",
+      "Michael Menzel",
+      "Marion Pott",
+      "Quentin Regnes",
+      "Andreas Resch",
+      "Matt Schwabel",
+      "Franz Vohwinkel",
+      "Stephen Graham Walsh"
+    ],
+    "publishers": [
+      "KOSMOS",
+      "64 Ounce Games",
+      "999 Games",
+      "Albi",
+      "asmodee",
+      "Astrel Games",
+      "BGA Plus",
+      "Br\u00e4dspel.se",
+      "Brain Games",
+      "Broadway Toys LTD",
+      "Capcom Co., Ltd.",
+      "Catan Studio",
+      "Competo / Marektoy",
+      "danspil",
+      "Descartes Editeur",
+      "Devir",
+      "Dexy Co",
+      "Enigma (Bergsala Enigma)",
+      "Eurogames",
+      "Filosofia \u00c9ditions",
+      "Galakta",
+      "Giochi Uniti",
+      "GP Games",
+      "Grow Jogos e Brinquedos",
+      "HaKubia",
+      "Hanayama",
+      "Hobby World",
+      "Ideal Board Games",
+      "Igroljub",
+      "IntelliGames.BG",
+      "\u00cds\u00f6ld ehf.",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "L&M Games",
+      "Laser plus",
+      "Lautapelit.fi",
+      "Logojogos",
+      "Mayfair Games",
+      "MIPL",
+      "NeoTroy Games",
+      "Ninive Games",
+      "Paper Iyagi",
+      "Piatnik",
+      "Rozum",
+      "Smart Ltd",
+      "Spilbr\u00e6t.dk",
+      "Stupor Mundi",
+      "Super Impulse",
+      "SuperHeated Neurons",
+      "Swan Panasia Co., Ltd.",
+      "Tilsit",
+      "Top Toys",
+      "TRY SOFT",
+      "Venner\u00f8d Forlag AS"
+    ]
+  },
+  {
+    "id": 27710,
+    "name": "Catan Dice Game",
+    "year": 2007,
+    "image": "https://cf.geekdo-images.com/lNVa_4IQ3pBHuh5CRzSe-w__original/img/nDWd2-dY7D1ZoFPZhXvDqQs_BA8=/0x0/filters:format(jpeg)/pic3661032.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/lNVa_4IQ3pBHuh5CRzSe-w__thumb/img/ICEhSw8IrhG7i-zNf9k7E3I3rrs=/fit-in/200x150/filters:strip_icc()/pic3661032.jpg",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 30,
+    "weight": 1.227,
+    "avg_rating": 5.72252,
+    "bayes_rating": 5.63159,
+    "my_rating": null,
+    "mechanics": [
+      "Dice Rolling",
+      "Paper-and-Pencil",
+      "Set Collection",
+      "Solo / Solitaire Game"
+    ],
+    "categories": [
+      "Dice"
+    ],
+    "designers": [
+      "Klaus Teuber"
+    ],
+    "artists": [
+      "Volkan Baga",
+      "Tanja Donner",
+      "Michaela Kienle",
+      "Harald Lieske",
+      "Michael Menzel",
+      "Klaus Teuber"
+    ],
+    "publishers": [
+      "KOSMOS",
+      "999 Games",
+      "Albi",
+      "Catan Studio",
+      "Devir",
+      "Galakta",
+      "Hobby World",
+      "Kaissa Chess & Games",
+      "Laser plus",
+      "Mayfair Games",
+      "Piatnik",
+      "Smart Ltd",
+      "Stupor Mundi"
+    ]
+  },
+  {
+    "id": 147240,
+    "name": "Catan: Family Edition",
+    "year": 2012,
+    "image": "https://cf.geekdo-images.com/allUQ1tQslwcs2Th7oAJZA__original/img/mDajKJl1wBW-pKYj1XJoN0QCwBA=/0x0/filters:format(jpeg)/pic3192913.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/allUQ1tQslwcs2Th7oAJZA__thumb/img/nsOf_d5gpKCLC1CyvZ6wQjFXzo0=/fit-in/200x150/filters:strip_icc()/pic3192913.jpg",
+    "min_players": 3,
+    "max_players": 4,
+    "playing_time": 90,
+    "weight": 2.25,
+    "avg_rating": 6.57382,
+    "bayes_rating": 5.62557,
+    "my_rating": 6.0,
+    "mechanics": [
+      "Dice Rolling",
+      "Hand Management",
+      "Modular Board",
+      "Network and Route Building",
+      "Trading"
+    ],
+    "categories": [
+      "Negotiation"
+    ],
+    "designers": [
+      "Klaus Teuber"
+    ],
+    "artists": [
+      "Oliver Freudenreich",
+      "Patricia Raubo"
+    ],
+    "publishers": [
+      "Catan Studio",
+      "FunFair",
+      "Mayfair Games"
+    ]
+  },
+  {
+    "id": 815,
+    "name": "Chrononauts",
+    "year": 2000,
+    "image": "https://cf.geekdo-images.com/Ksgr5efCoSoXzjveNPJvVA__original/img/mf7xCjyNjyoKR0OZzk4t9PvH9Ik=/0x0/filters:format(jpeg)/pic1909256.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/Ksgr5efCoSoXzjveNPJvVA__thumb/img/G03u9daaIYtY5q8wmPHGDm8QBEU=/fit-in/200x150/filters:strip_icc()/pic1909256.jpg",
+    "min_players": 1,
+    "max_players": 6,
+    "playing_time": 30,
+    "weight": 1.8515,
+    "avg_rating": 6.19007,
+    "bayes_rating": 5.94078,
+    "my_rating": 6.0,
+    "mechanics": [
+      "Hand Management",
+      "Modular Board",
+      "Solo / Solitaire Game"
+    ],
+    "categories": [
+      "Card Game",
+      "Educational",
+      "Political",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [
+      "Alison Frane",
+      "Derek Ring"
+    ],
+    "publishers": [
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 154633,
+    "name": "Clue",
+    "year": 2013,
+    "image": "https://cf.geekdo-images.com/4gd4Ars10XGe2MspWYjn9A__original/img/XL4K3GAtQGItvNIUqvKDxPAHaPw=/0x0/filters:format(jpeg)/pic7804537.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/4gd4Ars10XGe2MspWYjn9A__thumb/img/MrMzsYZZ5CTGEPMzSB2oEkjRHU0=/fit-in/200x150/filters:strip_icc()/pic7804537.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 45,
+    "weight": 1.3571,
+    "avg_rating": 5.81989,
+    "bayes_rating": 5.54335,
+    "my_rating": null,
+    "mechanics": [
+      "Roll / Spin and Move"
+    ],
+    "categories": [
+      "Deduction",
+      "Murder / Mystery"
+    ],
+    "designers": [],
+    "artists": [],
+    "publishers": [
+      "Hasbro"
+    ]
+  },
+  {
+    "id": 178900,
+    "name": "Codenames",
+    "year": 2015,
+    "image": "https://cf.geekdo-images.com/nC6ifPCDnAItwoKSKXVrnw__original/img/Id-jjIer_61ZbvI2_RVRCeBZFY4=/0x0/filters:format(jpeg)/pic8907965.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/nC6ifPCDnAItwoKSKXVrnw__thumb/img/1iZav_8ZqurrDbvkZA9GcFhB5x0=/fit-in/200x150/filters:strip_icc()/pic8907965.jpg",
+    "min_players": 2,
+    "max_players": 8,
+    "playing_time": 15,
+    "weight": 1.2587,
+    "avg_rating": 7.5322,
+    "bayes_rating": 7.43679,
+    "my_rating": 9.0,
+    "mechanics": [
+      "Communication Limits",
+      "Deduction",
+      "Memory",
+      "Race",
+      "Team-Based Game"
+    ],
+    "categories": [
+      "Card Game",
+      "Deduction",
+      "Party Game",
+      "Spies / Secret Agents",
+      "Word Game"
+    ],
+    "designers": [
+      "Vlaada Chv\u00e1til"
+    ],
+    "artists": [
+      "Vlaada Chv\u00e1til",
+      "St\u00e9phane Gantiez",
+      "D\u00e1vid Jablonovsk\u00fd",
+      "Tom\u00e1\u0161 Ku\u010derovsk\u00fd",
+      "Filip Murmak",
+      "Franti\u0161ek Sedl\u00e1\u010dek"
+    ],
+    "publishers": [
+      "Czech Games Edition",
+      "asmodee",
+      "Boardgame Space",
+      "Brain Games",
+      "Broadway Toys LTD",
+      "Cranio Creations",
+      "Cuaca Cerah Games",
+      "Devir",
+      "DiceTree Games",
+      "Enigma (Bergsala Enigma)",
+      "Fantasmagoria",
+      "Feelindigo",
+      "GaGa Games",
+      "Gaming Library",
+      "G\u00e9m Klub Kft.",
+      "Golden Egg Games",
+      "HeidelB\u00c4R Games",
+      "Heidelberger Spieleverlag",
+      "Hobby Japan",
+      "IELLO",
+      "Kaissa Chess & Games",
+      "Land of Beautiful Mind (\u0633\u0631\u0632\u0645\u06cc\u0646 \u0630\u0647\u0646 \u0632\u06cc\u0628\u0627)",
+      "Lex Games",
+      "Liam Games",
+      "MINDOK",
+      "MIPL",
+      "More Fun Co., Ltd.",
+      "Nordic Games ehf",
+      "One Moment Games",
+      "Ponva d.o.o.",
+      "Pridemage Games",
+      "Rebel Sp. z o.o.",
+      "SuperHeated Neurons",
+      "TWOPLUS Games",
+      "White Goblin Games"
+    ]
+  },
+  {
+    "id": 891,
+    "name": "Cranium",
+    "year": 1998,
+    "image": "https://cf.geekdo-images.com/-RAQw4eCx3i__6ctz6-N9A__original/img/Z1nfWJlFJQiirtkqCoMmoDbIQIE=/0x0/filters:format(jpeg)/pic4994220.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/-RAQw4eCx3i__6ctz6-N9A__thumb/img/6zwKtSbuLcz8negvxaM4hRA6rBw=/fit-in/200x150/filters:strip_icc()/pic4994220.jpg",
+    "min_players": 4,
+    "max_players": 99,
+    "playing_time": 60,
+    "weight": 1.4156,
+    "avg_rating": 5.68283,
+    "bayes_rating": 5.57472,
+    "my_rating": null,
+    "mechanics": [
+      "Acting",
+      "Line Drawing",
+      "Paper-and-Pencil",
+      "Roll / Spin and Move",
+      "Singing",
+      "Team-Based Game"
+    ],
+    "categories": [
+      "Party Game",
+      "Puzzle",
+      "Trivia",
+      "Word Game"
+    ],
+    "designers": [
+      "Whit Alexander",
+      "Richard Tait"
+    ],
+    "artists": [
+      "Gary Baseman",
+      "Damon S. Brown"
+    ],
+    "publishers": [
+      "Cranium, Inc.",
+      "danspil",
+      "Giochi Preziosi",
+      "Hasbro",
+      "Jumbo"
+    ]
+  },
+  {
+    "id": 397931,
+    "name": "Deep Regrets",
+    "year": 2025,
+    "image": "https://cf.geekdo-images.com/WUvpRzsNSZgq1gyvjiQcWw__original/img/wXnREOcKLkysXorXqRQXKslz-iI=/0x0/filters:format(jpeg)/pic8156363.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/WUvpRzsNSZgq1gyvjiQcWw__thumb/img/XJyLMXaTHUGyAv7n-G0DpR1W1SU=/fit-in/200x150/filters:strip_icc()/pic8156363.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 150,
+    "weight": 2.3846,
+    "avg_rating": 7.43288,
+    "bayes_rating": 6.27812,
+    "my_rating": null,
+    "mechanics": [
+      "Cooperative Game",
+      "Dice Rolling",
+      "Market",
+      "Push Your Luck",
+      "Re-rolling and Locking",
+      "Set Collection",
+      "Solo / Solitaire Game"
+    ],
+    "categories": [
+      "Dice",
+      "Horror",
+      "Nautical"
+    ],
+    "designers": [
+      "Judson Cowan"
+    ],
+    "artists": [
+      "Judson Cowan"
+    ],
+    "publishers": [
+      "Tettix Games",
+      "Alis Games",
+      "asmodee",
+      "Board Game Circus",
+      "White Goblin Games",
+      "\u0406\u0433\u0440\u043e\u043c\u0430\u0433"
+    ]
+  },
+  {
+    "id": 379699,
+    "name": "Dungeons & Dragons: Bedlam in Neverwinter",
+    "year": 2023,
+    "image": "https://cf.geekdo-images.com/IuFzYLls4WFJaHA7sYSmfw__original/img/4Ju0vmQWQOthWcTT4oKrvgOKL8w=/0x0/filters:format(jpeg)/pic8491643.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/IuFzYLls4WFJaHA7sYSmfw__thumb/img/V8ulgoOk_Q3LNttMctE9ZXc03Zs=/fit-in/200x150/filters:strip_icc()/pic8491643.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 270,
+    "weight": 1.6667,
+    "avg_rating": 7.13468,
+    "bayes_rating": 5.64759,
+    "my_rating": null,
+    "mechanics": [],
+    "categories": [],
+    "designers": [
+      "George Feledichuk",
+      "David \"Duvey\" Rudow",
+      "Leo Taylor"
+    ],
+    "artists": [
+      "Henning Ludvigsen"
+    ],
+    "publishers": [
+      "Hasbro",
+      "Wizards of the Coast"
+    ]
+  },
+  {
+    "id": 9825,
+    "name": "Early American Chrononauts",
+    "year": 2004,
+    "image": "https://cf.geekdo-images.com/y4SdeIW_TLufMubbAcvlaA__original/img/vx1hgbK_qhXy0W9Nbl5yRmUJajo=/0x0/filters:format(jpeg)/pic1919173.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/y4SdeIW_TLufMubbAcvlaA__thumb/img/1j73FI-QuRQuxftty5PL-vtvgNQ=/fit-in/200x150/filters:strip_icc()/pic1919173.jpg",
+    "min_players": 1,
+    "max_players": 6,
+    "playing_time": 45,
+    "weight": 1.8472,
+    "avg_rating": 6.58937,
+    "bayes_rating": 5.80179,
+    "my_rating": null,
+    "mechanics": [
+      "Modular Board"
+    ],
+    "categories": [
+      "Card Game",
+      "Educational",
+      "Political",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [
+      "Alison Frane"
+    ],
+    "publishers": [
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 426513,
+    "name": "Emberleaf",
+    "year": 2025,
+    "image": "https://cf.geekdo-images.com/iIOvqey92U7snvFG7Vz5Hg__original/img/Llf7USTv1eonUrRepM6hueTUerk=/0x0/filters:format(jpeg)/pic8356448.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/iIOvqey92U7snvFG7Vz5Hg__thumb/img/FhwQ_AjpGhZT1OI5Ep63syn3bNY=/fit-in/200x150/filters:strip_icc()/pic8356448.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 120,
+    "weight": 3.0435,
+    "avg_rating": 8.11029,
+    "bayes_rating": 6.00597,
+    "my_rating": 8.0,
+    "mechanics": [
+      "Contracts",
+      "Set Collection",
+      "Solo / Solitaire Game",
+      "Tile Placement",
+      "Variable Player Powers",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Animals",
+      "City Building",
+      "Fantasy",
+      "Puzzle"
+    ],
+    "designers": [
+      "James Tomblin",
+      "Frank West"
+    ],
+    "artists": [
+      "James Tomblin",
+      "Frank West"
+    ],
+    "publishers": [
+      "The City of Games",
+      "DSV Games"
+    ]
+  },
+  {
+    "id": 199792,
+    "name": "Everdell",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__original/img/HQ1ti16wT9lqja5_h3gUfHUIcVI=/0x0/filters:format(png)/pic3918905.png",
+    "thumbnail": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__thumb/img/Cf_mYxR_VvdjTEPXseSurni2JNI=/fit-in/200x150/filters:strip_icc()/pic3918905.png",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 80,
+    "weight": 2.8268,
+    "avg_rating": 7.99681,
+    "bayes_rating": 7.82084,
+    "my_rating": 10.0,
+    "mechanics": [
+      "Contracts",
+      "End Game Bonuses",
+      "Hand Management",
+      "Income",
+      "Open Drafting",
+      "Ownership",
+      "Set Collection",
+      "Solo / Solitaire Game",
+      "Tags",
+      "Variable Set-up",
+      "Worker Placement"
+    ],
+    "categories": [
+      "Animals",
+      "Card Game",
+      "City Building",
+      "Fantasy"
+    ],
+    "designers": [
+      "James A. Wilson"
+    ],
+    "artists": [
+      "Andrew Bosley",
+      "Cody Jones",
+      "Dann May"
+    ],
+    "publishers": [
+      "Starling Games (II)",
+      "Abraxas",
+      "Arclight Games",
+      "CMON Global Limited",
+      "Fantasmagoria",
+      "Gal\u00e1pagos Jogos",
+      "Gameology (Gameology Romania)",
+      "G\u00e9m Klub Kft.",
+      "Hobby World",
+      "Kaissa Chess & Games",
+      "Maldito Games",
+      "Matagot",
+      "MIPL",
+      "Pegasus Spiele",
+      "Rebel Sp. z o.o.",
+      "REXhry",
+      "Spilbr\u00e6t.dk",
+      "Tabletop Tycoon Inc.",
+      "Tycoon Games",
+      "White Goblin Games",
+      "YOKA Games",
+      "\u0406\u0433\u0440\u043e\u043c\u0430\u0433"
+    ]
+  },
+  {
+    "id": 172225,
+    "name": "Exploding Kittens",
+    "year": 2015,
+    "image": "https://cf.geekdo-images.com/N8bL53-pRU7zaXDTrEaYrw__original/img/0ciN1VZYifUd0qIDO0e8cGXmiss=/0x0/filters:format(png)/pic2691976.png",
+    "thumbnail": "https://cf.geekdo-images.com/N8bL53-pRU7zaXDTrEaYrw__thumb/img/3tH4pIc1Udzkd0tXc6MgVQ59BC0=/fit-in/200x150/filters:strip_icc()/pic2691976.png",
+    "min_players": 2,
+    "max_players": 5,
+    "playing_time": 15,
+    "weight": 1.0817,
+    "avg_rating": 6.06597,
+    "bayes_rating": 5.88011,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Hot Potato",
+      "Player Elimination",
+      "Push Your Luck",
+      "Set Collection",
+      "Take That"
+    ],
+    "categories": [
+      "Animals",
+      "Card Game",
+      "Comic Book / Strip",
+      "Humor"
+    ],
+    "designers": [
+      "Matthew Inman",
+      "Elan Lee",
+      "Shane Small"
+    ],
+    "artists": [
+      "Matthew Inman",
+      "Elan Lee",
+      "Shane Small"
+    ],
+    "publishers": [
+      "Ad Magic, Inc. (AdMagic Games)",
+      "Exploding Kittens",
+      "(Self-Published)",
+      "ADC Blackfire Entertainment",
+      "Angry Lion Games",
+      "asmodee",
+      "Blackfire Games",
+      "Boardgame Space",
+      "CoolPlay",
+      "Gal\u00e1pagos Jogos",
+      "G\u00e9m Klub Kft.",
+      "GoKids \u73a9\u6a02\u5c0f\u5b50",
+      "HaKubia",
+      "Hobby Japan",
+      "Hobby World",
+      "KADABRA",
+      "Kaissa Chess & Games",
+      "Popcorn Games",
+      "Rebel Sp. z o.o.",
+      "Rozum",
+      "Siam Board Games",
+      "Super Impulse"
+    ]
+  },
+  {
+    "id": 325409,
+    "name": "Fantasy Fluxx",
+    "year": 2021,
+    "image": "https://cf.geekdo-images.com/s2uIRb5xOjUg-m4Dpt2PlA__original/img/ZyYerPOXlqXEgbH_E6thOedaaWo=/0x0/filters:format(jpeg)/pic5813699.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/s2uIRb5xOjUg-m4Dpt2PlA__thumb/img/RiU-qx390smPvJkdB9khqHvEjx8=/fit-in/200x150/filters:strip_icc()/pic5813699.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 40,
+    "weight": 1.3333,
+    "avg_rating": 6.9254,
+    "bayes_rating": 5.61111,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game",
+      "Fantasy"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [],
+    "publishers": [
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 216597,
+    "name": "Flatline",
+    "year": 2017,
+    "image": "https://cf.geekdo-images.com/sLe2f4wP96jvQj9M6FufSg__original/img/fVbpPef6Miz25-jL542aQZ99_qc=/0x0/filters:format(jpeg)/pic3489123.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/sLe2f4wP96jvQj9M6FufSg__thumb/img/bwXVjzXeGj3UA7qWpWkXPpQ7YNA=/fit-in/200x150/filters:strip_icc()/pic3489123.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 45,
+    "weight": 2.3333,
+    "avg_rating": 7.06175,
+    "bayes_rating": 6.12332,
+    "my_rating": null,
+    "mechanics": [
+      "Cooperative Game",
+      "Dice Rolling",
+      "Push Your Luck",
+      "Real-Time",
+      "Solo / Solitaire Game"
+    ],
+    "categories": [
+      "Dice",
+      "Medical",
+      "Real-time",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Kane Klenko"
+    ],
+    "artists": [
+      "Sean Thurlow"
+    ],
+    "publishers": [
+      "Renegade Game Studios"
+    ]
+  },
+  {
+    "id": 265026,
+    "name": "The Floor is Lava",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/ZAb5WF0Mbbqej-PkWKx9cQ__original/img/AvcDz0FJlN87_GW8kQJtaXYCYxU=/0x0/filters:format(jpeg)/pic4424378.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/ZAb5WF0Mbbqej-PkWKx9cQ__thumb/img/3tNRJC0pZ7LLJREtaQFGfDokHrM=/fit-in/200x150/filters:strip_icc()/pic4424378.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 0,
+    "weight": 1.0,
+    "avg_rating": 4.8095,
+    "bayes_rating": 5.46067,
+    "my_rating": null,
+    "mechanics": [],
+    "categories": [
+      "Action / Dexterity",
+      "Children's Game"
+    ],
+    "designers": [],
+    "artists": [],
+    "publishers": [
+      "Endless Games (I)",
+      "Goliath Games"
+    ]
+  },
+  {
+    "id": 258,
+    "name": "Fluxx",
+    "year": 1997,
+    "image": "https://cf.geekdo-images.com/ZBQHRlhd32wt4F_zgeic6w__original/img/6-0pkob0RUXgRyxGPJ2ZKyYObxw=/0x0/filters:format(jpeg)/pic2405641.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/ZBQHRlhd32wt4F_zgeic6w__thumb/img/MjQ7iYoOXuU9AUrTojjYE8sdyTk=/fit-in/200x150/filters:strip_icc()/pic2405641.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 30,
+    "weight": 1.3889,
+    "avg_rating": 5.67742,
+    "bayes_rating": 5.56439,
+    "my_rating": 6.0,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game"
+    ],
+    "designers": [
+      "Andrew Looney",
+      "Kristin Looney"
+    ],
+    "artists": [
+      "Ra\u00fal Castellanos",
+      "Michael Hays",
+      "Naomi Kageyama",
+      "Andrew Looney",
+      "Barbara Spelger"
+    ],
+    "publishers": [
+      "Looney Labs",
+      "AMIGO",
+      "Black Monk",
+      "Edge Entertainment",
+      "Hexagonal",
+      "Hobby Japan",
+      "Hobby World",
+      "Iron Crown Enterprises",
+      "Monkey Time",
+      "Pegasus Spiele",
+      "PS-Games",
+      "Raven Distribution",
+      "Swan Panasia Co., Ltd."
+    ]
+  },
+  {
+    "id": 350764,
+    "name": "Fluxx Remixx",
+    "year": 2022,
+    "image": "https://cf.geekdo-images.com/09wnoCbNbpPe2UGu7vap2A__original/img/47dVTWvt0SoJGKk3E0ABbJYshGg=/0x0/filters:format(jpeg)/pic6494288.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/09wnoCbNbpPe2UGu7vap2A__thumb/img/VUfwXq-h3o6aFEXfKokzwLwLWu4=/fit-in/200x150/filters:strip_icc()/pic6494288.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 30,
+    "weight": 1.5,
+    "avg_rating": 7.00257,
+    "bayes_rating": 5.55798,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [],
+    "publishers": [
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 65244,
+    "name": "Forbidden Island",
+    "year": 2010,
+    "image": "https://cf.geekdo-images.com/JgAkEBUaiHOsOS94iRMs2w__original/img/H5d4I5z_HSpPEu7EAl0DqLt9_pM=/0x0/filters:format(jpeg)/pic646458.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/JgAkEBUaiHOsOS94iRMs2w__thumb/img/5aPR8-KMbgucI_XkPE2PJaMQQsg=/fit-in/200x150/filters:strip_icc()/pic646458.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 30,
+    "weight": 1.7378,
+    "avg_rating": 6.75358,
+    "bayes_rating": 6.64557,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Action Points",
+      "Cooperative Game",
+      "Events",
+      "Grid Movement",
+      "Hand Management",
+      "Map Reduction",
+      "Modular Board",
+      "Pick-up and Deliver",
+      "Set Collection",
+      "Solo / Solitaire Game",
+      "Square Grid",
+      "Tile Placement",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Adventure",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Matt Leacock"
+    ],
+    "artists": [
+      "C. B. Canga"
+    ],
+    "publishers": [
+      "Gamewright",
+      "ADC Blackfire Entertainment",
+      "Arclight Games",
+      "AURUM, Inc.",
+      "Br\u00e4dspel.se",
+      "Cocktail Games",
+      "Competo / Marektoy",
+      "Devir",
+      "FoxMind Israel",
+      "Kaissa Chess & Games",
+      "Kanga Games",
+      "Lex Games",
+      "Lifestyle Boardgames Ltd",
+      "NeoTroy Games",
+      "Rebel Sp. z o.o.",
+      "Reflexshop",
+      "Schmidt Spiele",
+      "Spilbr\u00e6t.dk",
+      "uplay.it edizioni",
+      "White Goblin Games"
+    ]
+  },
+  {
+    "id": 221965,
+    "name": "The Fox in the Forest",
+    "year": 2017,
+    "image": "https://cf.geekdo-images.com/spcy6nvsfq-hxYgwEpmidQ__original/img/rXKH8tfISrTxPqUKCw1FXIDSBc0=/0x0/filters:format(jpeg)/pic3496085.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/spcy6nvsfq-hxYgwEpmidQ__thumb/img/nR2TKxtWOVJR1OHD6hAF05IHuOI=/fit-in/200x150/filters:strip_icc()/pic3496085.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 30,
+    "weight": 1.5949,
+    "avg_rating": 7.0676,
+    "bayes_rating": 6.86518,
+    "my_rating": 8.0,
+    "mechanics": [
+      "Hand Management",
+      "Race",
+      "Score-and-Reset Game",
+      "Trick-taking",
+      "Turn Order: Stat-Based"
+    ],
+    "categories": [
+      "Animals",
+      "Card Game",
+      "Fantasy"
+    ],
+    "designers": [
+      "Joshua Buergel"
+    ],
+    "artists": [
+      "Jennifer L. Meyer",
+      "Keith Pishnery"
+    ],
+    "publishers": [
+      "Foxtrot Games",
+      "Renegade Game Studios",
+      "Banana Games",
+      "Gen-X Games",
+      "Lavka Games",
+      "Mandoo Games",
+      "MINDOK",
+      "Raven Distribution",
+      "Reflexshop",
+      "Schwerkraft-Verlag",
+      "SUNNY BIRD",
+      "White Goblin Games",
+      "WoodCat"
+    ]
+  },
+  {
+    "id": 174430,
+    "name": "Gloomhaven",
+    "year": 2017,
+    "image": "https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__original/img/7d-lj5Gd1e8PFnD97LYFah2c45M=/0x0/filters:format(jpeg)/pic2437871.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__thumb/img/veqFeP4d_3zNhFc3GNBkV95rBEQ=/fit-in/200x150/filters:strip_icc()/pic2437871.jpg",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 120,
+    "weight": 3.9146,
+    "avg_rating": 8.55704,
+    "bayes_rating": 8.31901,
+    "my_rating": null,
+    "mechanics": [
+      "Action Queue",
+      "Action Retrieval",
+      "Campaign / Battle Card Driven",
+      "Card Play Conflict Resolution",
+      "Communication Limits",
+      "Cooperative Game",
+      "Critical Hits and Failures",
+      "Deck Construction",
+      "Grid Movement",
+      "Hand Management",
+      "Hexagon Grid",
+      "Legacy Game",
+      "Line of Sight",
+      "Modular Board",
+      "Multi-Use Cards",
+      "Narrative Choice / Paragraph",
+      "Once-Per-Game Abilities",
+      "Role Playing",
+      "Scenario / Mission / Campaign Game",
+      "Simultaneous Action Selection",
+      "Solo / Solitaire Game",
+      "Storytelling",
+      "Tags",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Adventure",
+      "Exploration",
+      "Fantasy",
+      "Fighting",
+      "Miniatures"
+    ],
+    "designers": [
+      "Isaac Childres"
+    ],
+    "artists": [
+      "Alexandr Elichev",
+      "Josh T. McDowell",
+      "Alvaro Nebot"
+    ],
+    "publishers": [
+      "Cephalofair Games",
+      "Albi",
+      "Albi Polska",
+      "Arclight Games",
+      "Feuerland Spiele",
+      "Gal\u00e1pagos Jogos",
+      "Games Warehouse",
+      "G\u00e9m Klub Kft.",
+      "Hobby World",
+      "Korea Boardgames",
+      "MYBG Co., Ltd."
+    ]
+  },
+  {
+    "id": 154597,
+    "name": "Hive Pocket",
+    "year": 2010,
+    "image": "https://cf.geekdo-images.com/qxB2LU0536eKeByvNl3vcA__original/img/HxR4sVxK_YUaOSz89J_Y-o4qBcM=/0x0/filters:format(jpeg)/pic8229329.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/qxB2LU0536eKeByvNl3vcA__thumb/img/u-Mm0YOkr4MkmQqHLkh0uHTxHDI=/fit-in/200x150/filters:strip_icc()/pic8229329.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 20,
+    "weight": 2.2256,
+    "avg_rating": 7.69372,
+    "bayes_rating": 7.34319,
+    "my_rating": 6.0,
+    "mechanics": [
+      "Enclosure",
+      "Grid Movement",
+      "Hexagon Grid",
+      "Pattern Movement",
+      "Pieces as Map",
+      "Slide / Push",
+      "Three Dimensional Movement",
+      "Tile Placement"
+    ],
+    "categories": [
+      "Abstract Strategy",
+      "Animals"
+    ],
+    "designers": [
+      "John Yianni"
+    ],
+    "artists": [
+      "John Yianni"
+    ],
+    "publishers": [
+      "Gen42 Games",
+      "asmodee",
+      "AURUM, Inc.",
+      "FunBox Jogos",
+      "G3",
+      "Ghenos Games",
+      "HUCH!",
+      "Jolly Thinkers",
+      "Ludicus Games",
+      "Ludistri",
+      "Magellan",
+      "Maldito Games",
+      "MIPL",
+      "Morning Players",
+      "Mosigra",
+      "Reflexshop",
+      "Smart Zone Games",
+      "Story Factory",
+      "uplay.it edizioni",
+      "Vendetta",
+      "Zhiyanjia",
+      "\u0406\u0433\u0440\u043e\u043c\u0430\u0433"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Illuminati",
+    "year": 1987,
+    "image": "https://cf.geekdo-images.com/ea8y04WKGgdQkFy1Pbw9tA__original/img/F_xGJIZyrFTkGwRRhV4wk8uVbh4=/0x0/filters:format(jpeg)/pic1320091.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/ea8y04WKGgdQkFy1Pbw9tA__thumb/img/eph2ZknTAhhs-A8ij76DJbhzjrs=/fit-in/200x150/filters:strip_icc()/pic1320091.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 180,
+    "weight": 2.6568,
+    "avg_rating": 6.46722,
+    "bayes_rating": 6.10215,
+    "my_rating": null,
+    "mechanics": [
+      "Dice Rolling",
+      "Network and Route Building",
+      "Open Drafting",
+      "Tile Placement",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Card Game",
+      "Humor",
+      "Negotiation",
+      "Political",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Steve Jackson (I)"
+    ],
+    "artists": [
+      "Lar DeSouza",
+      "Jeffrey D. George",
+      "Frank Gerwin",
+      "John Grigni",
+      "C. Mara Lee",
+      "Carl Manz",
+      "Dave Martin",
+      "David Martin (II)",
+      "Shea Ryan",
+      "Dan Smith",
+      "Czeslaw Sornat",
+      "Cliff Van Meter"
+    ],
+    "publishers": [
+      "Steve Jackson Games",
+      "Descartes Editeur",
+      "Devir",
+      "Edge Entertainment",
+      "Finnish Game House",
+      "Laurin Verlag",
+      "Pegasus Spiele",
+      "Queen Games",
+      "Raven Distribution",
+      "Ubik"
+    ]
+  },
+  {
+    "id": 374595,
+    "name": "Kelp: Shark vs Octopus",
+    "year": 2024,
+    "image": "https://cf.geekdo-images.com/iMtHHxutEtga5DiZDIbgJg__original/img/nzgtIPmNuWX65AHNC0sAbo4V2vU=/0x0/filters:format(jpeg)/pic7493386.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/iMtHHxutEtga5DiZDIbgJg__thumb/img/4QKru9Jmr46bphmA9uzwnOZve44=/fit-in/200x150/filters:strip_icc()/pic7493386.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 60,
+    "weight": 2.3378,
+    "avg_rating": 7.65203,
+    "bayes_rating": 6.53912,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Area Movement",
+      "Deck, Bag, and Pool Building",
+      "Dice Rolling",
+      "Hidden Movement",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Animals",
+      "Bluffing",
+      "Card Game",
+      "Dice",
+      "Environmental"
+    ],
+    "designers": [
+      "Carl Robinson"
+    ],
+    "artists": [
+      "Weberson Santiago"
+    ],
+    "publishers": [
+      "Wonderbow Games",
+      "Delirium Games",
+      "Galakta",
+      "\u0406\u0433\u0440\u043e\u043c\u0430\u0433"
+    ]
+  },
+  {
+    "id": 1219,
+    "name": "Labyrinth",
+    "year": 1986,
+    "image": "https://cf.geekdo-images.com/qpL225YNN5iKRPotB7Q7MA__original/img/5ZGo501PquASeGxpQLBIglcVSYs=/0x0/filters:format(jpeg)/pic6173371.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/qpL225YNN5iKRPotB7Q7MA__thumb/img/JZR5MVC8xYrboBrYMsZmWtjJTu0=/fit-in/200x150/filters:strip_icc()/pic6173371.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 20,
+    "weight": 1.34,
+    "avg_rating": 6.40662,
+    "bayes_rating": 6.23222,
+    "my_rating": null,
+    "mechanics": [
+      "Map Deformation",
+      "Modular Board",
+      "Network and Route Building",
+      "Point to Point Movement",
+      "Slide / Push",
+      "Square Grid"
+    ],
+    "categories": [
+      "Children's Game",
+      "Maze",
+      "Puzzle"
+    ],
+    "designers": [
+      "Max J. Kobbert"
+    ],
+    "artists": [
+      "Xavier Gueniffey Durin",
+      "Andreas H\u00e4rlin",
+      "Stephen Hillenburg",
+      "illuVision",
+      "Max J. Kobbert",
+      "Joachim Krause",
+      "Horst Laupheimer",
+      "Herbert Lentz",
+      "Sybille Ring",
+      "Wolfgang Scheit",
+      "Mauricio de Souza",
+      "vitamin-be.de",
+      "Thomas Weiss",
+      "Paul Windle"
+    ],
+    "publishers": [
+      "Ravensburger",
+      "Discovery Toys",
+      "Elmark",
+      "Estrela",
+      "Grow Jogos e Brinquedos",
+      "Korea Boardgames",
+      "MoBi",
+      "Otto Maier Verlag",
+      "Ronda",
+      "VAKKO",
+      "\u03a4\u03bf \u039a\u03b1\u03bb\u03cc \u03a0\u03b1\u03b9\u03c7\u03bd\u03af\u03b4\u03b9 \u0391.\u0395."
+    ]
+  },
+  {
+    "id": 440371,
+    "name": "Landfall: A Cozy Volcano Island-Building Game",
+    "year": 2026,
+    "image": "https://cf.geekdo-images.com/sfeaNaGV-74SjdVMoQYfDQ__original/img/OoqsQKhOpvShbdfHpS9wt-Ze8LY=/0x0/filters:format(png)/pic8744701.png",
+    "thumbnail": "https://cf.geekdo-images.com/sfeaNaGV-74SjdVMoQYfDQ__thumb/img/eDhhq8XIOcHRFuj-9jkRWmm92vQ=/fit-in/200x150/filters:strip_icc()/pic8744701.png",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 90,
+    "weight": 0.0,
+    "avg_rating": 7.3125,
+    "bayes_rating": 0.0,
+    "my_rating": null,
+    "mechanics": [
+      "Three Dimensional Movement"
+    ],
+    "categories": [
+      "Abstract Strategy",
+      "Territory Building"
+    ],
+    "designers": [
+      "Evan Katz",
+      "Zachary Lee",
+      "Josh Roberts"
+    ],
+    "artists": [],
+    "publishers": [
+      "Evan and Josh's Very Special Games Company"
+    ]
+  },
+  {
+    "id": 277085,
+    "name": "Love Letter",
+    "year": 2019,
+    "image": "https://cf.geekdo-images.com/V7WQjhAh0AatPXTYOrXtCQ__original/img/peOFPtAkzWUSpOSVTJu3pTDv2ck=/0x0/filters:format(png)/pic4766499.png",
+    "thumbnail": "https://cf.geekdo-images.com/V7WQjhAh0AatPXTYOrXtCQ__thumb/img/PNp3MFmie6ffR5RtyNs7TsVV4wA=/fit-in/200x150/filters:strip_icc()/pic4766499.png",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 20,
+    "weight": 1.1123,
+    "avg_rating": 7.5104,
+    "bayes_rating": 7.16055,
+    "my_rating": null,
+    "mechanics": [
+      "Deduction",
+      "Hand Management",
+      "Player Elimination",
+      "Score-and-Reset Game",
+      "Take That"
+    ],
+    "categories": [
+      "Card Game",
+      "Deduction",
+      "Renaissance"
+    ],
+    "designers": [
+      "Seiji Kanai",
+      "Justin Kemppainen",
+      "Alexandar Ortloff-Tang"
+    ],
+    "artists": [
+      "Andrew Bosley",
+      "Samuel R. Shimota"
+    ],
+    "publishers": [
+      "Z-Man Games",
+      "ADC Blackfire Entertainment",
+      "asmodee",
+      "Boardgame Space",
+      "BoardM Factory",
+      "Delta Vision Publishing",
+      "FoxMind Israel",
+      "Gal\u00e1pagos Jogos",
+      "Hobby World",
+      "Korea Boardgames",
+      "Lord of Boards",
+      "Popcorn Games",
+      "Rebel Sp. z o.o.",
+      "Siam Board Games"
+    ]
+  },
+  {
+    "id": 41916,
+    "name": "The Magic Labyrinth",
+    "year": 2009,
+    "image": "https://cf.geekdo-images.com/XdRFJ8oqpUnDSN4AnIO5KA__original/img/eVitrOg_vW3GVRI5vHxmDCy4H3s=/0x0/filters:format(jpeg)/pic6961974.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/XdRFJ8oqpUnDSN4AnIO5KA__thumb/img/Aop_DugN6rEE_v0PKOsm0fxEC6w=/fit-in/200x150/filters:strip_icc()/pic6961974.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 30,
+    "weight": 1.2091,
+    "avg_rating": 6.81355,
+    "bayes_rating": 6.43291,
+    "my_rating": null,
+    "mechanics": [
+      "Dice Rolling",
+      "Grid Movement",
+      "Memory",
+      "Network and Route Building",
+      "Roll / Spin and Move"
+    ],
+    "categories": [
+      "Children's Game",
+      "Fantasy",
+      "Maze",
+      "Memory"
+    ],
+    "designers": [
+      "Dirk Baumann"
+    ],
+    "artists": [
+      "Rolf Vogt"
+    ],
+    "publishers": [
+      "Drei Magier Spiele",
+      "ADC Blackfire Entertainment",
+      "Competo / Marektoy",
+      "Devir",
+      "Enigma (Bergsala Enigma)",
+      "G3",
+      "Gigamic",
+      "HaKubia",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "Lautapelit.fi",
+      "Lion Rampant Imports",
+      "Oxygame",
+      "Playgo Hungary",
+      "Playroom Entertainment",
+      "Spilbr\u00e6t.dk",
+      "Swan Panasia Co., Ltd.",
+      "Venner\u00f8d Forlag AS",
+      "YellowBOX",
+      "\u0490\u0430\u0432\u0456\u0430\u043b",
+      "\u041d\u0435\u0441\u043a\u0443\u0447\u043d\u044b\u0435 \u0438\u0433\u0440\u044b"
+    ]
+  },
+  {
+    "id": 205059,
+    "name": "Mansions of Madness: Second Edition",
+    "year": 2016,
+    "image": "https://cf.geekdo-images.com/LIooA9bTdjnE9qmhjL-UFw__original/img/Go6c8-ZiXomS8E7X4MBCdDd-aZc=/0x0/filters:format(jpeg)/pic3118622.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/LIooA9bTdjnE9qmhjL-UFw__thumb/img/kwaa7aI2sMeyWV5JSRKcKrS5hC8=/fit-in/200x150/filters:strip_icc()/pic3118622.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 180,
+    "weight": 2.6999,
+    "avg_rating": 7.92476,
+    "bayes_rating": 7.69025,
+    "my_rating": null,
+    "mechanics": [
+      "Area Movement",
+      "Cooperative Game",
+      "Dice Rolling",
+      "Hand Management",
+      "Map Addition",
+      "Modular Board",
+      "Role Playing",
+      "Scenario / Mission / Campaign Game",
+      "Solo / Solitaire Game",
+      "Stat Check Resolution",
+      "Traitor Game",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Adventure",
+      "Exploration",
+      "Fantasy",
+      "Fighting",
+      "Horror",
+      "Miniatures",
+      "Murder / Mystery",
+      "Mythology",
+      "Novel-based",
+      "Puzzle"
+    ],
+    "designers": [
+      "Nikki Valens"
+    ],
+    "artists": [
+      "Cristi Balanescu",
+      "Yoann Boissonnet",
+      "Anders Fin\u00e9r",
+      "Tony Foti",
+      "Corey Konieczka",
+      "Jacob Murray",
+      "Magali Villeneuve"
+    ],
+    "publishers": [
+      "Fantasy Flight Games",
+      "ADC Blackfire Entertainment",
+      "Arclight Games",
+      "Asterion Press",
+      "Edge Entertainment",
+      "Galakta",
+      "Gal\u00e1pagos Jogos",
+      "Geekach LLC",
+      "Heidelberger Spieleverlag",
+      "Hobby World",
+      "Korea Boardgames",
+      "Meanbook Games",
+      "Siam Board Games"
+    ]
+  },
+  {
+    "id": 297978,
+    "name": "Mariposas",
+    "year": 2020,
+    "image": "https://cf.geekdo-images.com/UHTHsuI998L89uSTXS3hxg__original/img/OMzfKuv9bpTVIT5KBZcnMfm3Jmg=/0x0/filters:format(jpeg)/pic5153415.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/UHTHsuI998L89uSTXS3hxg__thumb/img/ruD8L6-y9vFuuvYd1eABXJPnsXk=/fit-in/200x150/filters:strip_icc()/pic5153415.jpg",
+    "min_players": 2,
+    "max_players": 5,
+    "playing_time": 75,
+    "weight": 2.1963,
+    "avg_rating": 6.7563,
+    "bayes_rating": 6.36308,
+    "my_rating": null,
+    "mechanics": [
+      "Grid Movement",
+      "Hexagon Grid",
+      "Movement Points",
+      "Set Collection",
+      "Turn Order: Stat-Based"
+    ],
+    "categories": [
+      "Animals",
+      "Environmental"
+    ],
+    "designers": [
+      "Elizabeth Hargrave"
+    ],
+    "artists": [
+      "Matt Paquette & Co.",
+      "Indi Maverick"
+    ],
+    "publishers": [
+      "Alderac Entertainment Group",
+      "Albi",
+      "Albi Polska",
+      "Arclight Games",
+      "Devir",
+      "Evrikus",
+      "Gal\u00e1pagos Jogos",
+      "Ghenos Games",
+      "Gigamic",
+      "Reflexshop",
+      "Tower Tactic Games",
+      "White Goblin Games",
+      "Yayoi The Dreamer"
+    ]
+  },
+  {
+    "id": 242529,
+    "name": "Medium",
+    "year": 2019,
+    "image": "https://cf.geekdo-images.com/gaiG9Iv8S3G6ppC5AKlNIQ__original/img/Qrleq5aHqrsQEcNKin1FYtgp6-E=/0x0/filters:format(png)/pic4912833.png",
+    "thumbnail": "https://cf.geekdo-images.com/gaiG9Iv8S3G6ppC5AKlNIQ__thumb/img/85q4rpTU8rQy3n0-agc3YUjda4o=/fit-in/200x150/filters:strip_icc()/pic4912833.png",
+    "min_players": 2,
+    "max_players": 8,
+    "playing_time": 45,
+    "weight": 1.0938,
+    "avg_rating": 6.86633,
+    "bayes_rating": 6.17977,
+    "my_rating": null,
+    "mechanics": [
+      "Communication Limits",
+      "Targeted Clues",
+      "Team-Based Game"
+    ],
+    "categories": [
+      "Card Game",
+      "Party Game",
+      "Print & Play",
+      "Word Game"
+    ],
+    "designers": [
+      "Danielle Deley",
+      "Lindsey Sherwood",
+      "Nathan Thornton"
+    ],
+    "artists": [
+      "Sarah Kelly"
+    ],
+    "publishers": [
+      "Greater Than Games, LLC",
+      "Ghenos Games",
+      "Perdix Spiele",
+      "Storm Chaser Games"
+    ]
+  },
+  {
+    "id": 1927,
+    "name": "Munchkin",
+    "year": 2001,
+    "image": "https://cf.geekdo-images.com/J-ts3MW0UhDzs621TR6cog__original/img/FbqPPCilgZKND2xmhWJgkfjZiYE=/0x0/filters:format(jpeg)/pic1871016.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/J-ts3MW0UhDzs621TR6cog__thumb/img/8hVkpMC5pDLr6ARI_4gI4N3aF5M=/fit-in/200x150/filters:strip_icc()/pic1871016.jpg",
+    "min_players": 3,
+    "max_players": 6,
+    "playing_time": 120,
+    "weight": 1.8145,
+    "avg_rating": 5.873,
+    "bayes_rating": 5.6908,
+    "my_rating": 5.0,
+    "mechanics": [
+      "Hand Management",
+      "Race",
+      "Take That",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Card Game",
+      "Fantasy",
+      "Fighting",
+      "Humor"
+    ],
+    "designers": [
+      "Steve Jackson (I)"
+    ],
+    "artists": [
+      "Alex Fernandez (I)",
+      "Edwin Huang",
+      "Steve Jackson (I)",
+      "John Kovalic",
+      "Ian McGinty",
+      "Heather Oliver",
+      "Philip Reed",
+      "Gabby Ruenes"
+    ],
+    "publishers": [
+      "Steve Jackson Games",
+      "(Unknown)",
+      "ADC Blackfire Entertainment",
+      "Arclight Games",
+      "asmodee",
+      "Black Monk",
+      "BoardM Factory",
+      "Broadway Toys LTD",
+      "Bureau de Juegos",
+      "Bur\u00f3",
+      "Delta Vision Publishing",
+      "Devir",
+      "Edge Entertainment",
+      "Enigma (Bergsala Enigma)",
+      "Fantasiapelit",
+      "Gal\u00e1pagos Jogos",
+      "Hobby World",
+      "Kaissa Chess & Games",
+      "Ku\u017ania Gier",
+      "NeoTroy Games",
+      "Outland",
+      "Pegasus Spiele",
+      "PS-Games",
+      "Q-Workshop",
+      "Raven Distribution",
+      "Silver Stars Publishing",
+      "Smart Ltd",
+      "Ubik",
+      "Wargames Club Publishing",
+      "\u0422\u0420\u0415\u0422\u042f \u041f\u041b\u0410\u041d\u0415\u0422\u0410"
+    ]
+  },
+  {
+    "id": 231567,
+    "name": "Now Boarding",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/yI1Zxy5JAgk7xFWpSqYX7w__original/img/J7wnIUJhfzO-5MJG7eALSWrZn-M=/0x0/filters:format(jpeg)/pic3710609.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/yI1Zxy5JAgk7xFWpSqYX7w__thumb/img/0b4G8p3lZJJhtWpLeOetrGDHWdI=/fit-in/200x150/filters:strip_icc()/pic3710609.jpg",
+    "min_players": 2,
+    "max_players": 5,
+    "playing_time": 60,
+    "weight": 2.1786,
+    "avg_rating": 7.00119,
+    "bayes_rating": 6.108,
+    "my_rating": null,
+    "mechanics": [
+      "Cooperative Game",
+      "Pick-up and Deliver",
+      "Real-Time",
+      "Simultaneous Action Selection",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Aviation / Flight",
+      "Real-time",
+      "Transportation"
+    ],
+    "designers": [
+      "Tim Fowers"
+    ],
+    "artists": [
+      "Ryan Goldsberry"
+    ],
+    "publishers": [
+      "Fowers Games"
+    ]
+  },
+  {
+    "id": 432351,
+    "name": "Oddities",
+    "year": 2025,
+    "image": "https://cf.geekdo-images.com/H3KI8lyJ2n3N4KngMJxVrQ__original/img/q4Ic_cewicBMNLk_qcos-_oCbgo=/0x0/filters:format(png)/pic8852615.png",
+    "thumbnail": "https://cf.geekdo-images.com/H3KI8lyJ2n3N4KngMJxVrQ__thumb/img/rKZs7D5hgYgoqY26x-pZJNx_Muc=/fit-in/200x150/filters:strip_icc()/pic8852615.png",
+    "min_players": 2,
+    "max_players": 8,
+    "playing_time": 60,
+    "weight": 0.0,
+    "avg_rating": 7.7,
+    "bayes_rating": 0.0,
+    "my_rating": null,
+    "mechanics": [
+      "Chaining",
+      "Hand Management",
+      "Set Collection",
+      "Take That",
+      "Turn Order: Progressive"
+    ],
+    "categories": [
+      "Card Game",
+      "Party Game"
+    ],
+    "designers": [
+      "A.K. Nelson"
+    ],
+    "artists": [
+      "Rihnlin"
+    ],
+    "publishers": [
+      "Twisted Branch Games"
+    ]
+  },
+  {
+    "id": 30549,
+    "name": "Pandemic",
+    "year": 2008,
+    "image": "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__original/img/IsrvRLpUV1TEyZsO5rC-btXaPz0=/0x0/filters:format(jpeg)/pic1534148.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__thumb/img/oqViRj6nVxK3m36NluTxU1PZkrk=/fit-in/200x150/filters:strip_icc()/pic1534148.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 45,
+    "weight": 2.3965,
+    "avg_rating": 7.5216,
+    "bayes_rating": 7.41377,
+    "my_rating": 6.0,
+    "mechanics": [
+      "Action Points",
+      "Chaining",
+      "Contracts",
+      "Cooperative Game",
+      "Events",
+      "Hand Management",
+      "Multi-Use Cards",
+      "Point to Point Movement",
+      "Set Collection",
+      "Simulation",
+      "Tags",
+      "Trading",
+      "Variable Player Powers",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Medical",
+      "Travel"
+    ],
+    "designers": [
+      "Matt Leacock"
+    ],
+    "artists": [
+      "Josh Cappel",
+      "Christian Hanisch",
+      "R\u00e9gis Moulun",
+      "Chris Quilliams",
+      "Tom Thiel"
+    ],
+    "publishers": [
+      "Z-Man Games",
+      "(Unknown)",
+      "ADC Blackfire Entertainment",
+      "Albi",
+      "Asterion Press",
+      "Boardgame Space",
+      "Brain Games",
+      "CoolPlay",
+      "Devir",
+      "Enigma (Bergsala Enigma)",
+      "Filosofia \u00c9ditions",
+      "Gal\u00e1pagos Jogos",
+      "Game Harbor",
+      "G\u00e9m Klub Kft.",
+      "HaKubia",
+      "Hobby Japan",
+      "HomoLudicus",
+      "Jolly Thinkers",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "Lacerta",
+      "Lautapelit.fi",
+      "Lifestyle Boardgames Ltd",
+      "MINDOK",
+      "Nordic Games ehf",
+      "Paladium Games",
+      "Pegasus Spiele",
+      "Quined White Goblin Games",
+      "Rebel Sp. z o.o.",
+      "Siam Board Games",
+      "Stratelibri",
+      "Wargames Club Publishing",
+      "White Goblin Games",
+      "Zhiyanjia",
+      "\u0412\u0437\u0440\u043e\u0441\u043b\u044b\u0435 \u0434\u0435\u0442\u0438",
+      "\u0406\u0433\u0440\u043e\u043c\u0430\u0433"
+    ]
+  },
+  {
+    "id": 260180,
+    "name": "Project L",
+    "year": 2020,
+    "image": "https://cf.geekdo-images.com/Zwx2ZXS6r6PaxhkaVEe75Q__original/img/nBfsV9V5a-xc3uJkYhE0DN-QVjI=/0x0/filters:format(jpeg)/pic4309147.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/Zwx2ZXS6r6PaxhkaVEe75Q__thumb/img/3x5kSxZlvLK6PdeMHX9xd_sSTMs=/fit-in/200x150/filters:strip_icc()/pic4309147.jpg",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 40,
+    "weight": 1.5592,
+    "avg_rating": 7.46305,
+    "bayes_rating": 7.10763,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Action Points",
+      "Open Drafting",
+      "Pattern Building",
+      "Resource Queue",
+      "Solo / Solitaire Game",
+      "Tile Placement"
+    ],
+    "categories": [
+      "Abstract Strategy",
+      "Puzzle",
+      "Video Game Theme"
+    ],
+    "designers": [
+      "Michal Mike\u0161",
+      "Jan Soukal",
+      "Adam \u0160pan\u011bl"
+    ],
+    "artists": [
+      "Jaroslav Jurica",
+      "Marek Loskot",
+      "Pavel Richter"
+    ],
+    "publishers": [
+      "Boardcubator",
+      "ADC Blackfire Entertainment",
+      "CrowD Games",
+      "Gal\u00e1pagos Jogos",
+      "G\u00e9m Klub Kft.",
+      "Hobby Japan",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "Lord of Boards",
+      "Rebel Sp. z o.o.",
+      "Siam Board Games"
+    ]
+  },
+  {
+    "id": 415843,
+    "name": "Puerto Rico 1897: Special Edition",
+    "year": 2025,
+    "image": "https://cf.geekdo-images.com/ewNPD8vcrsXVfuVc9_E6hg__original/img/H3yQmt-6vi4jSPP-Ty0ehZ0lksM=/0x0/filters:format(jpeg)/pic8376834.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/ewNPD8vcrsXVfuVc9_E6hg__thumb/img/fEkdPMxyjK8G9uqdRPT14Q-UCVo=/fit-in/200x150/filters:strip_icc()/pic8376834.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 120,
+    "weight": 3.1667,
+    "avg_rating": 7.89053,
+    "bayes_rating": 5.62374,
+    "my_rating": null,
+    "mechanics": [
+      "Action Drafting",
+      "End Game Bonuses",
+      "Follow",
+      "Hidden Victory Points",
+      "Increase Value of Unchosen Resources",
+      "Solo / Solitaire Game",
+      "Turn Order: Progressive",
+      "Variable Phase Order"
+    ],
+    "categories": [
+      "Economic",
+      "Farming"
+    ],
+    "designers": [
+      "Andreas Seyfarth"
+    ],
+    "artists": [
+      "Jakub Dzikowski"
+    ],
+    "publishers": [
+      "Awaken Realms",
+      "Ravensburger",
+      "GoKids \u73a9\u6a02\u5c0f\u5b50"
+    ]
+  },
+  {
+    "id": 429717,
+    "name": "Railroad Tiles: Collector's Edition",
+    "year": 2025,
+    "image": "https://cf.geekdo-images.com/aHolSdwsmDQPLQrlTdu1kw__original/img/wdbWjdLXMIlLKIA2d6TcAussCdk=/0x0/filters:format(jpeg)/pic8963651.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/aHolSdwsmDQPLQrlTdu1kw__thumb/img/1kg_9teNOnYHHN0S5aB1zofb4KA=/fit-in/200x150/filters:strip_icc()/pic8963651.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 30,
+    "weight": 2.0,
+    "avg_rating": 7.69107,
+    "bayes_rating": 5.55744,
+    "my_rating": null,
+    "mechanics": [
+      "Connections",
+      "Map Addition",
+      "Pattern Building",
+      "Solo / Solitaire Game",
+      "Tile Placement"
+    ],
+    "categories": [
+      "Environmental",
+      "Farming",
+      "Trains",
+      "Transportation"
+    ],
+    "designers": [
+      "Hjalmar Hach",
+      "Lorenzo Silva"
+    ],
+    "artists": [
+      "Francesco De Benedittis",
+      "Marta Tranquilli"
+    ],
+    "publishers": [
+      "Horrible Guild"
+    ]
+  },
+  {
+    "id": 446893,
+    "name": "Realm of Reckoning",
+    "year": 2026,
+    "image": "https://cf.geekdo-images.com/xElMYLyj1pqtCIOhRNzA9w__original/img/uQSPJKFbAsnhXf_gVKPnRyYMXK8=/0x0/filters:format(png)/pic8899476.png",
+    "thumbnail": "https://cf.geekdo-images.com/xElMYLyj1pqtCIOhRNzA9w__thumb/img/f1F4gQbvIXlwqCl0T11e7qcEPu4=/fit-in/200x150/filters:strip_icc()/pic8899476.png",
+    "min_players": 2,
+    "max_players": 5,
+    "playing_time": 120,
+    "weight": 3.0,
+    "avg_rating": 7.73333,
+    "bayes_rating": 5.53163,
+    "my_rating": null,
+    "mechanics": [
+      "Area Majority / Influence",
+      "Auction: Sealed Bid",
+      "Closed Drafting",
+      "Voting"
+    ],
+    "categories": [
+      "Fantasy"
+    ],
+    "designers": [
+      "Max Anderson",
+      "Zac Dixon",
+      "Austin Harrison"
+    ],
+    "artists": [
+      "Reece Parker"
+    ],
+    "publishers": [
+      "IV Studio"
+    ]
+  },
+  {
+    "id": 192153,
+    "name": "Reign of Cthulhu",
+    "year": 2016,
+    "image": "https://cf.geekdo-images.com/rwNaEQfzABp7dkpnwn1Ksw__original/img/NCSz1g5A1Dydfqlv68rbPEoRTes=/0x0/filters:format(png)/pic2866737.png",
+    "thumbnail": "https://cf.geekdo-images.com/rwNaEQfzABp7dkpnwn1Ksw__thumb/img/A77zWf8GZ3rPK5FPTitlJuTAoNM=/fit-in/200x150/filters:strip_icc()/pic2866737.png",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 40,
+    "weight": 2.1629,
+    "avg_rating": 7.36233,
+    "bayes_rating": 6.96405,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Action Points",
+      "Cooperative Game",
+      "Hand Management",
+      "Point to Point Movement",
+      "Set Collection",
+      "Trading",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Horror",
+      "Novel-based"
+    ],
+    "designers": [
+      "Matt Leacock",
+      "Chuck D. Yager"
+    ],
+    "artists": [
+      "Philippe Gu\u00e9rin",
+      "Fred Jordan",
+      "Atha Kanaani",
+      "Paul Kluka",
+      "Chris Quilliams"
+    ],
+    "publishers": [
+      "Z-Man Games",
+      "Asterion Press",
+      "Devir",
+      "Filosofia \u00c9ditions",
+      "Hobby Japan",
+      "Kaissa Chess & Games",
+      "Lacerta",
+      "Rebel Sp. z o.o."
+    ]
+  },
+  {
+    "id": 37198,
+    "name": "Risk (Revised Edition)",
+    "year": 2008,
+    "image": "https://cf.geekdo-images.com/DiCHx8FTBAz1kMbaSMH5ew__original/img/Ym7R4LnVQQpUQqN5Lc-hIDik3do=/0x0/filters:format(jpeg)/pic347837.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/DiCHx8FTBAz1kMbaSMH5ew__thumb/img/Fp8SKaKa4jb417OF6lVW__-Lj54=/fit-in/200x150/filters:strip_icc()/pic347837.jpg",
+    "min_players": 3,
+    "max_players": 5,
+    "playing_time": 90,
+    "weight": 2.1611,
+    "avg_rating": 5.97281,
+    "bayes_rating": 5.72166,
+    "my_rating": null,
+    "mechanics": [
+      "Area Majority / Influence",
+      "Area Movement",
+      "Dice Rolling",
+      "Player Elimination",
+      "Set Collection"
+    ],
+    "categories": [
+      "Territory Building",
+      "Wargame"
+    ],
+    "designers": [
+      "Rob Daviau"
+    ],
+    "artists": [],
+    "publishers": [
+      "Hasbro",
+      "Parker Brothers"
+    ]
+  },
+  {
+    "id": 203219,
+    "name": "Rivals for Catan: Deluxe",
+    "year": 2016,
+    "image": "https://cf.geekdo-images.com/D1hkSbHZDnJ2remJ4YQQMw__original/img/zK7j9k-RuoImjpb69RLnRsUtR4A=/0x0/filters:format(jpeg)/pic3119566.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/D1hkSbHZDnJ2remJ4YQQMw__thumb/img/wLJ6nfuuPKrWp-fSWryiXczJrEE=/fit-in/200x150/filters:strip_icc()/pic3119566.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 60,
+    "weight": 2.3333,
+    "avg_rating": 7.13397,
+    "bayes_rating": 5.86815,
+    "my_rating": null,
+    "mechanics": [
+      "Dice Rolling",
+      "Hand Management",
+      "Open Drafting",
+      "Random Production",
+      "Trading"
+    ],
+    "categories": [
+      "Card Game",
+      "Territory Building"
+    ],
+    "designers": [
+      "Klaus Teuber"
+    ],
+    "artists": [
+      "Michael Menzel"
+    ],
+    "publishers": [
+      "Catan Studio",
+      "Albi",
+      "Edge Entertainment",
+      "Galakta",
+      "Ideal Board Games",
+      "KOSMOS"
+    ]
+  },
+  {
+    "id": 305682,
+    "name": "Rolling Realms",
+    "year": 2021,
+    "image": "https://cf.geekdo-images.com/5TZ5YfDo_r9vNNvWTl_pzw__original/img/YxcHzKCiiRq68K7Fd3qsUp-xhaE=/0x0/filters:format(jpeg)/pic6313647.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/5TZ5YfDo_r9vNNvWTl_pzw__thumb/img/oKM1pAH4fCa7LCNluCqr9qNOq4M=/fit-in/200x150/filters:strip_icc()/pic6313647.jpg",
+    "min_players": 1,
+    "max_players": 6,
+    "playing_time": 30,
+    "weight": 1.9813,
+    "avg_rating": 7.12846,
+    "bayes_rating": 6.5878,
+    "my_rating": null,
+    "mechanics": [
+      "Bingo",
+      "Dice Rolling",
+      "Paper-and-Pencil",
+      "Simultaneous Action Selection",
+      "Solo / Solitaire Game"
+    ],
+    "categories": [
+      "Number",
+      "Print & Play"
+    ],
+    "designers": [
+      "Jamey Stegmaier"
+    ],
+    "artists": [
+      "Miles Bensky",
+      "Marius Petrescu"
+    ],
+    "publishers": [
+      "Stonemaier Games",
+      "Automa Factory",
+      "Delta Vision Publishing",
+      "Dice Realm",
+      "Feuerland Spiele",
+      "Ghenos Games",
+      "Lavka Games",
+      "Maldito Games",
+      "Matagot"
+    ]
+  },
+  {
+    "id": 393892,
+    "name": "Rolling Realms Redux",
+    "year": 2024,
+    "image": "https://cf.geekdo-images.com/GdFx1bIMyYgM0vzxPA0yOg__original/img/KE2bDsJKtvmrsdqVVhgbIbSjjSk=/0x0/filters:format(jpeg)/pic8269897.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/GdFx1bIMyYgM0vzxPA0yOg__thumb/img/9G51Cn7T2dvW88lMxwXuWSHDmKw=/fit-in/200x150/filters:strip_icc()/pic8269897.jpg",
+    "min_players": 1,
+    "max_players": 6,
+    "playing_time": 45,
+    "weight": 2.6667,
+    "avg_rating": 7.79109,
+    "bayes_rating": 5.8748,
+    "my_rating": null,
+    "mechanics": [
+      "Dice Rolling",
+      "Paper-and-Pencil",
+      "Simultaneous Action Selection",
+      "Solo / Solitaire Game"
+    ],
+    "categories": [],
+    "designers": [
+      "Jamey Stegmaier",
+      "Karel Titeca"
+    ],
+    "artists": [
+      "Miles Bensky",
+      "Marius Petrescu"
+    ],
+    "publishers": [
+      "Stonemaier Games",
+      "Automa Factory",
+      "Maldito Games",
+      "Matagot"
+    ]
+  },
+  {
+    "id": 237182,
+    "name": "Root",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/JUAUWaVUzeBgzirhZNmHHw__original/img/E0s2LvtFA1L5YKk-_44D4u2VD2s=/0x0/filters:format(jpeg)/pic4254509.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/JUAUWaVUzeBgzirhZNmHHw__thumb/img/ACovMZzGGIsBRyEQXFnsT8282NM=/fit-in/200x150/filters:strip_icc()/pic4254509.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 90,
+    "weight": 3.8298,
+    "avg_rating": 8.06978,
+    "bayes_rating": 7.88335,
+    "my_rating": null,
+    "mechanics": [
+      "Action Points",
+      "Action Queue",
+      "Action Retrieval",
+      "Area Majority / Influence",
+      "Area Movement",
+      "Dice Rolling",
+      "Hand Management",
+      "Multi-Use Cards",
+      "Negotiation",
+      "Point to Point Movement",
+      "Race",
+      "Sudden Death Ending",
+      "Take That",
+      "Variable Player Powers",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Animals",
+      "Fantasy",
+      "Negotiation",
+      "Territory Building",
+      "Wargame"
+    ],
+    "designers": [
+      "Cole Wehrle"
+    ],
+    "artists": [
+      "Kyle Ferrin"
+    ],
+    "publishers": [
+      "Leder Games",
+      "2Tomatoes Games",
+      "Arclight Games",
+      "CMON Global Limited",
+      "CrowD Games",
+      "Delta Vision Publishing",
+      "Fox in the Box",
+      "Kilogames",
+      "Korea Boardgames",
+      "MeepleBR",
+      "MS Edizioni",
+      "Portal Games",
+      "Quality Beast",
+      "Spielworxx",
+      "Tower Tactic Games",
+      "YOKA Games"
+    ]
+  },
+  {
+    "id": 368028,
+    "name": "RUN",
+    "year": 2023,
+    "image": "https://cf.geekdo-images.com/3WocDkiZ3sykV0C0tcaXGw__original/img/c1Q72-MknW88IJGvimHCdGEOmtI=/0x0/filters:format(jpeg)/pic7679521.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/3WocDkiZ3sykV0C0tcaXGw__thumb/img/USj6Ut3tSjY8puIGB1tIPPQ2rb4=/fit-in/200x150/filters:strip_icc()/pic7679521.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 30,
+    "weight": 2.1429,
+    "avg_rating": 7.49879,
+    "bayes_rating": 5.74649,
+    "my_rating": null,
+    "mechanics": [
+      "Deduction",
+      "Grid Movement",
+      "Hidden Movement",
+      "Once-Per-Game Abilities",
+      "Variable Player Powers",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Deduction"
+    ],
+    "designers": [
+      "Moritz Dressler"
+    ],
+    "artists": [
+      "Ryan Goldsberry"
+    ],
+    "publishers": [
+      "Fowers Games"
+    ]
+  },
+  {
+    "id": 177965,
+    "name": "Rush & Bash",
+    "year": 2015,
+    "image": "https://cf.geekdo-images.com/PwDVDTncbOXOR3-CKZxo0w__original/img/VM2cLz_sf2gt7bh-yS2hnSDHFZY=/0x0/filters:format(jpeg)/pic5101011.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/PwDVDTncbOXOR3-CKZxo0w__thumb/img/vmVmZgnpMsyLvL6YpPXERmhqr5g=/fit-in/200x150/filters:strip_icc()/pic5101011.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 30,
+    "weight": 1.4583,
+    "avg_rating": 6.74943,
+    "bayes_rating": 5.92675,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Modular Board",
+      "Race",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Fantasy",
+      "Humor",
+      "Racing"
+    ],
+    "designers": [
+      "Erik Burigo"
+    ],
+    "artists": [
+      "Guido Favaro"
+    ],
+    "publishers": [
+      "Intrafin Games",
+      "Quick Simple Fun Games",
+      "Red Glove",
+      "SD Games"
+    ]
+  },
+  {
+    "id": 166669,
+    "name": "San Juan (Second Edition)",
+    "year": 2014,
+    "image": "https://cf.geekdo-images.com/Upw8067nG8AmGvOfLYs1aQ__original/img/U26iPvrcmJeEsKeCIDCXbGFqB1U=/0x0/filters:format(jpeg)/pic2305703.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/Upw8067nG8AmGvOfLYs1aQ__thumb/img/3A0PXSduuqW0rejjc1tDegRxEG8=/fit-in/200x150/filters:strip_icc()/pic2305703.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 60,
+    "weight": 2.08,
+    "avg_rating": 7.44252,
+    "bayes_rating": 6.99579,
+    "my_rating": 9.0,
+    "mechanics": [
+      "Action Drafting",
+      "Follow",
+      "Hand Management",
+      "Multi-Use Cards",
+      "Set Collection",
+      "Variable Phase Order"
+    ],
+    "categories": [
+      "Card Game",
+      "City Building",
+      "Economic"
+    ],
+    "designers": [
+      "Andreas Seyfarth"
+    ],
+    "artists": [
+      "Harald Lieske",
+      "Mia Steingr\u00e4ber"
+    ],
+    "publishers": [
+      "alea",
+      "Ravensburger",
+      "Broadway Toys LTD",
+      "Giochi Uniti",
+      "Grow Jogos e Brinquedos",
+      "Lacerta",
+      "M\u00f6bius Games",
+      "Swan Panasia Co., Ltd."
+    ]
+  },
+  {
+    "id": 408180,
+    "name": "Shackleton Base: A Journey to the Moon",
+    "year": 2024,
+    "image": "https://cf.geekdo-images.com/XE4S_nXyHVvld2BOrDmA7Q__original/img/-QciIr30xD5cVmYZVZ_VwuigwSQ=/0x0/filters:format(jpeg)/pic7897060.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/XE4S_nXyHVvld2BOrDmA7Q__thumb/img/DAbZgOJbckBSg9Qq8rpdEhzpq_I=/fit-in/200x150/filters:strip_icc()/pic7897060.jpg",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 120,
+    "weight": 3.7787,
+    "avg_rating": 8.042,
+    "bayes_rating": 6.6587,
+    "my_rating": null,
+    "mechanics": [
+      "Variable Set-up",
+      "Worker Placement, Different Worker Types"
+    ],
+    "categories": [
+      "Science Fiction",
+      "Space Exploration"
+    ],
+    "designers": [
+      "Fabio Lopiano",
+      "Nestore Mangone"
+    ],
+    "artists": [
+      "David Sitbon"
+    ],
+    "publishers": [
+      "Sorry We Are French",
+      "4GAMES",
+      "Arrakis Games",
+      "Ghenos Games",
+      "Giant Roc",
+      "Hachette Boardgames UK",
+      "Happy Baobab",
+      "Pandasaurus Games"
+    ]
+  },
+  {
+    "id": 442522,
+    "name": "Six Sojourns: Deluxe Edition",
+    "year": 2025,
+    "image": "https://cf.geekdo-images.com/rTVbzYbqYE26xipUSiRJSw__original/img/W_7oz60JFY_5RBi38N3r0EQum5k=/0x0/filters:format(jpeg)/pic8828484.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/rTVbzYbqYE26xipUSiRJSw__thumb/img/iC3KlbNi_H1byKi7I1dMP1zgEEQ=/fit-in/200x150/filters:strip_icc()/pic8828484.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 60,
+    "weight": 0.0,
+    "avg_rating": 0.0,
+    "bayes_rating": 0.0,
+    "my_rating": null,
+    "mechanics": [
+      "Area Majority / Influence",
+      "Area Movement",
+      "Open Drafting",
+      "Set Collection"
+    ],
+    "categories": [
+      "Nautical",
+      "Territory Building"
+    ],
+    "designers": [
+      "Ryan Laukat"
+    ],
+    "artists": [
+      "Ryan Laukat"
+    ],
+    "publishers": [
+      "Red Raven Games"
+    ]
+  },
+  {
+    "id": 373106,
+    "name": "Sky Team",
+    "year": 2023,
+    "image": "https://cf.geekdo-images.com/uXMeQzNenHb3zK7Hoa6b2w__original/img/mWOQnkpyYBorh_Y1-0Y2o-ew17k=/0x0/filters:format(jpeg)/pic7398904.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/uXMeQzNenHb3zK7Hoa6b2w__thumb/img/WyPClajMWU9lV5BdCXiZnqdZgmU=/fit-in/200x150/filters:strip_icc()/pic7398904.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 20,
+    "weight": 2.0404,
+    "avg_rating": 8.15361,
+    "bayes_rating": 7.86715,
+    "my_rating": 8.0,
+    "mechanics": [
+      "Communication Limits",
+      "Cooperative Game",
+      "Dice Rolling",
+      "Scenario / Mission / Campaign Game",
+      "Turn Order: Progressive",
+      "Variable Player Powers",
+      "Variable Set-up",
+      "Worker Placement with Dice Workers"
+    ],
+    "categories": [
+      "Aviation / Flight",
+      "Dice"
+    ],
+    "designers": [
+      "Luc R\u00e9mond"
+    ],
+    "artists": [
+      "Eric Hibbeler",
+      "Adrien Rives"
+    ],
+    "publishers": [
+      "Scorpion Masqu\u00e9",
+      "999 Games",
+      "ADC Blackfire Entertainment",
+      "asmodee",
+      "Br\u00e4dspel.se",
+      "Gal\u00e1pagos Jogos",
+      "Games4you",
+      "Geekach LLC",
+      "Hachette Boardgames USA",
+      "Kaissa Chess & Games",
+      "KOSMOS",
+      "Lautapelit.fi",
+      "Lavka Games",
+      "Lucky Duck Games",
+      "Reflexshop",
+      "Regatul Jocurilor",
+      "Salta da Caixa",
+      "Sugorokuya",
+      "Tabletop KZ",
+      "YOKA Games"
+    ]
+  },
+  {
+    "id": 242302,
+    "name": "Space Base",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/MHhQxXVjiaa6C-04nGiIWw__original/img/QyWen0FVOKD_4wf7Na7fdsMTjis=/0x0/filters:format(jpeg)/pic6640638.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/MHhQxXVjiaa6C-04nGiIWw__thumb/img/rgETRyeuYs_wiZ5y-9Zj5H8kyFo=/fit-in/200x150/filters:strip_icc()/pic6640638.jpg",
+    "min_players": 2,
+    "max_players": 5,
+    "playing_time": 60,
+    "weight": 2.1268,
+    "avg_rating": 7.53889,
+    "bayes_rating": 7.31941,
+    "my_rating": null,
+    "mechanics": [
+      "Dice Rolling",
+      "Open Drafting",
+      "Random Production"
+    ],
+    "categories": [
+      "Dice",
+      "Science Fiction",
+      "Space Exploration"
+    ],
+    "designers": [
+      "John D. Clair"
+    ],
+    "artists": [
+      "Chris Walton"
+    ],
+    "publishers": [
+      "Alderac Entertainment Group",
+      "Arclight Games",
+      "Broadway Toys LTD",
+      "Edge Entertainment",
+      "Lavka Games",
+      "Maldito Games"
+    ]
+  },
+  {
+    "id": 372559,
+    "name": "Spots",
+    "year": 2022,
+    "image": "https://cf.geekdo-images.com/TCBUzmSNUYw_yqJAXGWnNQ__original/img/GklWmrbqMips7ref85Pa-X5eNQQ=/0x0/filters:format(png)/pic7592453.png",
+    "thumbnail": "https://cf.geekdo-images.com/TCBUzmSNUYw_yqJAXGWnNQ__thumb/img/BgniZvPRJVenqn7XHd4TQtsSuwI=/fit-in/200x150/filters:strip_icc()/pic7592453.png",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 30,
+    "weight": 1.2951,
+    "avg_rating": 7.14911,
+    "bayes_rating": 6.6759,
+    "my_rating": null,
+    "mechanics": [
+      "Action Drafting",
+      "Contracts",
+      "Dice Rolling",
+      "Increase Value of Unchosen Resources",
+      "Push Your Luck",
+      "Race",
+      "Re-rolling and Locking",
+      "Set Collection",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Animals",
+      "Card Game",
+      "Dice"
+    ],
+    "designers": [
+      "Alex Hague",
+      "Jon Perry",
+      "Justin Vickers"
+    ],
+    "artists": [
+      "John Bond"
+    ],
+    "publishers": [
+      "CMYK",
+      "Choo Choo Games",
+      "CoolPlay",
+      "Devir",
+      "Gal\u00e1pagos Jogos",
+      "Game Harbor",
+      "G\u00e9m Klub Kft.",
+      "IELLO",
+      "Pegasus Spiele",
+      "Rebel Sp. z o.o.",
+      "\u0406\u0433\u0440\u043e\u043c\u0430\u0433"
+    ]
+  },
+  {
+    "id": 268276,
+    "name": "Star Trek Chrono-Trek",
+    "year": 2019,
+    "image": "https://cf.geekdo-images.com/ivlZAglZuCKtOZI0nNuobw__original/img/OZQYC7GEZohxxzSpbzyV9PSgJWI=/0x0/filters:format(png)/pic4753392.png",
+    "thumbnail": "https://cf.geekdo-images.com/ivlZAglZuCKtOZI0nNuobw__thumb/img/UKLpOI6KGzNLMYUR9A2BMQVqyPo=/fit-in/200x150/filters:strip_icc()/pic4753392.png",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 45,
+    "weight": 2.3333,
+    "avg_rating": 6.5245,
+    "bayes_rating": 5.57201,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Modular Board",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game",
+      "Movies / TV / Radio theme",
+      "Science Fiction",
+      "Space Exploration"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [
+      "Kevin Hill (II)"
+    ],
+    "publishers": [
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 246531,
+    "name": "Star Trek Fluxx",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/meYu0ztErdmtiDgbUBYbsQ__original/img/9waEwk7uP8H77hvSePV_mZah2T8=/0x0/filters:format(jpeg)/pic4167392.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/meYu0ztErdmtiDgbUBYbsQ__thumb/img/Y6Yt56veEsMb_UB0oce6ZuiNakY=/fit-in/200x150/filters:strip_icc()/pic4167392.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 40,
+    "weight": 1.1667,
+    "avg_rating": 6.77072,
+    "bayes_rating": 5.66146,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game",
+      "Movies / TV / Radio theme",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [],
+    "publishers": [
+      "Gale Force Nine, LLC",
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 268274,
+    "name": "Star Trek: Deep Space Nine Fluxx",
+    "year": 2019,
+    "image": "https://cf.geekdo-images.com/U-VJ6697laB3QIRKn93q9A__original/img/P5tvPbARIjMJJE4nII0OvlFoLek=/0x0/filters:format(png)/pic4627040.png",
+    "thumbnail": "https://cf.geekdo-images.com/U-VJ6697laB3QIRKn93q9A__thumb/img/H07ingBmbXwKVIbjRv-ZrwH2zBY=/fit-in/200x150/filters:strip_icc()/pic4627040.png",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 40,
+    "weight": 1.25,
+    "avg_rating": 6.9723,
+    "bayes_rating": 5.60835,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game",
+      "Movies / TV / Radio theme",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [
+      "Kevin Hill (II)"
+    ],
+    "publishers": [
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 246530,
+    "name": "Star Trek: The Next Generation Fluxx",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/MT1sTlbb6mQYHr4-E5sOxQ__original/img/tVGQE7v0TALZvu48Z2U2vmYK_As=/0x0/filters:format(jpeg)/pic4167395.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/MT1sTlbb6mQYHr4-E5sOxQ__thumb/img/__T9ZagPhfguqmG-juAw0Fehueg=/fit-in/200x150/filters:strip_icc()/pic4167395.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 30,
+    "weight": 1.5,
+    "avg_rating": 6.80952,
+    "bayes_rating": 5.68146,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [],
+    "publishers": [
+      "Gale Force Nine, LLC",
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 318392,
+    "name": "Star Trek: Voyager Fluxx",
+    "year": 2020,
+    "image": "https://cf.geekdo-images.com/hqHQBuLvvXx5RyLlIEktzA__original/img/WgJB1KI6lYJjqIKR8l1xAY3a2L8=/0x0/filters:format(jpeg)/pic5630085.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/hqHQBuLvvXx5RyLlIEktzA__thumb/img/La9WUtBeVGhG0FwyIxOzRpRbjSw=/fit-in/200x150/filters:strip_icc()/pic5630085.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 40,
+    "weight": 1.5,
+    "avg_rating": 7.33819,
+    "bayes_rating": 5.56795,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game",
+      "Movies / TV / Radio theme",
+      "Science Fiction"
+    ],
+    "designers": [
+      "Andrew Looney"
+    ],
+    "artists": [
+      "Kevin Hill (II)"
+    ],
+    "publishers": [
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 364393,
+    "name": "Star Tycoon",
+    "year": 2024,
+    "image": "https://cf.geekdo-images.com/3hR8thydzsjKjX8ORIZdxg__original/img/eBJQzruSXRnReUCYVS13fE5qlVw=/0x0/filters:format(jpeg)/pic7998500.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/3hR8thydzsjKjX8ORIZdxg__thumb/img/8E2lzUJwWtbF-dn1URwmMf-W5xw=/fit-in/200x150/filters:strip_icc()/pic7998500.jpg",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 100,
+    "weight": 2.8333,
+    "avg_rating": 7.40016,
+    "bayes_rating": 5.6964,
+    "my_rating": 8.0,
+    "mechanics": [
+      "Commodity Speculation",
+      "End Game Bonuses",
+      "Events",
+      "Income",
+      "Market",
+      "Set Collection",
+      "Turn Order: Progressive",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Economic",
+      "Industry / Manufacturing",
+      "Science Fiction",
+      "Space Exploration"
+    ],
+    "designers": [
+      "Peter Sanderson",
+      "Alkira Sanderson"
+    ],
+    "artists": [
+      "Michael Dickinson"
+    ],
+    "publishers": [
+      "Warp Core Games",
+      "Good Games Publishing"
+    ]
+  },
+  {
+    "id": 103885,
+    "name": "Star Wars: X-Wing Miniatures Game",
+    "year": 2012,
+    "image": "https://cf.geekdo-images.com/yNqgVxaqoZepir7Hzkfe-Q__original/img/H6rYWOhYjT_PXTrvHKyX6FEt-vw=/0x0/filters:format(jpeg)/pic1603292.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/yNqgVxaqoZepir7Hzkfe-Q__thumb/img/idalbLcUm2q9yxVZzRDkLEax5AE=/fit-in/200x150/filters:strip_icc()/pic1603292.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 45,
+    "weight": 2.4957,
+    "avg_rating": 7.62624,
+    "bayes_rating": 7.3701,
+    "my_rating": null,
+    "mechanics": [
+      "Action Queue",
+      "Critical Hits and Failures",
+      "Dice Rolling",
+      "Line of Sight",
+      "Movement Template",
+      "Player Elimination",
+      "Simulation",
+      "Simultaneous Action Selection",
+      "Variable Player Powers"
+    ],
+    "categories": [
+      "Aviation / Flight",
+      "Bluffing",
+      "Collectible Components",
+      "Miniatures",
+      "Movies / TV / Radio theme",
+      "Science Fiction",
+      "Wargame"
+    ],
+    "designers": [
+      "Jay Little"
+    ],
+    "artists": [
+      "Matt Allsopp",
+      "Sacha Angel Diener",
+      "Jon Bosco",
+      "Matt Bradbury",
+      "Blake Henriksen",
+      "Jason Juta",
+      "Lucasfilm Ltd.",
+      "Henning Ludvigsen",
+      "Jorge Maese",
+      "Dallas Mehlhoff",
+      "Scott Murphy",
+      "David Auden Nash",
+      "Vlad Ricean",
+      "Matthew Starbuck",
+      "Nicholas Stohlman",
+      "Angela Sung"
+    ],
+    "publishers": [
+      "Fantasy Flight Games",
+      "cutia.ro",
+      "Edge Entertainment",
+      "Galakta",
+      "Gal\u00e1pagos Jogos",
+      "Giochi Uniti",
+      "Heidelberger Spieleverlag",
+      "Hobby World",
+      "Korea Boardgames",
+      "Martinex",
+      "Peliko Oy",
+      "Stratelibri",
+      "Wargames Club Publishing"
+    ]
+  },
+  {
+    "id": 8804,
+    "name": "Stoner Fluxx",
+    "year": 2003,
+    "image": "https://cf.geekdo-images.com/Lc1T6Hrm4uKxJP9lbZ9N3A__original/img/e70uaJDHW9GzGYTaD6AVNxch4mw=/0x0/filters:format(jpeg)/pic605022.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/Lc1T6Hrm4uKxJP9lbZ9N3A__thumb/img/scOI6yT1fy8UCh3XOcbOrtKRMvk=/fit-in/200x150/filters:strip_icc()/pic605022.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 15,
+    "weight": 1.3182,
+    "avg_rating": 5.70532,
+    "bayes_rating": 5.52612,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Set Collection"
+    ],
+    "categories": [
+      "Card Game",
+      "Humor"
+    ],
+    "designers": [
+      "Andrew Looney",
+      "Kristin Looney"
+    ],
+    "artists": [
+      "Melinda Rainsberger"
+    ],
+    "publishers": [
+      "Fully Baked Ideas",
+      "Looney Labs"
+    ]
+  },
+  {
+    "id": 249816,
+    "name": "Taco vs Burrito",
+    "year": 2018,
+    "image": "https://cf.geekdo-images.com/uzup0Vf48l1O-xrTrtZC-g__original/img/TSxHDMqIYKEh2cg8G_neCXGlHfw=/0x0/filters:format(jpeg)/pic8386226.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/uzup0Vf48l1O-xrTrtZC-g__thumb/img/u3ktcctcMKBghg5IjGgalnoJQmY=/fit-in/200x150/filters:strip_icc()/pic8386226.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 45,
+    "weight": 1.0,
+    "avg_rating": 5.11874,
+    "bayes_rating": 5.39356,
+    "my_rating": null,
+    "mechanics": [
+      "Take That"
+    ],
+    "categories": [
+      "Card Game"
+    ],
+    "designers": [
+      "Alex Butler"
+    ],
+    "artists": [
+      "Anonymous Typing Monkey",
+      "Leslie Pierson",
+      "Kersly Potter"
+    ],
+    "publishers": [
+      "Hot Taco Inc"
+    ]
+  },
+  {
+    "id": 118048,
+    "name": "Targi",
+    "year": 2012,
+    "image": "https://cf.geekdo-images.com/wHg4fOf48cs1kw1PDOk1tQ__original/img/St4ABQhpauYiq4Mt6-f38JtLOjM=/0x0/filters:format(jpeg)/pic3958793.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/wHg4fOf48cs1kw1PDOk1tQ__thumb/img/6l-jqYlfECK1SVSsUs7FXUheKzQ=/fit-in/200x150/filters:strip_icc()/pic3958793.jpg",
+    "min_players": 2,
+    "max_players": 2,
+    "playing_time": 60,
+    "weight": 2.3435,
+    "avg_rating": 7.59653,
+    "bayes_rating": 7.41012,
+    "my_rating": null,
+    "mechanics": [
+      "End Game Bonuses",
+      "Modular Board",
+      "Open Drafting",
+      "Set Collection",
+      "Square Grid",
+      "Turn Order: Progressive",
+      "Worker Placement"
+    ],
+    "categories": [
+      "Arabian",
+      "Card Game"
+    ],
+    "designers": [
+      "Andreas Steiger"
+    ],
+    "artists": [
+      "Taira Akitsu",
+      "Franz Vohwinkel"
+    ],
+    "publishers": [
+      "KOSMOS",
+      "999 Games",
+      "Broadway Toys LTD",
+      "Devir",
+      "Filosofia \u00c9ditions",
+      "Galakta",
+      "Giochi Uniti",
+      "Group SNE",
+      "IELLO",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "Stupor Mundi",
+      "White Goblin Games",
+      "Z-Man Games"
+    ]
+  },
+  {
+    "id": 167791,
+    "name": "Terraforming Mars",
+    "year": 2016,
+    "image": "https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__original/img/thIqWDnH9utKuoKVEUqveDixprI=/0x0/filters:format(jpeg)/pic3536616.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__thumb/img/BTxqxgYay5tHJfVoJ2NF5g43_gA=/fit-in/200x150/filters:strip_icc()/pic3536616.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 120,
+    "weight": 3.2669,
+    "avg_rating": 8.34656,
+    "bayes_rating": 8.1974,
+    "my_rating": 8.0,
+    "mechanics": [
+      "Closed Drafting",
+      "Contracts",
+      "End Game Bonuses",
+      "Hand Management",
+      "Hexagon Grid",
+      "Income",
+      "Solo / Solitaire Game",
+      "Tags",
+      "Take That",
+      "Tile Placement",
+      "Turn Order: Progressive",
+      "Variable Player Powers",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Civilization",
+      "Economic",
+      "Environmental",
+      "Industry / Manufacturing",
+      "Science Fiction",
+      "Space Exploration",
+      "Territory Building"
+    ],
+    "designers": [
+      "Jacob Fryxelius"
+    ],
+    "artists": [
+      "Isaac Fryxelius",
+      "Daniel Fryxelius"
+    ],
+    "publishers": [
+      "FryxGames",
+      "Arclight Games",
+      "Br\u00e4dspel.se",
+      "Fantasmagoria",
+      "Ghenos Games",
+      "Green Elephant Games",
+      "Intrafin Games",
+      "Kaissa Chess & Games",
+      "Kilogames",
+      "Korea Boardgames",
+      "Lautapelit.fi",
+      "Lavka Games",
+      "Lex Games",
+      "Maldito Games",
+      "MeepleBR",
+      "MINDOK",
+      "MIPL",
+      "MYBG Co., Ltd.",
+      "NeoTroy Games",
+      "Rebel Sp. z o.o.",
+      "Reflexshop",
+      "Schwerkraft-Verlag",
+      "Siam Board Games",
+      "Stronghold Games",
+      "SuperHeated Neurons",
+      "Surfin' Meeple China"
+    ]
+  },
+  {
+    "id": 14996,
+    "name": "Ticket to Ride: Europe",
+    "year": 2005,
+    "image": "https://cf.geekdo-images.com/0K1AOciqlMVUWFPLTJSiww__original/img/O37sCRSJLq4S8EpCxFDNVsNBuxE=/0x0/filters:format(jpeg)/pic66668.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/0K1AOciqlMVUWFPLTJSiww__thumb/img/RDvu2FvsYVVH8icp1VsilUlqUGI=/fit-in/200x150/filters:strip_icc()/pic66668.jpg",
+    "min_players": 2,
+    "max_players": 5,
+    "playing_time": 60,
+    "weight": 1.917,
+    "avg_rating": 7.52672,
+    "bayes_rating": 7.4003,
+    "my_rating": 5.0,
+    "mechanics": [
+      "Connections",
+      "Contracts",
+      "End Game Bonuses",
+      "Hand Management",
+      "Network and Route Building",
+      "Open Drafting",
+      "Push Your Luck",
+      "Set Collection"
+    ],
+    "categories": [
+      "Trains"
+    ],
+    "designers": [
+      "Alan R. Moon"
+    ],
+    "artists": [
+      "Cyrille Daujean",
+      "Julien Delval"
+    ],
+    "publishers": [
+      "Days of Wonder",
+      "ADC Blackfire Entertainment",
+      "Asterion Press",
+      "Boardgame Space",
+      "Compaya.hu: Gamer Caf\u00e9 Kft.",
+      "Edge Entertainment",
+      "Enigma (Bergsala Enigma)",
+      "Gal\u00e1pagos Jogos",
+      "G\u00e9m Klub Kft.",
+      "GoKids \u73a9\u6a02\u5c0f\u5b50",
+      "HaKubia",
+      "Happy Baobab",
+      "Hobby Japan",
+      "Hobby World",
+      "KADABRA",
+      "Kaissa Chess & Games",
+      "KDS Distribuzione",
+      "Korea Boardgames",
+      "Lautapelit.fi",
+      "Lord of Boards",
+      "Ponva d.o.o.",
+      "Rebel Sp. z o.o.",
+      "Runadrake",
+      "Smart Ltd"
+    ]
+  },
+  {
+    "id": 205125,
+    "name": "Ticket to Ride: First Journey (U.S.)",
+    "year": 2016,
+    "image": "https://cf.geekdo-images.com/bGvfrC4pLxR-xkK_nN31DA__original/img/YyJlEee0IXZKQKeDD9UxPwQgRk8=/0x0/filters:format(jpeg)/pic3116341.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/bGvfrC4pLxR-xkK_nN31DA__thumb/img/oHlL9FSE6aJxTGwxAY7hVYqz7Ew=/fit-in/200x150/filters:strip_icc()/pic3116341.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 30,
+    "weight": 1.4167,
+    "avg_rating": 6.85179,
+    "bayes_rating": 6.18541,
+    "my_rating": null,
+    "mechanics": [
+      "Hand Management",
+      "Network and Route Building",
+      "Set Collection"
+    ],
+    "categories": [
+      "Children's Game",
+      "Trains"
+    ],
+    "designers": [
+      "Alan R. Moon"
+    ],
+    "artists": [
+      "Cyrille Daujean",
+      "Jean-Baptiste Reynaud"
+    ],
+    "publishers": [
+      "Days of Wonder"
+    ]
+  },
+  {
+    "id": 329500,
+    "name": "Unconscious Mind",
+    "year": 2024,
+    "image": "https://cf.geekdo-images.com/ufkAbhulnKJ7uDpi09TXOQ__original/img/hhBc0bcNj9U3t-4trByrjrO8-ro=/0x0/filters:format(jpeg)/pic7127448.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/ufkAbhulnKJ7uDpi09TXOQ__thumb/img/XBP7p0D1bkzDXkoOuXSiavW26Ig=/fit-in/200x150/filters:strip_icc()/pic7127448.jpg",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 120,
+    "weight": 4.0019,
+    "avg_rating": 7.93036,
+    "bayes_rating": 7.1138,
+    "my_rating": 9.0,
+    "mechanics": [
+      "Contracts",
+      "End Game Bonuses",
+      "Layering",
+      "Melding and Splaying",
+      "Open Drafting",
+      "Programmed Movement",
+      "Rondel",
+      "Set Collection",
+      "Solo / Solitaire Game",
+      "Tags",
+      "Variable Set-up",
+      "Worker Placement"
+    ],
+    "categories": [
+      "Medical",
+      "Post-Napoleonic"
+    ],
+    "designers": [
+      "Laskas",
+      "Jonny Pac",
+      "Yoma",
+      "Antonio Zax"
+    ],
+    "artists": [
+      "Andrew Bosley",
+      "Vincent Dutrait"
+    ],
+    "publishers": [
+      "Fantasia Games",
+      "Frosted Games",
+      "GaGa Games",
+      "G\u00e9m Klub Kft.",
+      "Keep Exploring Games",
+      "Lucky Duck Games",
+      "Maldito Games",
+      "Mosaico Jogos",
+      "Regatul Jocurilor",
+      "TLAMA games"
+    ]
+  },
+  {
+    "id": 290484,
+    "name": "Unsettled",
+    "year": 2021,
+    "image": "https://cf.geekdo-images.com/ldAjb0-puj6iiMZO0xuJtw__original/img/kkWT405tYN-PpRDL5oLjJVok19M=/0x0/filters:format(jpeg)/pic5106065.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/ldAjb0-puj6iiMZO0xuJtw__thumb/img/KX2h7qhPJLV94t8vBkHUO1CjpOE=/fit-in/200x150/filters:strip_icc()/pic5106065.jpg",
+    "min_players": 2,
+    "max_players": 4,
+    "playing_time": 90,
+    "weight": 3.272,
+    "avg_rating": 8.08542,
+    "bayes_rating": 7.00538,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Action Retrieval",
+      "Cooperative Game",
+      "Modular Board",
+      "Scenario / Mission / Campaign Game",
+      "Tech Trees / Tech Tracks",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Game System",
+      "Science Fiction",
+      "Space Exploration"
+    ],
+    "designers": [
+      "Tom Mattson",
+      "Marc Neidlinger"
+    ],
+    "artists": [
+      "Bartek Fedyczak",
+      "Krista Zimmerman"
+    ],
+    "publishers": [
+      "Orange Nebula, LLC",
+      "Choo Choo Games",
+      "Lucky Duck Games"
+    ]
+  },
+  {
+    "id": 262543,
+    "name": "Wavelength",
+    "year": 2019,
+    "image": "https://cf.geekdo-images.com/z4fbPdmJg_5yphJEvql4ZA__original/img/bP1gM8RC-o5iz20_WazBaBNDHnU=/0x0/filters:format(png)/pic4552862.png",
+    "thumbnail": "https://cf.geekdo-images.com/z4fbPdmJg_5yphJEvql4ZA__thumb/img/bxLuHVLF-Y06jWRSKA-tuQ3YYcE=/fit-in/200x150/filters:strip_icc()/pic4552862.png",
+    "min_players": 2,
+    "max_players": 12,
+    "playing_time": 45,
+    "weight": 1.1077,
+    "avg_rating": 7.22234,
+    "bayes_rating": 6.98415,
+    "my_rating": 7.0,
+    "mechanics": [
+      "Race",
+      "Targeted Clues",
+      "Team-Based Game"
+    ],
+    "categories": [
+      "Party Game"
+    ],
+    "designers": [
+      "Alex Hague",
+      "Justin Vickers",
+      "Wolfgang Warsch"
+    ],
+    "artists": [
+      "Sofie Hannibal",
+      "Nan Na Hvass"
+    ],
+    "publishers": [
+      "Palm Court",
+      "Arrakis Games",
+      "CMYK",
+      "GaGa Games",
+      "Gal\u00e1pagos Jogos",
+      "G\u00e9m Klub Kft.",
+      "GoKids \u73a9\u6a02\u5c0f\u5b50",
+      "Hid Konem (\u0425\u0456\u0434 \u041a\u043e\u043d\u0435\u043c)",
+      "Hobby Japan",
+      "Korea Boardgames",
+      "Lord of Boards",
+      "Rebel Sp. z o.o.",
+      "Schmidt Spiele",
+      "Zito! \u038f\u03c1\u03b1 \u03b3\u03b9\u03b1 \u03c0\u03b1\u03b9\u03c7\u03bd\u03af\u03b4\u03b9"
+    ]
+  },
+  {
+    "id": 266192,
+    "name": "Wingspan",
+    "year": 2019,
+    "image": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__original/img/cI782Zis9cT66j2MjSHKJGnFPNw=/0x0/filters:format(jpeg)/pic4458123.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__thumb/img/VNToqgS2-pOGU6MuvIkMPKn_y-s=/fit-in/200x150/filters:strip_icc()/pic4458123.jpg",
+    "min_players": 1,
+    "max_players": 5,
+    "playing_time": 70,
+    "weight": 2.4732,
+    "avg_rating": 8.01366,
+    "bayes_rating": 7.86207,
+    "my_rating": 10.0,
+    "mechanics": [
+      "Action Queue",
+      "Dice Rolling",
+      "End Game Bonuses",
+      "Hand Management",
+      "Once-Per-Game Abilities",
+      "Open Drafting",
+      "Set Collection",
+      "Solo / Solitaire Game",
+      "Turn Order: Progressive"
+    ],
+    "categories": [
+      "Animals",
+      "Card Game",
+      "Educational"
+    ],
+    "designers": [
+      "Elizabeth Hargrave"
+    ],
+    "artists": [
+      "Ana Maria Martinez Jaramillo",
+      "Natalia Rojas",
+      "Elizabeth Hargrave",
+      "Greg May",
+      "Beth Sobel"
+    ],
+    "publishers": [
+      "Stonemaier Games",
+      "999 Games",
+      "Angry Lion Games",
+      "Arclight Games",
+      "asmodee",
+      "Automa Factory",
+      "Bluebird Games",
+      "Brain Games",
+      "Delta Vision Publishing",
+      "Divercentro",
+      "Feuerland Spiele",
+      "Ghenos Games",
+      "Green Elephant Games",
+      "Grok Games",
+      "Kaissa Chess & Games",
+      "Korea Boardgames",
+      "Lautapelit.fi",
+      "Lavka Games",
+      "Ludofy Creative",
+      "Maldito Games",
+      "Matagot",
+      "MINDOK",
+      "MIPL",
+      "NeoTroy Games",
+      "Rebel Sp. z o.o.",
+      "Regatul Jocurilor",
+      "Siam Board Games",
+      "Surfin' Meeple China",
+      "\u0406\u0433\u0440\u043e\u043c\u0430\u0433"
+    ]
+  },
+  {
+    "id": 2471,
+    "name": "Zombies!!!",
+    "year": 2001,
+    "image": "https://cf.geekdo-images.com/MLkRHrISvHx8plwBsCk9iw__original/img/tqe-xEnAUGUT3PVymvhgRVkqbv4=/0x0/filters:format(jpeg)/pic2525171.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/MLkRHrISvHx8plwBsCk9iw__thumb/img/AW6pHylkGBmfTSdI15DqRJ0JH6w=/fit-in/200x150/filters:strip_icc()/pic2525171.jpg",
+    "min_players": 2,
+    "max_players": 6,
+    "playing_time": 90,
+    "weight": 1.612,
+    "avg_rating": 5.79195,
+    "bayes_rating": 5.60803,
+    "my_rating": null,
+    "mechanics": [
+      "Cooperative Game",
+      "Dice Rolling",
+      "Grid Movement",
+      "Hand Management",
+      "Modular Board",
+      "Roll / Spin and Move"
+    ],
+    "categories": [
+      "Exploration",
+      "Fighting",
+      "Horror",
+      "Miniatures",
+      "Movies / TV / Radio theme",
+      "Zombies"
+    ],
+    "designers": [
+      "Todd Breitenstein",
+      "Kerry Breitenstein"
+    ],
+    "artists": [
+      "Dave Aikins",
+      "Kurt Miller"
+    ],
+    "publishers": [
+      "Twilight Creations, Inc.",
+      "Edge Entertainment",
+      "Journeyman Press",
+      "Pegasus Spiele",
+      "Raven Distribution",
+      "ToyCo"
+    ]
+  }
+]

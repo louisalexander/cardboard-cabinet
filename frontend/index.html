@@ -1,1 +1,98 @@
-<!-- index.html (see full version in previous assistant message) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Board Game Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>🎲 My Board Game Library</h1>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search by name..." />
+      <button id="refresh">Refresh from BGG</button>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="panel">
+      <h2>Mechanics</h2>
+      <div id="mechanics-cloud" class="tag-cloud"></div>
+
+      <h2>Filters</h2>
+      <div class="filters">
+        <label>Categories</label>
+        <select id="categories" multiple></select>
+
+        <label>Designers</label>
+        <select id="designers" multiple></select>
+
+        <label>Artists</label>
+        <select id="artists" multiple></select>
+
+        <label>Publishers</label>
+        <select id="publishers" multiple></select>
+
+        <div class="row">
+          <div>
+            <label>Year Min</label>
+            <input id="year_min" type="number" placeholder="e.g. 2000" />
+          </div>
+          <div>
+            <label>Year Max</label>
+            <input id="year_max" type="number" placeholder="e.g. 2025" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Players (exact)</label>
+            <input id="players" type="number" placeholder="e.g. 4" />
+          </div>
+          <div>
+            <label>Time ≤ (min)</label>
+            <input id="time_max" type="number" placeholder="e.g. 90" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Weight min</label>
+            <input id="weight_min" type="number" step="0.01" placeholder="e.g. 2.0" />
+          </div>
+          <div>
+            <label>Weight max</label>
+            <input id="weight_max" type="number" step="0.01" placeholder="e.g. 3.5" />
+          </div>
+        </div>
+
+        <div>
+          <label>Avg rating ≥</label>
+          <input id="rating_min" type="number" step="0.1" placeholder="e.g. 7.0" />
+        </div>
+
+        <div class="actions">
+          <button id="apply">Apply Filters</button>
+          <button id="clear">Clear</button>
+        </div>
+
+        <h3>Summary</h3>
+        <ul id="summary"></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <div id="stats"></div>
+      <div id="results" class="cards"></div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small>Powered by BGG XML API2 • Built for Louis</small>
+  </footer>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
