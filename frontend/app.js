@@ -130,16 +130,23 @@ const state = {
       el.innerHTML = `
         <img src="${g.thumbnail || g.image || ""}" alt="">
         <div class="body">
-          <div class="name">${g.name}</div>
+          <div class="name clickable" data-game-id="${g.id}">${g.name}</div>
           <div class="meta">
             ${g.year || "—"} • ${g.min_players || "?"}–${g.max_players || "?"} players • ${g.playing_time || "?"} min • weight ${g.weight?.toFixed ? g.weight.toFixed(2) : (g.weight ?? "—")}
           </div>
           <div class="meta">Rating: ${g.avg_rating?.toFixed ? g.avg_rating.toFixed(2) : (g.avg_rating ?? "—")} (Bayes: ${g.bayes_rating?.toFixed ? g.bayes_rating.toFixed(2) : (g.bayes_rating ?? "—")}) • My: ${g.my_rating ?? "—"}</div>
           <div class="badges">
-            ${g.mechanics.slice(0,3).map(m=>`<span class="badge">${m}</span>`).join("")}
+            ${g.mechanics.slice(0,3).map(m=>`<span class="badge clickable" data-type="mechanics" data-value="${m}">${m}</span>`).join("")}
           </div>
         </div>
       `;
+      
+      // Add click event listeners
+      el.querySelector('.name').addEventListener('click', () => openBGGPage(g.id, g.name));
+      el.querySelectorAll('.badge').forEach(badge => {
+        badge.addEventListener('click', () => filterByValue(badge.dataset.type, badge.dataset.value));
+      });
+      
       container.appendChild(el);
     }
   }
@@ -198,7 +205,7 @@ const state = {
       const row = document.createElement("tr");
       row.innerHTML = `
         <td><img src="${g.thumbnail || g.image || ""}" alt="" class="list-thumbnail"></td>
-        <td class="game-name">${g.name}</td>
+        <td class="game-name clickable" data-game-id="${g.id}">${g.name}</td>
         <td>${g.year || "—"}</td>
         <td>${g.min_players || "?"}–${g.max_players || "?"}</td>
         <td>${g.playing_time || "?"}</td>
@@ -206,9 +213,16 @@ const state = {
         <td>${g.avg_rating?.toFixed ? g.avg_rating.toFixed(2) : (g.avg_rating ?? "—")}</td>
         <td>${g.bayes_rating?.toFixed ? g.bayes_rating.toFixed(2) : (g.bayes_rating ?? "—")}</td>
         <td>${g.my_rating ?? "—"}</td>
-        <td>${g.mechanics?.join(", ") || "—"}</td>
-        <td>${g.categories?.join(", ") || "—"}</td>
+        <td>${g.mechanics?.map(m => `<span class="badge clickable" data-type="mechanics" data-value="${m}">${m}</span>`).join(" ") || "—"}</td>
+        <td>${g.categories?.map(c => `<span class="badge clickable" data-type="categories" data-value="${c}">${c}</span>`).join(" ") || "—"}</td>
       `;
+      
+      // Add click event listeners
+      row.querySelector('.game-name').addEventListener('click', () => openBGGPage(g.id, g.name));
+      row.querySelectorAll('.badge').forEach(badge => {
+        badge.addEventListener('click', () => filterByValue(badge.dataset.type, badge.dataset.value));
+      });
+      
       tbody.appendChild(row);
     }
     table.appendChild(tbody);
@@ -256,6 +270,43 @@ const state = {
     }
     
     // Re-render the list view with new sorting
+    applyFilters();
+  }
+  
+  function openBGGPage(gameId, gameName) {
+    const url = `https://boardgamegeek.com/boardgame/${gameId}`;
+    window.open(url, '_blank');
+  }
+  
+  function filterByValue(type, value) {
+    if (type === 'mechanics') {
+      // Toggle mechanics selection
+      if (state.selectedMechanics.has(value)) {
+        state.selectedMechanics.delete(value);
+      } else {
+        state.selectedMechanics.add(value);
+      }
+      // Update mechanics cloud visual state
+      document.querySelectorAll('.tag').forEach(tag => {
+        if (tag.querySelector('span').textContent === value) {
+          tag.classList.toggle('active', state.selectedMechanics.has(value));
+        }
+      });
+    } else if (type === 'categories') {
+      // Set categories filter
+      const categoriesSelect = qs('categories');
+      if (categoriesSelect) {
+        // Find and select the category option
+        Array.from(categoriesSelect.options).forEach(option => {
+          if (option.value === value) {
+            option.selected = true;
+          }
+        });
+      }
+    }
+    
+    // Apply the new filters
+    updateSummary();
     applyFilters();
   }
   

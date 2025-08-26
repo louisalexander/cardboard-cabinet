@@ -110,6 +110,31 @@
     color: var(--text);
   }
   
+  /* Clickable elements */
+  .clickable {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .clickable:hover {
+    color: var(--accent);
+  }
+  
+  .game-name.clickable:hover {
+    text-decoration: underline;
+  }
+  
+  .badge.clickable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .badge.clickable:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+  
   /* Sortable column styles */
   .sortable {
     cursor: pointer;
