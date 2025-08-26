@@ -9,7 +9,7 @@ import httpx
 
 from .models import Game, Facets, RefreshResponse
 from .storage import load_cache, save_cache
-from .bgg import fetch_collection_ids, fetch_things
+from .bgg import fetch_collection_ids, fetch_things, fetch_things_parallel
 from .util import bucketize_minutes
 
 load_dotenv()
@@ -29,6 +29,11 @@ app.mount("/static", StaticFiles(directory="frontend"), name="static")
 async def read_index():
     with open("frontend/index.html", "r") as f:
         return Response(content=f.read(), media_type="text/html")
+
+@app.get("/api/test")
+async def test_endpoint():
+    """Simple test endpoint to verify the API is working."""
+    return {"status": "ok", "message": "API is working"}
 
 def make_facets(games: List[Game]) -> Facets:
     def add_count(d: Dict[str,int], key: Optional[str]):
@@ -172,14 +177,36 @@ async def refresh(username: Optional[str] = None):
         return Response(status_code=400, content="BGG_USERNAME not configured and no username provided")
 
     try:
-        async with httpx.AsyncClient() as client:
+        # Use connection pooling and keep-alive for better performance
+        limits = httpx.Limits(max_keepalive_connections=20, max_connections=20)
+        timeout = httpx.Timeout(60.0, connect=10.0)
+        
+        async with httpx.AsyncClient(limits=limits, timeout=timeout) as client:
             print(f"Fetching collection for user: {user}")
             ids, my_ratings = await fetch_collection_ids(client, user)
             print(f"Found {len(ids)} games in collection")
-            games = await fetch_things(client, ids, my_ratings)
+            
+            # Use parallel fetching for much faster performance
+            if len(ids) > 25:  # Use parallel for larger collections
+                print("Using parallel fetching for faster performance...")
+                games = await fetch_things_parallel(client, ids, my_ratings)
+            else:
+                print("Using sequential fetching for smaller collection...")
+                games = await fetch_things(client, ids, my_ratings)
+                
             print(f"Successfully hydrated {len(games)} games")
+            
+            # Debug: Check if games have content
+            if games:
+                print(f"First game: {games[0].name if games[0] else 'None'}")
+                print(f"Total games fetched: {len(games)}")
+            else:
+                print("WARNING: No games were fetched!")
+                
         save_cache(games)
         return RefreshResponse(username=user, total_in_collection=len(ids), total_hydrated=len(games), cached=True)
     except Exception as e:
         print(f"Error in refresh: {e}")
+        import traceback
+        traceback.print_exc()
         return Response(status_code=500, content=f"Error refreshing collection: {str(e)}")

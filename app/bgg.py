@@ -1,11 +1,14 @@
 import httpx
 import xml.etree.ElementTree as ET
+import asyncio
 from typing import List, Dict, Tuple, Optional
 from .models import Game
 from .util import rate_limit_sleep
 
 BASE = "https://boardgamegeek.com/xmlapi2"
-CHUNK_SIZE = 10
+CHUNK_SIZE = 20  # Optimized size for BGG API reliability
+MAX_CONCURRENT_CHUNKS = 5  # Process multiple chunks simultaneously
+REDUCED_DELAY = 0.3  # Reduced delay for faster processing
 
 async def fetch_collection_ids(client: httpx.AsyncClient, username: str) -> Tuple[List[int], Optional[float]]:
     """
@@ -17,27 +20,44 @@ async def fetch_collection_ids(client: httpx.AsyncClient, username: str) -> Tupl
     ids: List[int] = []
 
     while True:
-        r = await client.get(f"{BASE}/collection", params=params, timeout=60)
-        if r.status_code == 202:
-            rate_limit_sleep(1.5)
-            continue
-        r.raise_for_status()
-        root = ET.fromstring(r.text)
-        for item in root.findall("item"):
-            gid = int(item.attrib.get("objectid"))
-            ids.append(gid)
-            stats = item.find("stats")
-            my = None
-            if stats is not None:
-                rating = stats.find("rating")
-                if rating is not None:
-                    val = rating.attrib.get("value")
-                    try:
-                        my = float(val) if val not in (None, "N/A") else None
-                    except:
-                        my = None
-            ratings[gid] = my
-        break
+        try:
+            r = await client.get(f"{BASE}/collection", params=params, timeout=60)
+            
+            if r.status_code == 202:
+                await asyncio.sleep(1.0)  # Fixed: use async sleep
+                continue
+                
+            r.raise_for_status()
+            
+            root = ET.fromstring(r.text)
+            
+            # BGG can return either <collection> or <items> as the root
+            items = root.findall("item")
+            if not items:
+                # Try alternative structure
+                items = root.findall(".//item")
+            
+            for item in items:
+                gid = int(item.attrib.get("objectid"))
+                ids.append(gid)
+                stats = item.find("stats")
+                my = None
+                if stats is not None:
+                    rating = stats.find("rating")
+                    if rating is not None:
+                        val = rating.attrib.get("value")
+                        try:
+                            my = float(val) if val not in (None, "N/A") else None
+                        except:
+                            my = None
+                ratings[gid] = my
+            break
+            
+        except Exception as e:
+            print(f"Error in fetch_collection_ids: {e}")
+            import traceback
+            traceback.print_exc()
+            raise
 
     return ids, ratings  # ratings are per game in collection
 
@@ -111,18 +131,68 @@ def parse_thing_xml(x: str, my_ratings: Dict[int, Optional[float]]) -> List[Game
         games.append(g)
     return games
 
+async def fetch_chunk(client: httpx.AsyncClient, chunk: List[int], my_ratings: Dict[int, Optional[float]]) -> List[Game]:
+    """Fetch a single chunk of games with error handling."""
+    params = {"id": ",".join(map(str, chunk)), "stats": 1, "type": "boardgame"}
+    try:
+        r = await client.get(f"{BASE}/thing", params=params, timeout=60)
+        r.raise_for_status()
+        games = parse_thing_xml(r.text, my_ratings)
+        return games
+    except Exception as e:
+        print(f"Error fetching chunk {chunk}: {e}")
+        return []  # Return empty list instead of failing
+
+async def fetch_things_parallel(client: httpx.AsyncClient, ids: List[int], my_ratings: Dict[int, Optional[float]]) -> List[Game]:
+    """Fetch games in parallel chunks for much faster performance."""
+    if not ids:
+        return []
+    
+    # Create chunks
+    chunks = [ids[i:i + CHUNK_SIZE] for i in range(0, len(ids), CHUNK_SIZE)]
+    print(f"Processing {len(chunks)} chunks of up to {CHUNK_SIZE} games each")
+    
+    # Process chunks in parallel with controlled concurrency
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT_CHUNKS)
+    
+    async def fetch_chunk_with_semaphore(chunk: List[int]) -> List[Game]:
+        async with semaphore:
+            games = await fetch_chunk(client, chunk, my_ratings)
+            # Small delay to be respectful to BGG
+            await asyncio.sleep(REDUCED_DELAY)
+            return games
+    
+    # Fetch all chunks concurrently
+    tasks = [fetch_chunk_with_semaphore(chunk) for chunk in chunks]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+    
+    # Combine results and handle any exceptions
+    all_games = []
+    for result in results:
+        if isinstance(result, Exception):
+            print(f"Chunk failed with exception: {result}")
+        else:
+            all_games.extend(result)
+    
+    return all_games
+
 async def fetch_things(client: httpx.AsyncClient, ids: List[int], my_ratings: Dict[int, Optional[float]]) -> List[Game]:
+    """Legacy sequential method - kept for fallback."""
     games: List[Game] = []
+    
     for i in range(0, len(ids), CHUNK_SIZE):
         chunk = ids[i:i+CHUNK_SIZE]
         params = {"id": ",".join(map(str, chunk)), "stats": 1, "type": "boardgame"}
+        
         try:
             r = await client.get(f"{BASE}/thing", params=params, timeout=60)
             r.raise_for_status()
-            games.extend(parse_thing_xml(r.text, my_ratings))
-            rate_limit_sleep(2.0)
+            chunk_games = parse_thing_xml(r.text, my_ratings)
+            games.extend(chunk_games)
+            await asyncio.sleep(2.0)  # Fixed: use async sleep
         except Exception as e:
             print(f"Error fetching chunk {chunk}: {e}")
             # Continue with other chunks instead of failing completely
             continue
+    
     return games

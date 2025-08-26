@@ -20,16 +20,24 @@ const state = {
   }
   
   async function loadFacets() {
-    const r = await fetch("/api/facets");
-    if (!r.ok) return;
-    const data = await r.json();
-    state.facets = data;
-    renderTagCloud(data.mechanics);
-    fillSelect(qs("categories"), data.categories);
-    fillSelect(qs("designers"), data.designers);
-    fillSelect(qs("artists"), data.artists);
-    fillSelect(qs("publishers"), data.publishers);
-    updateSummary();
+    try {
+      const r = await fetch("/api/facets");
+      if (!r.ok) {
+        console.error("Failed to load facets:", r.status, r.statusText);
+        return;
+      }
+      const data = await r.json();
+      console.log("Loaded facets:", data);
+      state.facets = data;
+      renderTagCloud(data.mechanics);
+      fillSelect(qs("categories"), data.categories);
+      fillSelect(qs("designers"), data.designers);
+      fillSelect(qs("artists"), data.artists);
+      fillSelect(qs("publishers"), data.publishers);
+      updateSummary();
+    } catch (error) {
+      console.error("Error loading facets:", error);
+    }
   }
   
   function fillSelect(sel, dict) {
@@ -103,11 +111,21 @@ const state = {
   }
   
   async function applyFilters() {
-    collectFilters();
-    const query = toQuery(state.filters);
-    const r = await fetch(`/api/games?${query}`);
-    const data = await r.json();
-    renderResults(data);
+    try {
+      collectFilters();
+      const query = toQuery(state.filters);
+      console.log("Applying filters with query:", query);
+      const r = await fetch(`/api/games?${query}`);
+      if (!r.ok) {
+        console.error("Failed to fetch games:", r.status, r.statusText);
+        return;
+      }
+      const data = await r.json();
+      console.log("Fetched games:", data.length, "games");
+      renderResults(data);
+    } catch (error) {
+      console.error("Error applying filters:", error);
+    }
   }
   
   function renderResults(games) {
@@ -331,22 +349,56 @@ const state = {
     const refreshButton = qs("refresh");
     const originalText = refreshButton.textContent;
     
-    // Show loading state
+    // Show loading state with progress
     refreshButton.disabled = true;
     refreshButton.innerHTML = '<span class="rolling-dice">🎲</span> Refreshing...';
     
+    // Add progress indicator
+    const progressDiv = document.createElement('div');
+    progressDiv.className = 'refresh-progress';
+    progressDiv.innerHTML = `
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="progress-text">Connecting to BGG...</div>
+    `;
+    refreshButton.parentNode.insertBefore(progressDiv, refreshButton.nextSibling);
+    
     try {
       const url = username ? `/api/refresh?username=${encodeURIComponent(username)}` : `/api/refresh`;
+      
+      // Update progress
+      progressDiv.querySelector('.progress-text').textContent = 'Fetching collection...';
+      progressDiv.querySelector('.progress-fill').style.width = '25%';
+      
       const r = await fetch(url, { method: "POST" });
       if (!r.ok) {
-        alert("Refresh failed.");
-        return;
+        throw new Error(`HTTP ${r.status}: ${r.statusText}`);
       }
+      
+      // Update progress
+      progressDiv.querySelector('.progress-text').textContent = 'Processing games...';
+      progressDiv.querySelector('.progress-fill').style.width = '75%';
+      
       await loadFacets();
       await applyFilters();
+      
+      // Complete progress
+      progressDiv.querySelector('.progress-text').textContent = 'Complete!';
+      progressDiv.querySelector('.progress-fill').style.width = '100%';
+      
+      // Show success message
+      setTimeout(() => {
+        progressDiv.remove();
+      }, 2000);
+      
     } catch (error) {
       console.error("Refresh error:", error);
-      alert("Refresh failed: " + error.message);
+      progressDiv.querySelector('.progress-text').textContent = 'Failed: ' + error.message;
+      progressDiv.querySelector('.progress-fill').style.background = 'var(--accent-4)';
+      setTimeout(() => {
+        progressDiv.remove();
+      }, 5000);
     } finally {
       // Restore button state
       refreshButton.disabled = false;
