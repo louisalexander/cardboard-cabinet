@@ -38,6 +38,76 @@
     ]
   },
   {
+    "id": 342942,
+    "name": "Ark Nova",
+    "year": 2021,
+    "image": "https://cf.geekdo-images.com/SoU8p28Sk1s8MSvoM4N8pQ__original/img/g4S18szTdrXCdIwVKzMKrZrYAcM=/0x0/filters:format(jpeg)/pic6293412.jpg",
+    "thumbnail": "https://cf.geekdo-images.com/SoU8p28Sk1s8MSvoM4N8pQ__thumb/img/4KuHNTWSMPf8vTNDKSRMMI3oOv8=/fit-in/200x150/filters:strip_icc()/pic6293412.jpg",
+    "min_players": 1,
+    "max_players": 4,
+    "playing_time": 150,
+    "weight": 3.788,
+    "avg_rating": 8.53878,
+    "bayes_rating": 8.35062,
+    "my_rating": null,
+    "mechanics": [
+      "Contracts",
+      "End Game Bonuses",
+      "Events",
+      "Grid Coverage",
+      "Hand Management",
+      "Hexagon Grid",
+      "Income",
+      "Increase Value of Unchosen Resources",
+      "Open Drafting",
+      "Race",
+      "Set Collection",
+      "Solo / Solitaire Game",
+      "Tags",
+      "Tile Placement",
+      "Track Movement",
+      "Variable Player Powers",
+      "Variable Set-up"
+    ],
+    "categories": [
+      "Animals",
+      "Card Game",
+      "Economic",
+      "Environmental"
+    ],
+    "designers": [
+      "Mathias Wigge"
+    ],
+    "artists": [
+      "Steffen Bieker",
+      "Lo\u00efc Billiau",
+      "Dennis Lohausen",
+      "Christof Tisch"
+    ],
+    "publishers": [
+      "Feuerland Spiele",
+      "Capstone Games",
+      "CMON Global Limited",
+      "Cranio Creations",
+      "Game Harbor",
+      "G\u00e9m Klub Kft.",
+      "Grok Games",
+      "IGAMES",
+      "Korea Boardgames",
+      "Lautapelit.fi",
+      "Ludofy Creative",
+      "Maldito Games",
+      "MINDOK",
+      "MIPL",
+      "Portal Games",
+      "Regatul Jocurilor",
+      "Super Meeple",
+      "\u30c6\u30f3\u30c7\u30a4\u30ba\u30b2\u30fc\u30e0\u30ba (TendaysGames)",
+      "Tower Tactic Games",
+      "White Goblin Games"
+    ]
+  },
+  {
     "id": 230802,
     "name": "Azul",
     "year": 2017,

@@ -70,4 +70,99 @@
   
   #stats { color: var(--muted); margin-bottom: 8px; }
   
+  /* List view styles */
+  .list-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .list-table th,
+  .list-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .list-table th {
+    background: var(--panel);
+    font-weight: 600;
+    color: var(--accent);
+  }
+  
+  .list-table tr:hover {
+    background: var(--chip-hover);
+  }
+  
+  .list-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #0a0a0a;
+  }
+  
+  .game-name {
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  /* Sortable column styles */
+  .sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+  }
+  
+  .sortable:hover {
+    background: var(--chip-hover) !important;
+  }
+  
+  .sortable::after {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+  }
+  
+  .view-toggle { 
+    background: var(--chip); 
+    color: var(--text); 
+    border: 1px solid var(--border); 
+    border-radius: 10px; 
+    padding: 10px 14px; 
+    cursor: pointer; 
+  }
+  .view-toggle:hover { background: var(--chip-hover); }
+  .view-toggle.active { 
+    background: var(--accent); 
+    color: var(--bg); 
+    border-color: var(--accent); 
+  }
+  
+  /* Rolling dice animation */
+  .rolling-dice {
+    display: inline-block;
+    animation: roll 1s infinite linear;
+  }
+  
+  @keyframes roll {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Disabled button state */
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
   footer { color: var(--muted); text-align: center; padding: 24px 16px; }

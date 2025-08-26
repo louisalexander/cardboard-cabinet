@@ -1,4 +1,4 @@
-# Board Game Library (FastAPI + Vanilla JS)
+# Cardboard Cabinet (FastAPI + Vanilla JS)
 
 A slick, filterable, visual view of your BoardGameGeek collection: -
 Pulls your *owned* collection from BGG
