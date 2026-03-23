@@ -6,25 +6,31 @@ from .models import Game
 from .util import rate_limit_sleep
 
 BASE = "https://boardgamegeek.com/xmlapi2"
-CHUNK_SIZE = 20  # Optimized size for BGG API reliability
-MAX_CONCURRENT_CHUNKS = 5  # Process multiple chunks simultaneously
-REDUCED_DELAY = 0.3  # Reduced delay for faster processing
+CHUNK_SIZE = 20
+MAX_CONCURRENT_CHUNKS = 5
+REDUCED_DELAY = 0.3
+MAX_POLL_RETRIES = 30  # ~30 seconds before giving up on BGG 202 responses
 
-async def fetch_collection_ids(client: httpx.AsyncClient, username: str) -> Tuple[List[int], Optional[float]]:
+async def fetch_collection_ids(client: httpx.AsyncClient, username: str) -> Tuple[List[int], Dict[int, Optional[float]]]:
     """
-    Returns list of game ids and your per-game ratings (dict by id) from the collection.
+    Returns list of game ids and per-game ratings (dict by id) from the collection.
     """
     params = {"username": username, "own": 1, "excludesubtype": "boardgameexpansion", "stats": 1}
-    # BGG collection can return 202 (accepted) first; poll until ready
     ratings: Dict[int, Optional[float]] = {}
     ids: List[int] = []
+    poll_attempts = 0
 
     while True:
         try:
             r = await client.get(f"{BASE}/collection", params=params, timeout=60)
-            
+
             if r.status_code == 202:
-                await asyncio.sleep(1.0)  # Fixed: use async sleep
+                poll_attempts += 1
+                if poll_attempts >= MAX_POLL_RETRIES:
+                    raise TimeoutError(
+                        f"BGG collection API still not ready after {MAX_POLL_RETRIES} attempts"
+                    )
+                await asyncio.sleep(1.0)
                 continue
                 
             r.raise_for_status()
@@ -48,7 +54,7 @@ async def fetch_collection_ids(client: httpx.AsyncClient, username: str) -> Tupl
                         val = rating.attrib.get("value")
                         try:
                             my = float(val) if val not in (None, "N/A") else None
-                        except:
+                        except (ValueError, TypeError):
                             my = None
                 ratings[gid] = my
             break
@@ -74,7 +80,7 @@ def _text(elem, path, attr=None, cast=None):
     if cast:
         try:
             return cast(val)
-        except:
+        except (ValueError, TypeError):
             return None
     return val
 

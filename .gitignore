@@ -49,3 +49,10 @@ Thumbs.db
 # Project specific
 app/__pycache__/
 data/cache.json
+data/*.db
+test_db.py
+
+# Test artifacts
+htmlcov/
+.coverage
+.pytest_cache/

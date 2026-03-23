@@ -1,29 +1,34 @@
-from sqlalchemy import create_engine, MetaData
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine, event
+from sqlalchemy.orm import DeclarativeBase, sessionmaker
 from pathlib import Path
 
-# Create data directory if it doesn't exist
-DATA_DIR = Path("data")
+DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-# Database URL - using SQLite for simplicity
 DATABASE_URL = f"sqlite:///{DATA_DIR}/games.db"
 
-# Create engine
 engine = create_engine(
-    DATABASE_URL, 
-    connect_args={"check_same_thread": False},  # Needed for SQLite
-    echo=False  # Set to True for SQL debugging
+    DATABASE_URL,
+    connect_args={"check_same_thread": False},
+    echo=False,
 )
 
-# Create session factory
+
+@event.listens_for(engine, "connect")
+def set_sqlite_pragma(dbapi_connection, connection_record):
+    """Enable FK enforcement so ON DELETE CASCADE works at the DB level."""
+    cursor = dbapi_connection.cursor()
+    cursor.execute("PRAGMA foreign_keys=ON")
+    cursor.close()
+
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# Create base class for models
-Base = declarative_base()
 
-# Dependency to get database session
+class Base(DeclarativeBase):
+    pass
+
+
 def get_db():
     db = SessionLocal()
     try:

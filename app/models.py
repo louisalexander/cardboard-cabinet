@@ -31,6 +31,11 @@ class Facets(BaseModel):
     time_buckets: Dict[str, int]
     weight_buckets: Dict[str, int]
 
+class GamesResponse(BaseModel):
+    games: List[Game]
+    total: int
+    filtered: int
+
 class RefreshResponse(BaseModel):
     username: str
     total_in_collection: int
