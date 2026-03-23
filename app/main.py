@@ -8,7 +8,7 @@ from pydantic import BaseModel
 import httpx
 
 from .models import Game, Facets, RefreshResponse
-from .storage import load_cache, save_cache
+from .db_storage import save_games, load_games, get_games_filtered, init_db
 from .bgg import fetch_collection_ids, fetch_things, fetch_things_parallel
 from .util import bucketize_minutes
 
@@ -20,6 +20,11 @@ app.add_middleware(
     allow_origins=["*"], allow_credentials=True,
     allow_methods=["*"], allow_headers=["*"]
 )
+
+# Initialize database on startup
+@app.on_event("startup")
+async def startup_event():
+    init_db()
 
 # Serve frontend static files
 app.mount("/static", StaticFiles(directory="frontend"), name="static")
@@ -135,7 +140,7 @@ def matches_filters(g: Game, q: dict) -> bool:
 
 @app.get("/api/facets", response_model=Facets)
 def get_facets():
-    games = load_cache()
+    games = load_games()
     return make_facets(games)
 
 @app.get("/api/games", response_model=List[Game])
@@ -156,19 +161,30 @@ def get_games(
     rating_min: Optional[float] = None,
     search: Optional[str] = None
 ):
-    games = load_cache()
-    q = {
-        "mechanics": mechanics.split(",") if mechanics else None,
-        "categories": categories.split(",") if categories else None,
-        "designers": designers.split(",") if designers else None,
-        "artists": artists.split(",") if artists else None,
-        "publishers": publishers.split(",") if publishers else None,
-        "year_min": year_min, "year_max": year_max,
-        "players": players, "players_min": players_min, "players_max": players_max,
-        "time_max": time_max, "weight_min": weight_min, "weight_max": weight_max,
-        "rating_min": rating_min, "search": search
-    }
-    return [g for g in games if matches_filters(g, q)]
+    # Convert comma-separated strings to lists
+    mechanics_list = mechanics.split(",") if mechanics else None
+    categories_list = categories.split(",") if categories else None
+    designers_list = designers.split(",") if designers else None
+    artists_list = artists.split(",") if artists else None
+    publishers_list = publishers.split(",") if publishers else None
+    
+    return get_games_filtered(
+        mechanics=mechanics_list,
+        categories=categories_list,
+        designers=designers_list,
+        artists=artists_list,
+        publishers=publishers_list,
+        year_min=year_min,
+        year_max=year_max,
+        players=players,
+        players_min=players_min,
+        players_max=players_max,
+        time_max=time_max,
+        weight_min=weight_min,
+        weight_max=weight_max,
+        rating_min=rating_min,
+        search=search
+    )
 
 @app.post("/api/refresh", response_model=RefreshResponse)
 async def refresh(username: Optional[str] = None):
@@ -203,7 +219,7 @@ async def refresh(username: Optional[str] = None):
             else:
                 print("WARNING: No games were fetched!")
                 
-        save_cache(games)
+        save_games(games)
         return RefreshResponse(username=user, total_in_collection=len(ids), total_hydrated=len(games), cached=True)
     except Exception as e:
         print(f"Error in refresh: {e}")
