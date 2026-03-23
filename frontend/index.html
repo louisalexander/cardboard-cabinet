@@ -15,28 +15,33 @@
     <div class="toolbar">
       <input id="search" type="search" placeholder="Search by name..." />
       <button id="refresh">🔄 Refresh from BGG</button>
-      <button id="view-toggle" class="view-toggle">📋 List View</button>
+      <button id="view-toggle" class="view-toggle" aria-label="Switch to list view">List view</button>
     </div>
   </header>
 
   <main class="container grid">
-    <section class="panel">
+    <section class="panel" id="sidebar">
       <h2>Mechanics</h2>
       <div id="mechanics-cloud" class="tag-cloud"></div>
+      <div id="filter-summary"></div>
 
       <h2>Filters</h2>
-      <div class="filters">
+      <div class="filters" id="filters-panel">
         <label>Categories</label>
         <select id="categories" multiple></select>
+        <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
 
         <label>Designers</label>
         <select id="designers" multiple></select>
+        <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
 
         <label>Artists</label>
         <select id="artists" multiple></select>
+        <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
 
         <label>Publishers</label>
         <select id="publishers" multiple></select>
+        <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
 
         <div class="row">
           <div>
@@ -51,7 +56,7 @@
 
         <div class="row">
           <div>
-            <label>Players (exact)</label>
+            <label>Players supported</label>
             <input id="players" type="number" placeholder="e.g. 4" />
           </div>
           <div>
@@ -77,12 +82,8 @@
         </div>
 
         <div class="actions">
-          <button id="apply">Apply Filters</button>
-          <button id="clear">Clear</button>
+          <button type="button" id="clear">Clear</button>
         </div>
-
-        <h3>Summary</h3>
-        <ul id="summary"></ul>
       </div>
     </section>
 
