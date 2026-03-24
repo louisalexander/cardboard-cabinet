@@ -37,7 +37,7 @@ async def fetch_collection(
     Returns (game_ids, user_ratings_by_id, raw_xml) from the BGG collection.
     Authenticated via httpx cookie jar (session_cookie param kept for compat).
     """
-    params = {"username": username, "own": 1, "excludesubtype": "boardgameexpansion", "stats": 1}
+    params = {"username": username, "own": 1, "stats": 1}
     ratings: Dict[int, Optional[float]] = {}
     ids: List[int] = []
     poll_attempts = 0
