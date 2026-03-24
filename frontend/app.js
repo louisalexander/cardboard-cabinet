@@ -343,7 +343,7 @@ function renderTileView(games, container) {
     const el = document.createElement("div");
     el.className = "card";
     el.innerHTML = `
-      <img src="${escapeHtml(g.thumbnail || g.image || "")}" alt="${escapeHtml(g.name)} box art">
+      <img src="${escapeHtml(g.image || g.thumbnail || "")}" alt="${escapeHtml(g.name)} box art">
       <div class="body">
         <a class="name" href="https://boardgamegeek.com/boardgame/${escapeHtml(String(g.id))}"
            target="_blank" rel="noopener noreferrer">${escapeHtml(g.name)}</a>
@@ -419,7 +419,7 @@ function renderListView(games, container) {
   for (const g of games) {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td><img src="${escapeHtml(g.thumbnail || g.image || "")}" alt="${escapeHtml(g.name)} box art" class="list-thumbnail"></td>
+      <td><img src="${escapeHtml(g.image || g.thumbnail || "")}" alt="${escapeHtml(g.name)} box art" class="list-thumbnail"></td>
       <td class="game-name">
         <a href="https://boardgamegeek.com/boardgame/${escapeHtml(String(g.id))}"
            target="_blank" rel="noopener noreferrer">${escapeHtml(g.name)}</a>
