@@ -82,14 +82,11 @@ function showOnboarding() {
     <div class="onboarding-card panel">
       <span class="onboarding-icon" aria-hidden="true">🎲</span>
       <h2>Your cabinet is empty</h2>
-      <p>Connect your BoardGameGeek account to import your collection. It only takes a few seconds.</p>
-      <button type="button" id="onboarding-connect" class="primary-btn" autofocus>Connect BGG Account</button>
-      <p class="hint">Your BGG username is stored only in your browser.</p>
+      <p>Sync your BoardGameGeek collection to get started. It only takes a few seconds.</p>
+      <button type="button" id="onboarding-connect" class="primary-btn" autofocus>Sync BGG Collection</button>
     </div>
   `;
-  main.querySelector("#onboarding-connect").addEventListener("click", () => {
-    showUsernameForm(true);
-  });
+  main.querySelector("#onboarding-connect").addEventListener("click", doRefresh);
 }
 
 function restoreMainLayout() {
@@ -630,77 +627,9 @@ function clearAll() {
   if (search) search.focus();
 }
 
-// ── Inline username form (replaces window.prompt) ─────────────────────────
+// ── Refresh ────────────────────────────────────────────────────────────────
 
-function showUsernameForm(fromOnboarding = false) {
-  const storedUser = localStorage.getItem("bgg_username") || "";
-
-  if (fromOnboarding) {
-    const card = document.querySelector(".onboarding-card");
-    if (!card) { doRefreshWithUsername(storedUser || null, null); return; }
-    card.innerHTML = `
-      <span class="onboarding-icon" aria-hidden="true">🎲</span>
-      <h2>Connect BGG Account</h2>
-      <form id="bgg-form" class="username-form">
-        <input id="bgg-username-input" type="text" placeholder="BGG username"
-               autocomplete="username" value="${escapeHtml(storedUser)}" />
-        <input id="bgg-password-input" type="password" placeholder="BGG password"
-               autocomplete="current-password" />
-        <button type="submit" class="primary-btn">Sync Collection</button>
-        <button type="button" class="ghost-btn" id="cancel-onboarding">Cancel</button>
-      </form>
-      <p class="hint">Username is saved in your browser. Password is never stored.</p>
-    `;
-    card.querySelector("#cancel-onboarding").addEventListener("click", showOnboarding);
-    card.querySelector("#bgg-form").addEventListener("submit", e => {
-      e.preventDefault();
-      const username = card.querySelector("#bgg-username-input").value.trim() || null;
-      const password = card.querySelector("#bgg-password-input").value || null;
-      doRefreshWithUsername(username, password);
-    });
-    card.querySelector("#bgg-username-input").focus();
-    return;
-  }
-
-  // Expand header toolbar
-  const toolbar = document.querySelector(".toolbar");
-  const refreshBtn = qs("refresh");
-  refreshBtn.style.display = "none";
-
-  const form = document.createElement("form");
-  form.id = "bgg-inline-form";
-  form.className = "username-form";
-  form.innerHTML = `
-    <input id="bgg-username-input" type="text" placeholder="BGG username"
-           autocomplete="username" value="${escapeHtml(storedUser)}" />
-    <input id="bgg-password-input" type="password" placeholder="BGG password"
-           autocomplete="current-password" />
-    <button type="submit" class="primary-btn" id="sync-btn">Sync Collection</button>
-    <button type="button" class="ghost-btn" id="cancel-sync">Cancel</button>
-  `;
-  toolbar.appendChild(form);
-
-  form.querySelector("#bgg-username-input").focus();
-  form.querySelector("#cancel-sync").addEventListener("click", () => {
-    form.remove();
-    refreshBtn.style.display = "";
-    refreshBtn.focus();
-  });
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    const username = form.querySelector("#bgg-username-input").value.trim() || null;
-    const password = form.querySelector("#bgg-password-input").value || null;
-    form.remove();
-    refreshBtn.style.display = "";
-    doRefreshWithUsername(username, password);
-  });
-}
-
-async function doRefreshWithUsername(username, password) {
-  if (username) {
-    try { localStorage.setItem("bgg_username", username); } catch {}
-  }
-
+async function doRefresh() {
   const refreshBtn = qs("refresh");
   const originalText = refreshBtn ? refreshBtn.textContent : "";
   if (refreshBtn) {
@@ -721,15 +650,7 @@ async function doRefreshWithUsername(username, password) {
   const preRefreshTotal = state.totalGames;
 
   try {
-    const payload = {};
-    if (username) payload.username = username;
-    if (password) payload.password = password;
-    const body = JSON.stringify(payload);
-    const r = await fetch("/api/refresh", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body,
-    });
+    const r = await fetch("/api/refresh", { method: "POST" });
     if (!r.ok) {
       const err = await r.json().catch(() => ({}));
       throw new Error(err.detail || `HTTP ${r.status}`);
@@ -774,7 +695,7 @@ async function doRefreshWithUsername(username, password) {
     progressDiv.querySelector(".progress-text").textContent = `Failed: ${err.message}`;
     const hint = document.createElement("p");
     hint.className = "progress-hint";
-    hint.textContent = "If this keeps happening, check that your BGG username is correct.";
+    hint.textContent = "If this keeps happening, check server logs or contact the administrator.";
     progressDiv.appendChild(hint);
     setTimeout(() => progressDiv.remove(), 8000);
   } finally {
@@ -839,7 +760,7 @@ function bindFilterListeners() {
 window.addEventListener("DOMContentLoaded", async () => {
   updateLastSynced();
 
-  qs("refresh").addEventListener("click", () => showUsernameForm(false));
+  qs("refresh").addEventListener("click", doRefresh);
   qs("view-toggle").addEventListener("click", toggleView);
 
   // Debounced search (M5.3)

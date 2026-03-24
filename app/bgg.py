@@ -6,10 +6,10 @@ from .models import Game
 from .util import rate_limit_sleep
 
 BASE = "https://boardgamegeek.com/xmlapi2"
-CHUNK_SIZE = 20
-MAX_CONCURRENT_CHUNKS = 5
+GEEKITEMS = "https://boardgamegeek.com/api/geekitems"
+MAX_CONCURRENT = 5
 REDUCED_DELAY = 0.3
-MAX_POLL_RETRIES = 30  # ~30 seconds before giving up on BGG 202 responses
+MAX_POLL_RETRIES = 30
 
 
 async def get_bgg_session(client: httpx.AsyncClient, username: str, password: str) -> str:
@@ -28,211 +28,208 @@ async def get_bgg_session(client: httpx.AsyncClient, username: str, password: st
     return session_id
 
 
-async def fetch_collection_ids(
+async def fetch_collection(
     client: httpx.AsyncClient,
     username: str,
     session_cookie: Optional[str] = None,
-) -> Tuple[List[int], Dict[int, Optional[float]]]:
+) -> Tuple[List[int], Dict[int, Optional[float]], str]:
     """
-    Returns list of game ids and per-game ratings (dict by id) from the collection.
+    Returns (game_ids, user_ratings_by_id, raw_xml) from the BGG collection.
+    Authenticated via httpx cookie jar (session_cookie param kept for compat).
     """
     params = {"username": username, "own": 1, "excludesubtype": "boardgameexpansion", "stats": 1}
-    headers = {"Cookie": f"SessionID={session_cookie}"} if session_cookie else {}
     ratings: Dict[int, Optional[float]] = {}
     ids: List[int] = []
     poll_attempts = 0
 
     while True:
+        r = await client.get(f"{BASE}/collection", params=params, timeout=60)
+
+        if r.status_code == 202:
+            poll_attempts += 1
+            if poll_attempts >= MAX_POLL_RETRIES:
+                raise TimeoutError(f"BGG collection API not ready after {MAX_POLL_RETRIES} attempts")
+            await asyncio.sleep(1.0)
+            continue
+
+        if r.status_code == 401:
+            raise PermissionError(
+                "BGG requires a password to access your collection. "
+                "Enter your BGG password in the refresh form."
+            )
+        if r.status_code == 404:
+            raise LookupError(f"BGG username '{username}' not found.")
+        if r.status_code == 429:
+            raise RuntimeError("BGG rate limit reached. Try again in a few minutes.")
+        if r.status_code in (502, 503, 504):
+            raise RuntimeError("BoardGameGeek is temporarily unavailable. Try again in a few minutes.")
+
+        r.raise_for_status()
+
+        root = ET.fromstring(r.text)
+        items = root.findall("item") or root.findall(".//item")
+
+        for item in items:
+            gid = int(item.attrib.get("objectid"))
+            ids.append(gid)
+            stats = item.find("stats")
+            my = None
+            if stats is not None:
+                rating = stats.find("rating")
+                if rating is not None:
+                    val = rating.attrib.get("value")
+                    try:
+                        my = float(val) if val not in (None, "N/A") else None
+                    except (ValueError, TypeError):
+                        my = None
+            ratings[gid] = my
+        break
+
+    return ids, ratings, r.text
+
+
+# Alias for backward compatibility with tests
+async def fetch_collection_ids(
+    client: httpx.AsyncClient,
+    username: str,
+    session_cookie: Optional[str] = None,
+) -> Tuple[List[int], Dict[int, Optional[float]]]:
+    ids, ratings, _ = await fetch_collection(client, username, session_cookie)
+    return ids, ratings
+
+
+def _parse_collection_item(item: ET.Element, my_ratings: Dict[int, Optional[float]]) -> Game:
+    """Extract all available fields from a collection <item> element."""
+    gid = int(item.attrib.get("objectid"))
+
+    name_node = item.find("name")
+    name = name_node.text if name_node is not None else f"Game {gid}"
+
+    def text(path):
+        n = item.find(path)
+        return n.text if n is not None else None
+
+    def intval(path):
         try:
-            r = await client.get(f"{BASE}/collection", params=params, headers=headers, timeout=60)
-
-            if r.status_code == 202:
-                poll_attempts += 1
-                if poll_attempts >= MAX_POLL_RETRIES:
-                    raise TimeoutError(
-                        f"BGG collection API still not ready after {MAX_POLL_RETRIES} attempts"
-                    )
-                await asyncio.sleep(1.0)
-                continue
-
-            if r.status_code == 401:
-                raise PermissionError(
-                    "BGG requires a password to access your collection. "
-                    "Enter your BGG password in the refresh form."
-                )
-            if r.status_code == 404:
-                raise LookupError(f"BGG username '{username}' not found.")
-            if r.status_code == 429:
-                raise RuntimeError("BGG rate limit reached. Try again in a few minutes.")
-            if r.status_code in (502, 503, 504):
-                raise RuntimeError("BoardGameGeek is temporarily unavailable. Try again in a few minutes.")
-
-            r.raise_for_status()
-            
-            root = ET.fromstring(r.text)
-            
-            # BGG can return either <collection> or <items> as the root
-            items = root.findall("item")
-            if not items:
-                # Try alternative structure
-                items = root.findall(".//item")
-            
-            for item in items:
-                gid = int(item.attrib.get("objectid"))
-                ids.append(gid)
-                stats = item.find("stats")
-                my = None
-                if stats is not None:
-                    rating = stats.find("rating")
-                    if rating is not None:
-                        val = rating.attrib.get("value")
-                        try:
-                            my = float(val) if val not in (None, "N/A") else None
-                        except (ValueError, TypeError):
-                            my = None
-                ratings[gid] = my
-            break
-            
-        except Exception as e:
-            print(f"Error in fetch_collection_ids: {e}")
-            import traceback
-            traceback.print_exc()
-            raise
-
-    return ids, ratings  # ratings are per game in collection
-
-def _text(elem, path, attr=None, cast=None):
-    node = elem.find(path)
-    if node is None:
-        return None
-    if attr:
-        val = node.attrib.get(attr)
-    else:
-        val = node.text
-    if val is None:
-        return None
-    if cast:
-        try:
-            return cast(val)
+            v = text(path)
+            return int(v) if v else None
         except (ValueError, TypeError):
             return None
-    return val
 
-def parse_thing_xml(x: str, my_ratings: Dict[int, Optional[float]]) -> List[Game]:
-    root = ET.fromstring(x)
-    games: List[Game] = []
-    for item in root.findall("item"):
-        gid = int(item.attrib["id"])
-        name_node = None
-        # pick the primary name
-        for n in item.findall("name"):
-            if n.attrib.get("type") == "primary":
-                name_node = n
-                break
-        if name_node is None:
-            name_node = item.find("name")
+    year = intval("yearpublished")
+    image = text("image")
+    thumb = text("thumbnail")
 
-        name = name_node.attrib.get("value") if name_node is not None else f"Game {gid}"
+    stats = item.find("stats")
+    min_players = max_players = playing_time = avg_rating = bayes = None
+    if stats is not None:
+        min_players = int(stats.attrib.get("minplayers") or 0) or None
+        max_players = int(stats.attrib.get("maxplayers") or 0) or None
+        playing_time = int(stats.attrib.get("playingtime") or 0) or None
+        rating = stats.find("rating")
+        if rating is not None:
+            try:
+                avg_rating = float(rating.find("average").attrib.get("value") or 0) or None
+            except Exception:
+                avg_rating = None
+            try:
+                bayes = float(rating.find("bayesaverage").attrib.get("value") or 0) or None
+            except Exception:
+                bayes = None
 
-        year = _text(item, "yearpublished", "value", int)
-        image = _text(item, "image")
-        thumb = _text(item, "thumbnail")
+    return Game(
+        id=gid, name=name, year=year, image=image, thumbnail=thumb,
+        min_players=min_players, max_players=max_players, playing_time=playing_time,
+        weight=None, avg_rating=avg_rating, bayes_rating=bayes,
+        my_rating=my_ratings.get(gid),
+        mechanics=[], categories=[], designers=[], artists=[], publishers=[],
+    )
 
-        min_players = _text(item, "minplayers", "value", int)
-        max_players = _text(item, "maxplayers", "value", int)
-        playing_time = _text(item, "playingtime", "value", int)
 
-        stats = item.find("statistics")
-        avg_rating = bayes = weight = None
-        if stats is not None:
-            ratings = stats.find("ratings")
-            if ratings is not None:
-                avg_rating = _text(ratings, "average", "value", float)
-                bayes     = _text(ratings, "bayesaverage", "value", float)
-                weight    = _text(ratings, "averageweight", "value", float)
-
-        def links_of(t: str) -> List[str]:
-            return [ln.attrib.get("value") for ln in item.findall(f"link[@type='{t}']")]
-
-        mechanics  = links_of("boardgamemechanic")
-        categories = links_of("boardgamecategory")
-        designers  = links_of("boardgamedesigner")
-        artists    = links_of("boardgameartist")
-        publishers = links_of("boardgamepublisher")
-
-        g = Game(
-            id=gid, name=name, year=year, image=image, thumbnail=thumb,
-            min_players=min_players, max_players=max_players, playing_time=playing_time,
-            weight=weight, avg_rating=avg_rating, bayes_rating=bayes,
-            my_rating=my_ratings.get(gid),
-            mechanics=mechanics, categories=categories, designers=designers,
-            artists=artists, publishers=publishers
-        )
-        games.append(g)
-    return games
-
-async def fetch_chunk(client: httpx.AsyncClient, chunk: List[int], my_ratings: Dict[int, Optional[float]]) -> List[Game]:
-    """Fetch a single chunk of games with error handling."""
-    params = {"id": ",".join(map(str, chunk)), "stats": 1, "type": "boardgame"}
+async def fetch_game_links(
+    client: httpx.AsyncClient,
+    game: Game,
+) -> Game:
+    """
+    Fetch mechanics, categories, designers, artists, publishers for a game
+    from BGG's internal geekitems API (no auth required).
+    Returns an updated Game with those fields populated.
+    """
     try:
-        r = await client.get(f"{BASE}/thing", params=params, timeout=60)
-        r.raise_for_status()
-        games = parse_thing_xml(r.text, my_ratings)
-        return games
+        r = await client.get(
+            GEEKITEMS,
+            params={"nosession": 1, "objecttype": "thing", "objectid": game.id},
+            timeout=30,
+        )
+        if r.status_code != 200:
+            return game
+        item = r.json().get("item", {})
+        links = item.get("links", {})
+
+        def names(key):
+            return [e["name"] for e in links.get(key, []) if e.get("name")]
+
+        # Use better image from geekitems if available and collection had none
+        image = game.image or item.get("imageurl")
+        thumb = game.thumbnail or (item.get("images") or {}).get("thumb")
+
+        return Game(
+            id=game.id, name=game.name, year=game.year,
+            image=image, thumbnail=thumb,
+            min_players=game.min_players, max_players=game.max_players,
+            playing_time=game.playing_time,
+            weight=None,
+            avg_rating=game.avg_rating, bayes_rating=game.bayes_rating,
+            my_rating=game.my_rating,
+            mechanics=names("boardgamemechanic"),
+            categories=names("boardgamecategory"),
+            designers=names("boardgamedesigner"),
+            artists=names("boardgameartist"),
+            publishers=names("boardgamepublisher"),
+        )
     except Exception as e:
-        print(f"Error fetching chunk {chunk}: {e}")
-        return []  # Return empty list instead of failing
+        print(f"Error fetching geekitems for game {game.id}: {e}")
+        return game
 
-async def fetch_things_parallel(client: httpx.AsyncClient, ids: List[int], my_ratings: Dict[int, Optional[float]]) -> List[Game]:
-    """Fetch games in parallel chunks for much faster performance."""
-    if not ids:
-        return []
-    
-    # Create chunks
-    chunks = [ids[i:i + CHUNK_SIZE] for i in range(0, len(ids), CHUNK_SIZE)]
-    print(f"Processing {len(chunks)} chunks of up to {CHUNK_SIZE} games each")
-    
-    # Process chunks in parallel with controlled concurrency
-    semaphore = asyncio.Semaphore(MAX_CONCURRENT_CHUNKS)
-    
-    async def fetch_chunk_with_semaphore(chunk: List[int]) -> List[Game]:
+
+async def fetch_all_games(
+    auth_client: httpx.AsyncClient,
+    ids: List[int],
+    my_ratings: Dict[int, Optional[float]],
+    collection_xml: str,
+) -> List[Game]:
+    """
+    Given the collection XML (already fetched), parse basic game data,
+    then enrich each game with links from the geekitems API in parallel.
+    """
+    root = ET.fromstring(collection_xml)
+    items = root.findall("item") or root.findall(".//item")
+    seen: set = set()
+    unique_items = []
+    for item in items:
+        gid = int(item.attrib.get("objectid"))
+        if gid not in seen:
+            seen.add(gid)
+            unique_items.append(item)
+    games = [_parse_collection_item(item, my_ratings) for item in unique_items]
+    print(f"Parsed {len(games)} games from collection, fetching links...")
+
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT)
+
+    async def enrich(game: Game) -> Game:
         async with semaphore:
-            games = await fetch_chunk(client, chunk, my_ratings)
-            # Small delay to be respectful to BGG
+            result = await fetch_game_links(auth_client, game)
             await asyncio.sleep(REDUCED_DELAY)
-            return games
-    
-    # Fetch all chunks concurrently
-    tasks = [fetch_chunk_with_semaphore(chunk) for chunk in chunks]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
-    
-    # Combine results and handle any exceptions
-    all_games = []
-    for result in results:
-        if isinstance(result, Exception):
-            print(f"Chunk failed with exception: {result}")
-        else:
-            all_games.extend(result)
-    
-    return all_games
+            return result
 
-async def fetch_things(client: httpx.AsyncClient, ids: List[int], my_ratings: Dict[int, Optional[float]]) -> List[Game]:
-    """Legacy sequential method - kept for fallback."""
-    games: List[Game] = []
-    
-    for i in range(0, len(ids), CHUNK_SIZE):
-        chunk = ids[i:i+CHUNK_SIZE]
-        params = {"id": ",".join(map(str, chunk)), "stats": 1, "type": "boardgame"}
-        
-        try:
-            r = await client.get(f"{BASE}/thing", params=params, timeout=60)
-            r.raise_for_status()
-            chunk_games = parse_thing_xml(r.text, my_ratings)
-            games.extend(chunk_games)
-            await asyncio.sleep(2.0)  # Fixed: use async sleep
-        except Exception as e:
-            print(f"Error fetching chunk {chunk}: {e}")
-            # Continue with other chunks instead of failing completely
-            continue
-    
-    return games
+    tasks = [enrich(g) for g in games]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    enriched = []
+    for r in results:
+        if isinstance(r, Exception):
+            print(f"Game enrichment failed: {r}")
+        else:
+            enriched.append(r)
+
+    return enriched
