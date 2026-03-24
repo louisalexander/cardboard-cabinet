@@ -955,32 +955,6 @@ html {
   font-family: 'Outfit', sans-serif;
 }
 
-/* ── Onboarding card ───────────────────────────────────────────────────── */
-
-.onboarding-card {
-  max-width: 520px;
-  margin: 60px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
-}
-
-.onboarding-icon {
-  font-size: 4rem;
-  display: block;
-}
-
-.onboarding-card h2 {
-  margin: 0;
-}
-
-.onboarding-card p {
-  color: var(--text-secondary);
-  margin: 0;
-}
-
 .hint {
   font-size: 13px;
   color: var(--muted);

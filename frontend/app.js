@@ -75,101 +75,6 @@ function showFacetsError() {
   });
 }
 
-function showOnboarding() {
-  const main = document.querySelector("main");
-  main.classList.remove("grid");
-  main.innerHTML = `
-    <div class="onboarding-card panel">
-      <span class="onboarding-icon" aria-hidden="true">🎲</span>
-      <h2>Your cabinet is empty</h2>
-      <p>Sync your BoardGameGeek collection to get started. It only takes a few seconds.</p>
-      <button type="button" id="onboarding-connect" class="primary-btn" autofocus>Sync BGG Collection</button>
-    </div>
-  `;
-  main.querySelector("#onboarding-connect").addEventListener("click", doRefresh);
-}
-
-function restoreMainLayout() {
-  const main = document.querySelector("main");
-  if (!main.classList.contains("grid")) {
-    main.className = "container grid";
-    main.innerHTML = `
-      <section class="panel" id="sidebar">
-        <h2>Mechanics</h2>
-        <div id="mechanics-cloud" class="tag-cloud"></div>
-        <div id="filter-summary"></div>
-        <h2>Filters</h2>
-        <div class="filters" id="filters-panel">
-          <label>Categories</label>
-          <select id="categories" multiple></select>
-          <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
-
-          <label>Designers</label>
-          <select id="designers" multiple></select>
-          <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
-
-          <label>Artists</label>
-          <select id="artists" multiple></select>
-          <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
-
-          <label>Publishers</label>
-          <select id="publishers" multiple></select>
-          <p class="filter-hint">Hold Ctrl (or Cmd on Mac) to select multiple</p>
-
-          <div class="row">
-            <div>
-              <label>Year Min</label>
-              <input id="year_min" type="number" placeholder="e.g. 2000" />
-            </div>
-            <div>
-              <label>Year Max</label>
-              <input id="year_max" type="number" placeholder="e.g. 2025" />
-            </div>
-          </div>
-
-          <div class="row">
-            <div>
-              <label>Players supported</label>
-              <input id="players" type="number" placeholder="e.g. 4" />
-            </div>
-            <div>
-              <label>Time ≤ (min)</label>
-              <input id="time_max" type="number" placeholder="e.g. 90" />
-            </div>
-          </div>
-
-          <div class="row">
-            <div>
-              <label>Weight min</label>
-              <input id="weight_min" type="number" step="0.01" placeholder="e.g. 2.0" />
-            </div>
-            <div>
-              <label>Weight max</label>
-              <input id="weight_max" type="number" step="0.01" placeholder="e.g. 3.5" />
-            </div>
-          </div>
-
-          <div>
-            <label>Avg rating ≥</label>
-            <input id="rating_min" type="number" step="0.1" placeholder="e.g. 7.0" />
-          </div>
-
-          <div class="actions">
-            <button type="button" id="clear">Clear</button>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Results</h2>
-        <div id="stats"></div>
-        <div id="results" class="cards"></div>
-      </section>
-    `;
-    bindFilterListeners();
-  }
-}
-
 // ── Facets / filters ───────────────────────────────────────────────────────
 
 async function loadFacets() {
@@ -398,7 +303,18 @@ function renderResults(games, total, filtered) {
   if (!container) return;
   container.innerHTML = "";
 
-  if (games.length === 0 && total > 0) {
+  if (total === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <span class="empty-icon" aria-hidden="true">📦</span>
+        <h3>No games yet</h3>
+        <p>Click <strong>Refresh from BGG</strong> to sync your BoardGameGeek collection.</p>
+      </div>
+    `;
+    return;
+  }
+
+  if (games.length === 0) {
     const searchVal = qs("search")?.value;
     const searchHint = searchVal
       ? ` Search is also active — clear it above to search by name only.`
@@ -681,7 +597,6 @@ async function doRefresh() {
 
     // Invalidate cache, reload
     state.lastGames = null;
-    restoreMainLayout();
     await loadFacets();
     await applyFilters();
     updateLastSynced();
@@ -797,12 +712,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     return;
   }
   const data = await r.json();
-
-  if (data.total === 0) {
-    showOnboarding();
-  } else {
-    state.lastGames = data.games;
-    state.totalGames = data.total;
-    renderResults(data.games, data.total, data.filtered);
-  }
+  state.lastGames = data.games;
+  state.totalGames = data.total;
+  renderResults(data.games, data.total, data.filtered);
 });
