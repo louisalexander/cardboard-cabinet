@@ -53,7 +53,8 @@ help:
 	@echo ""
 	@echo "  Docker"
 	@echo "    docker-build     Build the Docker image tagged '$(IMAGE)'"
-	@echo "    docker-run       Run the image with .env on port $(PORT)"
+	@echo "    docker-run       Run the image on port $(PORT) (falls back to .env)"
+	@echo "                     Override creds: make docker-run BGG_USERNAME=x BGG_PASSWORD=y"
 	@echo ""
 	@echo "  Cleanup"
 	@echo "    clean            Remove .venv, caches, and compiled bytecode"
@@ -160,11 +161,18 @@ ci-test:
 
 # ── Docker ────────────────────────────────────────────────────────────────────
 
+BGG_USERNAME ?=
+BGG_PASSWORD ?=
+
 docker-build:
 	docker build -t $(IMAGE) .
 
 docker-run:
-	docker run -p $(PORT):8000 --env-file .env $(IMAGE)
+	docker run -p $(PORT):8000 \
+	  $(if $(BGG_USERNAME),-e BGG_USERNAME=$(BGG_USERNAME)) \
+	  $(if $(BGG_PASSWORD),-e BGG_PASSWORD='$(BGG_PASSWORD)') \
+	  $(if $(and $(BGG_USERNAME),$(BGG_PASSWORD)),,--env-file .env) \
+	  $(IMAGE)
 
 # ── Cleanup ───────────────────────────────────────────────────────────────────
 
