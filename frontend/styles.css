@@ -159,10 +159,10 @@ button:active {
 }
 
 /* Modern Grid Layout */
-.grid { 
-  display: grid; 
-  grid-template-columns: 360px 1fr; 
-  gap: 32px; 
+.grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
 }
 
 /* Glassmorphism Panel */
@@ -450,6 +450,8 @@ h2::after {
 /* Modern List Table */
 .list-table {
   width: 100%;
+  min-width: 800px;
+  table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
   background: var(--card-glass);
@@ -460,22 +462,74 @@ h2::after {
   backdrop-filter: blur(20px);
 }
 
+/* Column width distribution */
+.list-table th:nth-child(1),
+.list-table td:nth-child(1) { width: 80px; }   /* Image */
+
+.list-table th:nth-child(2),
+.list-table td:nth-child(2) { width: auto; }    /* Name — absorbs remaining space */
+
+.list-table th:nth-child(3),
+.list-table td:nth-child(3) { width: 64px; }    /* Year */
+
+.list-table th:nth-child(4),
+.list-table td:nth-child(4) { width: 72px; }    /* Players */
+
+.list-table th:nth-child(5),
+.list-table td:nth-child(5) { width: 80px; }    /* Time */
+
+.list-table th:nth-child(6),
+.list-table td:nth-child(6) { width: 72px; }    /* Weight */
+
+.list-table th:nth-child(7),
+.list-table td:nth-child(7) { width: 84px; }    /* Avg Rating */
+
+.list-table th:nth-child(8),
+.list-table td:nth-child(8) { width: 84px; }    /* Bayes Rating */
+
+.list-table th:nth-child(9),
+.list-table td:nth-child(9) { width: 72px; }    /* My Rating */
+
+.list-table th:nth-child(10),
+.list-table td:nth-child(10) { width: 160px; }  /* Mechanics */
+
+.list-table th:nth-child(11),
+.list-table td:nth-child(11) { width: 140px; }  /* Categories */
+
 .list-table th,
 .list-table td {
-  padding: 20px;
+  padding: 10px 12px;
   text-align: left;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Name column should allow wrapping */
+.list-table td:nth-child(2) {
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Mechanics and categories cells allow wrapping for badge stacking */
+.list-table td:nth-child(10),
+.list-table td:nth-child(11) {
+  white-space: normal;
 }
 
 .list-table th {
   background: var(--panel-glass);
   font-weight: 700;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 11px;
   font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   backdrop-filter: blur(20px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .list-table tr {
@@ -492,12 +546,21 @@ h2::after {
 }
 
 .list-thumbnail {
-  width: 60px;
+  display: block;
   height: 60px;
-  object-fit: cover;
-  border-radius: 12px;
+  width: auto;
+  max-width: 72px;
+  object-fit: contain;
+  border-radius: 8px;
   background: linear-gradient(135deg, #1e293b, #334155);
   box-shadow: var(--shadow-sm);
+}
+
+/* Keep the image cell compact and centered */
+.list-table td:nth-child(1) {
+  padding: 8px 10px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .game-name {
