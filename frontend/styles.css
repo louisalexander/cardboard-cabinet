@@ -994,6 +994,7 @@ html {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .username-form input[type="text"] {

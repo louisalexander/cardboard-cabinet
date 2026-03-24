@@ -11,18 +11,40 @@ MAX_CONCURRENT_CHUNKS = 5
 REDUCED_DELAY = 0.3
 MAX_POLL_RETRIES = 30  # ~30 seconds before giving up on BGG 202 responses
 
-async def fetch_collection_ids(client: httpx.AsyncClient, username: str) -> Tuple[List[int], Dict[int, Optional[float]]]:
+
+async def get_bgg_session(client: httpx.AsyncClient, username: str, password: str) -> str:
+    """Login to BGG and return the SessionID cookie value."""
+    r = await client.post(
+        "https://boardgamegeek.com/login/api/v1",
+        json={"credentials": {"username": username, "password": password}},
+        timeout=30,
+    )
+    if r.status_code == 400:
+        raise ValueError("Invalid BGG username or password.")
+    r.raise_for_status()
+    session_id = r.cookies.get("SessionID")
+    if not session_id:
+        raise RuntimeError("BGG login succeeded but no session cookie was returned.")
+    return session_id
+
+
+async def fetch_collection_ids(
+    client: httpx.AsyncClient,
+    username: str,
+    session_cookie: Optional[str] = None,
+) -> Tuple[List[int], Dict[int, Optional[float]]]:
     """
     Returns list of game ids and per-game ratings (dict by id) from the collection.
     """
     params = {"username": username, "own": 1, "excludesubtype": "boardgameexpansion", "stats": 1}
+    headers = {"Cookie": f"SessionID={session_cookie}"} if session_cookie else {}
     ratings: Dict[int, Optional[float]] = {}
     ids: List[int] = []
     poll_attempts = 0
 
     while True:
         try:
-            r = await client.get(f"{BASE}/collection", params=params, timeout=60)
+            r = await client.get(f"{BASE}/collection", params=params, headers=headers, timeout=60)
 
             if r.status_code == 202:
                 poll_attempts += 1
@@ -32,7 +54,19 @@ async def fetch_collection_ids(client: httpx.AsyncClient, username: str) -> Tupl
                     )
                 await asyncio.sleep(1.0)
                 continue
-                
+
+            if r.status_code == 401:
+                raise PermissionError(
+                    "BGG requires a password to access your collection. "
+                    "Enter your BGG password in the refresh form."
+                )
+            if r.status_code == 404:
+                raise LookupError(f"BGG username '{username}' not found.")
+            if r.status_code == 429:
+                raise RuntimeError("BGG rate limit reached. Try again in a few minutes.")
+            if r.status_code in (502, 503, 504):
+                raise RuntimeError("BoardGameGeek is temporarily unavailable. Try again in a few minutes.")
+
             r.raise_for_status()
             
             root = ET.fromstring(r.text)

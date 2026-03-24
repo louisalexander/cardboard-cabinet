@@ -633,28 +633,30 @@ function clearAll() {
 // ── Inline username form (replaces window.prompt) ─────────────────────────
 
 function showUsernameForm(fromOnboarding = false) {
-  const stored = localStorage.getItem("bgg_username") || "";
+  const storedUser = localStorage.getItem("bgg_username") || "";
 
   if (fromOnboarding) {
-    // Self-contained form inside onboarding card
     const card = document.querySelector(".onboarding-card");
-    if (!card) { doRefreshWithUsername(stored || null); return; }
+    if (!card) { doRefreshWithUsername(storedUser || null, null); return; }
     card.innerHTML = `
       <span class="onboarding-icon" aria-hidden="true">🎲</span>
       <h2>Connect BGG Account</h2>
       <form id="bgg-form" class="username-form">
         <input id="bgg-username-input" type="text" placeholder="BGG username"
-               autocomplete="username" value="${escapeHtml(stored)}" />
+               autocomplete="username" value="${escapeHtml(storedUser)}" />
+        <input id="bgg-password-input" type="password" placeholder="BGG password"
+               autocomplete="current-password" />
         <button type="submit" class="primary-btn">Sync Collection</button>
         <button type="button" class="ghost-btn" id="cancel-onboarding">Cancel</button>
       </form>
-      <p class="hint">Your username is stored in your browser for next time.</p>
+      <p class="hint">Username is saved in your browser. Password is never stored.</p>
     `;
     card.querySelector("#cancel-onboarding").addEventListener("click", showOnboarding);
     card.querySelector("#bgg-form").addEventListener("submit", e => {
       e.preventDefault();
       const username = card.querySelector("#bgg-username-input").value.trim() || null;
-      doRefreshWithUsername(username);
+      const password = card.querySelector("#bgg-password-input").value || null;
+      doRefreshWithUsername(username, password);
     });
     card.querySelector("#bgg-username-input").focus();
     return;
@@ -670,7 +672,9 @@ function showUsernameForm(fromOnboarding = false) {
   form.className = "username-form";
   form.innerHTML = `
     <input id="bgg-username-input" type="text" placeholder="BGG username"
-           autocomplete="username" value="${escapeHtml(stored)}" />
+           autocomplete="username" value="${escapeHtml(storedUser)}" />
+    <input id="bgg-password-input" type="password" placeholder="BGG password"
+           autocomplete="current-password" />
     <button type="submit" class="primary-btn" id="sync-btn">Sync Collection</button>
     <button type="button" class="ghost-btn" id="cancel-sync">Cancel</button>
   `;
@@ -685,13 +689,14 @@ function showUsernameForm(fromOnboarding = false) {
   form.addEventListener("submit", e => {
     e.preventDefault();
     const username = form.querySelector("#bgg-username-input").value.trim() || null;
+    const password = form.querySelector("#bgg-password-input").value || null;
     form.remove();
     refreshBtn.style.display = "";
-    doRefreshWithUsername(username);
+    doRefreshWithUsername(username, password);
   });
 }
 
-async function doRefreshWithUsername(username) {
+async function doRefreshWithUsername(username, password) {
   if (username) {
     try { localStorage.setItem("bgg_username", username); } catch {}
   }
@@ -716,7 +721,10 @@ async function doRefreshWithUsername(username) {
   const preRefreshTotal = state.totalGames;
 
   try {
-    const body = username ? JSON.stringify({ username }) : "{}";
+    const payload = {};
+    if (username) payload.username = username;
+    if (password) payload.password = password;
+    const body = JSON.stringify(payload);
     const r = await fetch("/api/refresh", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

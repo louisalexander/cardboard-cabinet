@@ -14,7 +14,7 @@ import httpx
 from .models import Game, Facets, RefreshResponse, GamesResponse
 from .database import get_db
 from .db_storage import save_games, load_games, get_games_filtered, get_total_game_count, init_db
-from .bgg import fetch_collection_ids, fetch_things, fetch_things_parallel
+from .bgg import fetch_collection_ids, fetch_things, fetch_things_parallel, get_bgg_session
 from .util import bucketize_minutes
 
 load_dotenv()
@@ -154,6 +154,7 @@ def get_games(
 
 class RefreshRequest(BaseModel):
     username: Optional[str] = None
+    password: Optional[str] = None
 
 
 @app.post("/api/refresh", response_model=RefreshResponse)
@@ -165,13 +166,20 @@ async def refresh(
     if not user:
         raise HTTPException(status_code=400, detail="BGG_USERNAME not configured and no username provided")
 
+    password = (body.password if body else None) or os.getenv("BGG_PASSWORD")
+
     try:
         limits = httpx.Limits(max_keepalive_connections=20, max_connections=20)
         timeout = httpx.Timeout(60.0, connect=10.0)
 
         async with httpx.AsyncClient(limits=limits, timeout=timeout) as client:
+            session_cookie = None
+            if password:
+                print(f"Authenticating with BGG as '{user}'")
+                session_cookie = await get_bgg_session(client, user, password)
+
             print(f"Fetching collection for user: {user}")
-            ids, my_ratings = await fetch_collection_ids(client, user)
+            ids, my_ratings = await fetch_collection_ids(client, user, session_cookie=session_cookie)
             print(f"Found {len(ids)} games in collection")
 
             if len(ids) > 25:
@@ -185,7 +193,9 @@ async def refresh(
         return RefreshResponse(username=user, total_in_collection=len(ids), total_hydrated=len(games), cached=True)
     except HTTPException:
         raise
+    except (PermissionError, LookupError) as e:
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         import traceback
         traceback.print_exc()
-        raise HTTPException(status_code=500, detail="Failed to refresh collection. Check server logs for details.")
+        raise HTTPException(status_code=500, detail=str(e) or "Failed to refresh collection. Check server logs for details.")
