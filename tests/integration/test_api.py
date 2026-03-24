@@ -179,13 +179,11 @@ class TestRefreshEndpoints:
             if env_backup is not None:
                 os.environ["BGG_USERNAME"] = env_backup
 
-    def test_refresh_reads_username_from_json_body(self, client):
-        """Username in JSON body is used (not silently ignored as query param)."""
-        # We expect a non-422 response: username was received and the request
-        # reached BGG (which may return 400/500 depending on network/collection visibility).
+    def test_refresh_ignores_json_body(self, client):
+        """Refresh uses server-side env credentials; any JSON body is ignored."""
         response = client.post("/api/refresh", json={"username": "testuser"})
+        # Credentials come from env — request succeeds regardless of body content
         assert response.status_code != 422
-        assert "detail" in response.json()
 
     def test_refresh_empty_body_accepted(self, client):
         """POST with no body at all should not 422 — username is optional."""
