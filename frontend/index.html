@@ -16,6 +16,7 @@
       <input id="search" type="search" placeholder="Search by name..." />
       <button id="refresh" hidden>🔄 Refresh from BGG</button>
       <button id="view-toggle" class="view-toggle" aria-label="Switch to list view">List view</button>
+      <button id="play-picker" class="view-toggle">🎲 What should we play?</button>
     </div>
   </header>
 
@@ -98,7 +99,12 @@
     <small>Powered by BGG XML API2</small>
   </footer>
 
+  <div id="showdown-overlay" hidden>
+    <div class="showdown-inner" id="showdown-screen"></div>
+  </div>
+
   <script src="data.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="showdown.js" defer></script>
 </body>
 </html>

@@ -680,6 +680,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   qs("refresh").addEventListener("click", doRefresh);
   qs("view-toggle").addEventListener("click", toggleView);
+  qs("play-picker").addEventListener("click", () => window.Showdown.open(state.allGames || []));
 
   // Debounced search (M5.3)
   qs("search").addEventListener("input", () => {

@@ -1160,3 +1160,91 @@ html {
   .rolling-dice { animation: none; }
   .progress-fill.indeterminate { animation: none; width: 60% !important; }
 }
+
+/* ── Game Showdown overlay ──────────────────────────────────────────────── */
+#showdown-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 18, 0.92);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 2rem 1rem;
+}
+#showdown-overlay[hidden] { display: none; }
+.showdown-inner {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.sd-head { display: flex; justify-content: space-between; align-items: center; min-height: 2rem; }
+.sd-x {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: var(--muted, #9aa);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.sd-progress { color: var(--muted, #9aa); font-size: 0.9rem; margin: 0; }
+.sd-q { text-align: center; margin: 0; }
+.sd-group { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.sd-group > label { width: 100%; font-weight: 600; color: var(--muted, #9aa); font-size: 0.85rem; }
+.sd-chip {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+.sd-chip.active { background: var(--accent, #6c8cff); border-color: var(--accent, #6c8cff); color: #fff; }
+.sd-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 0.5rem; }
+.sd-actions button, .sd-redeal {
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+.sd-primary { background: var(--accent, #6c8cff); border-color: var(--accent, #6c8cff); color: #fff; font-weight: 600; }
+.sd-redeal { align-self: center; }
+.sd-msg { text-align: center; color: var(--accent, #6c8cff); min-height: 1.2rem; margin: 0; }
+.sd-matchup { display: flex; align-items: stretch; gap: 0.75rem; }
+.sd-vs { align-self: center; font-weight: 700; color: var(--muted, #9aa); }
+.sd-card {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: left;
+  padding: 0;
+  transition: transform 0.08s ease, border-color 0.08s ease;
+}
+.sd-card:hover { transform: translateY(-2px); border-color: var(--accent, #6c8cff); }
+.sd-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+.sd-card-body { padding: 0.75rem; }
+.sd-card-body h3 { margin: 0 0 0.35rem; font-size: 1rem; }
+.sd-stats { color: var(--muted, #9aa); font-size: 0.85rem; }
+.sd-champion { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+.sd-champion img { max-width: 280px; width: 100%; border-radius: 12px; }
+.sd-champion h2 { font-size: 1.8rem; margin: 0; }
+.sd-tonight { color: var(--muted, #9aa); margin: 0; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; }
+@media (max-width: 560px) {
+  .sd-matchup { flex-direction: column; }
+  .sd-vs { padding: 0.25rem 0; }
+}
