@@ -1,6 +1,6 @@
 .PHONY: help install dev dev-verbose test test-unit test-integration test-slow test-file test-coverage \
         lint format check \
-        db-reset \
+        db-reset export \
         ci-install ci-check ci-test \
         docker-build docker-run \
         clean clean-all
@@ -142,6 +142,12 @@ db-reset:
 	rm -f $(DB_PATH)
 	$(PYTHON) -c "from app.database import engine; from app import db_models; db_models.Base.metadata.create_all(engine)"
 	@echo "$(DB_PATH) recreated with empty schema."
+
+# ── Static export ─────────────────────────────────────────────────────────────
+
+# Fetch the BGG collection and write frontend/data/games.json for the static site.
+export: install
+	$(PYTHON) -m scripts.export_collection
 
 # ── CI (tools on PATH — no .venv assumed) ────────────────────────────────────
 
