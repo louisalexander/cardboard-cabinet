@@ -7,6 +7,9 @@ from .util import rate_limit_sleep
 
 BASE = "https://boardgamegeek.com/xmlapi2"
 GEEKITEMS = "https://boardgamegeek.com/api/geekitems"
+# Community weight (complexity) lives in BGG's dynamic stats API. The xmlapi2
+# /thing endpoint now rejects cookie auth (401), so we read it from here.
+DYNAMICINFO = "https://api.geekdo.com/api/dynamicinfo"
 MAX_CONCURRENT = 5
 REDUCED_DELAY = 0.3
 MAX_POLL_RETRIES = 30
@@ -146,6 +149,35 @@ def _parse_collection_item(item: ET.Element, my_ratings: Dict[int, Optional[floa
     )
 
 
+def _parse_avgweight(payload: dict) -> Optional[float]:
+    """Extract the community average weight from a dynamicinfo JSON payload.
+
+    Returns None for missing, zero (no votes), or malformed values.
+    """
+    stats = ((payload.get("item") or {}).get("stats") or {})
+    try:
+        w = float(stats.get("avgweight"))
+    except (TypeError, ValueError):
+        return None
+    return w or None
+
+
+async def fetch_weight(client: httpx.AsyncClient, game_id: int) -> Optional[float]:
+    """Fetch a game's community weight from BGG's dynamicinfo API (no auth)."""
+    try:
+        r = await client.get(
+            DYNAMICINFO,
+            params={"objectid": game_id, "objecttype": "thing"},
+            timeout=30,
+        )
+        if r.status_code != 200:
+            return None
+        return _parse_avgweight(r.json())
+    except Exception as e:
+        print(f"Error fetching weight for game {game_id}: {e}")
+        return None
+
+
 async def fetch_game_links(
     client: httpx.AsyncClient,
     game: Game,
@@ -219,6 +251,7 @@ async def fetch_all_games(
     async def enrich(game: Game) -> Game:
         async with semaphore:
             result = await fetch_game_links(auth_client, game)
+            result.weight = await fetch_weight(auth_client, game.id)
             await asyncio.sleep(REDUCED_DELAY)
             return result
 
