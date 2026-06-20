@@ -1,6 +1,6 @@
 .PHONY: help install dev dev-verbose test test-unit test-integration test-slow test-file test-coverage \
         lint format check \
-        db-reset export deploy \
+        test-js db-reset export deploy \
         ci-install ci-check ci-test \
         docker-build docker-run \
         clean clean-all
@@ -93,6 +93,11 @@ dev-verbose: install
 
 test: install
 	$(PYTEST)
+
+# Client-side parity tests for frontend/data.js (Node's built-in test runner).
+# Uses an explicit glob — the bare directory form fails on Node 23+.
+test-js:
+	node --test tests/js/*.test.js
 
 test-unit: install
 	$(PYTEST) -m unit

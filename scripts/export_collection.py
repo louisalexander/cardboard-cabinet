@@ -24,7 +24,7 @@ def games_to_json(games: List[Game]) -> str:
     """Serialize games to deterministic, name-sorted, pretty JSON."""
     data = [g.model_dump() for g in games]
     data.sort(key=lambda d: (d["name"] or "").lower())
-    return json.dumps(data, ensure_ascii=False, indent=2)
+    return json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 
 
 async def export() -> int:

@@ -311,7 +311,7 @@ function renderResults(games, total, filtered) {
       <div class="empty-state">
         <span class="empty-icon" aria-hidden="true">📦</span>
         <h3>No games yet</h3>
-        <p>Click <strong>Refresh from BGG</strong> to sync your BoardGameGeek collection.</p>
+        <p>The collection data hasn't been loaded. Run <strong>make export</strong> to fetch your BoardGameGeek collection, then redeploy.</p>
       </div>
     `;
     return;
