@@ -1,6 +1,6 @@
 .PHONY: help install dev dev-verbose test test-unit test-integration test-slow test-file test-coverage \
         lint format check \
-        db-reset export \
+        db-reset export deploy \
         ci-install ci-check ci-test \
         docker-build docker-run \
         clean clean-all
@@ -148,6 +148,14 @@ db-reset:
 # Fetch the BGG collection and write frontend/data/games.json for the static site.
 export: install
 	$(PYTHON) -m scripts.export_collection
+
+# ── Deploy ────────────────────────────────────────────────────────────────────
+
+# Deploy the static frontend to Cloudflare Pages via Wrangler.
+# Requires: npx wrangler login (one-time). PROJECT defaults to cardboard-cabinet.
+PROJECT ?= cardboard-cabinet
+deploy:
+	npx wrangler@latest pages deploy frontend --project-name=$(PROJECT)
 
 # ── CI (tools on PATH — no .venv assumed) ────────────────────────────────────
 
