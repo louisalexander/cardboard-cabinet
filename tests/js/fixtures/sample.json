@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1, "name": "Azul", "year": 2017, "image": null, "thumbnail": null,
+    "min_players": 2, "max_players": 4, "playing_time": 45, "weight": 1.77,
+    "avg_rating": 7.8, "bayes_rating": 7.7, "my_rating": 8.0,
+    "mechanics": ["Tile Placement", "Pattern Building"],
+    "categories": ["Abstract Strategy"], "designers": ["Michael Kiesling"],
+    "artists": ["Chris Quilliams"], "publishers": ["Plan B Games"]
+  },
+  {
+    "id": 2, "name": "Gloomhaven", "year": 2017, "image": null, "thumbnail": null,
+    "min_players": 1, "max_players": 4, "playing_time": 120, "weight": 3.9,
+    "avg_rating": 8.6, "bayes_rating": 8.4, "my_rating": null,
+    "mechanics": ["Hand Management", "Cooperative Game"],
+    "categories": ["Adventure", "Fighting"], "designers": ["Isaac Childres"],
+    "artists": ["Alexandr Elichev"], "publishers": ["Cephalofair Games"]
+  },
+  {
+    "id": 3, "name": "Patchwork", "year": 2014, "image": null, "thumbnail": null,
+    "min_players": 2, "max_players": 2, "playing_time": 30, "weight": null,
+    "avg_rating": 7.6, "bayes_rating": 7.5, "my_rating": 7.0,
+    "mechanics": ["Tile Placement"],
+    "categories": ["Abstract Strategy"], "designers": ["Uwe Rosenberg"],
+    "artists": ["Klemens Franz"], "publishers": ["Lookout Games"]
+  }
+]
