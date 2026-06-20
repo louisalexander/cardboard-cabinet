@@ -17,7 +17,15 @@ const state = {
   sortDirection: "asc",
   lastGames: null,   // cached result for view toggle (M6.4)
   totalGames: 0,     // unfiltered collection size (M5.6)
+  allGames: null,
 };
+
+async function ensureCollection() {
+  if (state.allGames) return state.allGames;
+  state.allGames = await loadCollection();
+  state.totalGames = state.allGames.length;
+  return state.allGames;
+}
 
 function qs(id) { return document.getElementById(id); }
 
@@ -79,15 +87,13 @@ function showFacetsError() {
 
 async function loadFacets() {
   try {
-    const r = await fetch("/api/facets");
-    if (!r.ok) { showFacetsError(); return; }
-    const data = await r.json();
-    state.facets = data;
-    renderTagCloud(data.mechanics);
-    fillSelect(qs("categories"), data.categories);
-    fillSelect(qs("designers"), data.designers);
-    fillSelect(qs("artists"), data.artists);
-    fillSelect(qs("publishers"), data.publishers);
+    const games = await ensureCollection();
+    state.facets = computeFacets(games);
+    renderTagCloud(state.facets.mechanics);
+    fillSelect(qs("categories"), state.facets.categories);
+    fillSelect(qs("designers"), state.facets.designers);
+    fillSelect(qs("artists"), state.facets.artists);
+    fillSelect(qs("publishers"), state.facets.publishers);
     updateSummary();
   } catch {
     showFacetsError();
@@ -265,15 +271,12 @@ async function applyFilters() {
 
   try {
     collectFilters();
-    const query = toQuery(state.filters);
-    const r = await fetch(`/api/games?${query}`, { signal });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const data = await r.json();
-    state.lastGames = data.games;
-    state.totalGames = data.total;
-    renderResults(data.games, data.total, data.filtered);
+    const games = await ensureCollection();
+    const filtered = queryGames(games, state.filters);
+    state.lastGames = filtered;
+    state.totalGames = games.length;
+    renderResults(filtered, games.length, filtered.length);
   } catch (err) {
-    if (err.name === "AbortError") return;
     showResultsError("Could not load games.");
   } finally {
     clearTimeout(showBarTimer);
@@ -705,14 +708,5 @@ window.addEventListener("DOMContentLoaded", async () => {
   `).join("");
 
   await loadFacets();
-  const r = await fetch("/api/games").catch(() => null);
-  if (!r || !r.ok) {
-    results.innerHTML = "";
-    showResultsError("Could not load games.");
-    return;
-  }
-  const data = await r.json();
-  state.lastGames = data.games;
-  state.totalGames = data.total;
-  renderResults(data.games, data.total, data.filtered);
+  await applyFilters();
 });
