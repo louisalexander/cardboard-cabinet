@@ -189,12 +189,19 @@
     else if (act === "redeal" || act === "again") { deal(ctrl.candidates); }
   }
 
+  function onKeydown(e) {
+    if (e.key === "Escape") close();
+  }
+
   function open(allGames) {
     ctrl.allGames = allGames || [];
     ctrl.setup = { players: 2, time: null, brainpower: null };
+    ctrl.candidates = [];
+    ctrl.state = null;
     const ov = overlay();
     ov.hidden = false;
     ov.addEventListener("click", onClick);
+    document.addEventListener("keydown", onKeydown);
     renderSetup("");
   }
 
@@ -202,6 +209,7 @@
     const ov = overlay();
     ov.hidden = true;
     ov.removeEventListener("click", onClick);
+    document.removeEventListener("keydown", onKeydown);
   }
 
   const api = { setupToFilters, dealBracket, currentMatchup, chooseWinner, champion, roundLabel, open };
