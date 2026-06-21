@@ -100,10 +100,13 @@
 
   function gameCard(g) {
     const img = g.image || g.thumbnail || "";
-    return '<button class="sd-card" data-id="' + esc(g.id) + '">'
-      + (img ? '<img src="' + esc(img) + '" alt="" loading="lazy">' : "")
+    // A <div role="button"> rather than a <button>: Safari does not lay out the
+    // flex children of a <button> (image + text), so the card box renders but its
+    // contents stay blank. Taps still work via the data-id click delegation.
+    return '<div class="sd-card" role="button" data-id="' + esc(g.id) + '">'
+      + (img ? '<img src="' + esc(img) + '" alt="">' : "")
       + '<div class="sd-card-body"><h3>' + esc(g.name) + "</h3>"
-      + '<div class="sd-stats">' + statsLine(g) + "</div></div></button>";
+      + '<div class="sd-stats">' + statsLine(g) + "</div></div></div>";
   }
 
   function chip(group, val, label) {
@@ -141,6 +144,17 @@
       + '<h2 class="sd-q">Which sounds better tonight?</h2>'
       + '<div class="sd-matchup">' + gameCard(m[0]) + '<span class="sd-vs">VS</span>' + gameCard(m[1]) + "</div>"
       + '<button class="sd-redeal" data-act="redeal">↺ Redeal</button>';
+    forceRepaint();
+  }
+
+  // iOS Safari can leave the image cards inside the position:fixed overlay
+  // unpainted on first render (blank until a repaint is forced, e.g. by rotating
+  // the device). Promoting them to their own compositing layer forces the paint.
+  function forceRepaint() {
+    requestAnimationFrame(function () {
+      var els = screen().querySelectorAll(".sd-card, .sd-champion img");
+      for (var i = 0; i < els.length; i++) els[i].style.transform = "translateZ(0)";
+    });
   }
 
   function renderChampion() {
@@ -154,6 +168,7 @@
       + '<div class="sd-stats">' + statsLine(g) + "</div>"
       + '<div class="sd-actions"><button class="sd-primary" data-act="again">↺ Run it again</button>'
       + '<button data-act="done">Done</button></div></div>';
+    forceRepaint();
   }
 
   function deal(candidates) {
